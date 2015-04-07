@@ -1,0 +1,7 @@
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Models\bin\Release\Reversi.Models.dll
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Models\bin\Release\Reversi.Models.pdb
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Models\obj\Release\Reversi.Models.csprojResolveAssemblyReference.cache
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Models\obj\Release\Reversi.Models.Properties.Resources.resources
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Models\obj\Release\Reversi.Models.csproj.GenerateResource.Cache
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Models\obj\Release\Reversi.Models.dll
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Models\obj\Release\Reversi.Models.pdb

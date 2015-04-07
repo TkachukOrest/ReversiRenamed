@@ -1,0 +1,8 @@
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Console\bin\Debug\Reversi.ConsoleProject.exe.config
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Console\bin\Debug\Reversi.ConsoleProject.exe
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Console\bin\Debug\Reversi.ConsoleProject.pdb
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Console\bin\Debug\Reversi.Models.dll
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Console\bin\Debug\Reversi.Models.pdb
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Console\obj\Debug\Reversi.ConsoleProject.csprojResolveAssemblyReference.cache
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Console\obj\Debug\Reversi.ConsoleProject.exe
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Console\obj\Debug\Reversi.ConsoleProject.pdb

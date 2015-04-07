@@ -1,0 +1,12 @@
+D:\Programming\Програмування_EPAM\Reversi\Reversi\bin\Release\Reversi.exe.config
+D:\Programming\Програмування_EPAM\Reversi\Reversi\obj\Release\Reversi.exe
+D:\Programming\Програмування_EPAM\Reversi\Reversi\obj\Release\Reversi.pdb
+D:\Programming\Програмування_EPAM\Reversi\Reversi\obj\Release\Reversi.AboutForm.resources
+D:\Programming\Програмування_EPAM\Reversi\Reversi\obj\Release\Reversi.MainForm.resources
+D:\Programming\Програмування_EPAM\Reversi\Reversi\obj\Release\Reversi.Properties.Resources.resources
+D:\Programming\Програмування_EPAM\Reversi\Reversi\obj\Release\Reversi.DekstopUI.csproj.GenerateResource.Cache
+D:\Programming\Програмування_EPAM\Reversi\Reversi\bin\Release\Reversi.exe
+D:\Programming\Програмування_EPAM\Reversi\Reversi\bin\Release\Reversi.pdb
+D:\Programming\Програмування_EPAM\Reversi\Reversi\obj\Release\Reversi.DekstopUI.csprojResolveAssemblyReference.cache
+D:\Programming\Програмування_EPAM\Reversi\Reversi\bin\Release\Reversi.GameEngine.dll
+D:\Programming\Програмування_EPAM\Reversi\Reversi\bin\Release\Reversi.GameEngine.pdb

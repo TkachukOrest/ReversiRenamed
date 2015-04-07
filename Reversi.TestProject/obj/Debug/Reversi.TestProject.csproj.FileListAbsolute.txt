@@ -1,0 +1,7 @@
+D:\Programming\Програмування_EPAM\Reversi\Reversi.TestProject\bin\Debug\Reversi.TestProject.dll
+D:\Programming\Програмування_EPAM\Reversi\Reversi.TestProject\bin\Debug\Reversi.TestProject.pdb
+D:\Programming\Програмування_EPAM\Reversi\Reversi.TestProject\obj\Debug\Reversi.TestProject.csprojResolveAssemblyReference.cache
+D:\Programming\Програмування_EPAM\Reversi\Reversi.TestProject\obj\Debug\Reversi.TestProject.dll
+D:\Programming\Програмування_EPAM\Reversi\Reversi.TestProject\obj\Debug\Reversi.TestProject.pdb
+D:\Programming\Програмування_EPAM\Reversi\Reversi.TestProject\bin\Debug\Reversi.Models.dll
+D:\Programming\Програмування_EPAM\Reversi\Reversi.TestProject\bin\Debug\Reversi.Models.pdb
