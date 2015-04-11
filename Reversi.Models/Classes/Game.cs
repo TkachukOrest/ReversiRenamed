@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Media;
 using System.Timers;
 
 namespace Reversi.GameEngine
@@ -11,23 +8,22 @@ namespace Reversi.GameEngine
     {
         #region Variables
         //music
-        private System.Media.SoundPlayer _sndBad;
-        private System.Media.SoundPlayer _sndGood;
+        private SoundPlayer _sndBad;
+        private SoundPlayer _sndGood;
 
         //timer for compturer move
-        private System.Timers.Timer _timer;
+        private Timer _timer;
 
         //assurance of exit from timer
         public bool AlreadyExitFromTimer { get; set; }
+
+        public bool EnabledComputerMoves { get; set; }
 
         //could be changed only in LoadFromFile method or in cb_change
         private bool _enabledTips = true;
         public bool EnabledTips { get { return _enabledTips; } set { _enabledTips = value; } }
 
-        private bool _enabledComputerMoves = false;
-        public bool EnabledComputerMoves { get { return _enabledComputerMoves; } set { _enabledComputerMoves = value; } }
-
-        private int _currentMove = 1;
+        private int _currentMove;
         public int CurrentMove { get { return _currentMove; } set { _currentMove = value; } }
 
         private Field _field;
@@ -45,8 +41,8 @@ namespace Reversi.GameEngine
         public Game()
         {
             //music initializating
-            _sndBad = new System.Media.SoundPlayer(Reversi.GameEngine.Properties.Resources.badMove1);
-            _sndGood = new System.Media.SoundPlayer(Reversi.GameEngine.Properties.Resources.goodMove1);
+            _sndBad = new SoundPlayer(Properties.Resources.badMove1);
+            _sndGood = new SoundPlayer(Properties.Resources.goodMove1);
             _sndBad.Load();
             _sndGood.Load();
 
@@ -55,7 +51,7 @@ namespace Reversi.GameEngine
             EnabledTips = true;
             EnabledComputerMoves = false;
             CurrentMove = 1;
-            _timer = new System.Timers.Timer();
+            _timer = new Timer();
         }
         #endregion
 
@@ -98,7 +94,7 @@ namespace Reversi.GameEngine
         public void CreateNewGame()
         {
             AlreadyExitFromTimer = true;
-            _enabledComputerMoves = false;
+            EnabledComputerMoves = false;
             _currentMove = 1;
             InitializeField();
             InitializeDraw();
@@ -110,7 +106,7 @@ namespace Reversi.GameEngine
         {
             return (_currentMove) % 2 == 0;
         }
-        
+
         public void Move(int x, int y)
         {
             DoPlayerMove(x, y);
@@ -125,7 +121,7 @@ namespace Reversi.GameEngine
             {
                 if (FirstPlayerMove())
                 {
-                    if (!_enabledComputerMoves)
+                    if (!EnabledComputerMoves)
                     {
                         if (_field.IsMovePoint(x, y, (int)Players.FirstPlayer))
                         {
@@ -157,7 +153,7 @@ namespace Reversi.GameEngine
 
         private void DoCompMoveIfNeed()
         {
-            if (_enabledComputerMoves && _field.GameProcess && FirstPlayerMove())
+            if (EnabledComputerMoves && _field.GameProcess && FirstPlayerMove())
             {
                 if (AlreadyExitFromTimer)
                 {
@@ -171,7 +167,7 @@ namespace Reversi.GameEngine
 
         private void TimerTick(Object myObject, ElapsedEventArgs myEventArgs)
         {
-            if (FirstPlayerMove() && _enabledComputerMoves && _field.GameProcess)
+            if (FirstPlayerMove() && EnabledComputerMoves && _field.GameProcess)
             {
                 _timer.Stop();
                 _timer.Enabled = false;
@@ -203,8 +199,8 @@ namespace Reversi.GameEngine
                 else
                     Draw((int)Players.SecondPlayer, _enabledTips);
             }
-        }        
-        #endregion     
+        }
+        #endregion
         #endregion
     }
 }

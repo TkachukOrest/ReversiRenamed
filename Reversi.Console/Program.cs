@@ -1,31 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Reversi.GameEngine;
 
-namespace Reversi.ConsoleProject
+namespace Reversi.ConsoleUI
 {
     class Program
     {
         #region Variables
-        private static Drawing draw;
-        private static Game game;
+        private static Drawing _draw;
+        private static Game _game;
         #endregion
 
         #region Methods for Events   
         private static void InitializeDraw()
         {
-            draw = new ConsoleDrawing(game.Field);
-            game.DrawHandler = draw.DrawField;
+            _draw = new ConsoleDrawing(_game.Field);
+            _game.DrawHandler = _draw.DrawField;
         }
         public static void UpdateScoreAndPlayerMove()
         {            
-            Console.WriteLine(String.Format("Score: {0}-{1}", game.Field.FirstPlayerPoints, game.Field.SecondPlayerPoints));
+            Console.WriteLine(String.Format("Score: {0}-{1}", _game.Field.FirstPlayerPoints, _game.Field.SecondPlayerPoints));
         }
         public static void ShowMessage(string message)
         {
@@ -36,16 +29,16 @@ namespace Reversi.ConsoleProject
         #region Main
         static void Main(string[] args)
         {
-            game = new Game();         
-            game.InitDrawHandler += InitializeDraw;
-            game.UpdateScoreLabelsHandler += UpdateScoreAndPlayerMove;
-            game.ShomMessageHandler += ShowMessage;
+            _game = new Game();         
+            _game.InitDrawHandler += InitializeDraw;
+            _game.UpdateScoreLabelsHandler += UpdateScoreAndPlayerMove;
+            _game.ShomMessageHandler += ShowMessage;
 
-            game.InitializeField();
-            game.InitializeDraw();       
+            _game.InitializeField();
+            _game.InitializeDraw();       
                         
-            game.Draw((int)Players.SecondPlayer, game.EnabledTips);
-            game.EnabledComputerMoves = true;
+            _game.Draw((int)Players.SecondPlayer, _game.EnabledTips);
+            _game.EnabledComputerMoves = true;
 
             string key;
             int x = 0, y = 0;
@@ -63,7 +56,7 @@ namespace Reversi.ConsoleProject
                     else
                         continue;
                 }
-                game.Move(x, y);
+                _game.Move(x, y);
             }
             while (key != "exit.");
 
