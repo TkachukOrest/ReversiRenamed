@@ -10,7 +10,6 @@ using System.Threading;
 using System.Windows.Forms;
 using Reversi.GameEngine;
 
-
 namespace Reversi
 {
     public partial class MainForm : Form
@@ -26,8 +25,7 @@ namespace Reversi
             InitializeComponent();
             System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = false;
 
-            game = new Game();
-            game.InitPnlFieldHandler += InitializeField;
+            game = new Game();        
             game.InitDrawHandler += InitializeDraw;
             game.UpdateScoreLabelsHandler += UpdateScoreAndPlayerMove;
             game.ShomMessageHandler += ShowMessage;
@@ -42,7 +40,7 @@ namespace Reversi
         {            
             if (game.AlreadyExitFromTimer)
             {
-                if ((game.CurrentMove) % 2 == 0)
+                if (game.FirstPlayerMove())
                     game.Draw((int)Players.FirstPlayer, game.EnabledTips);
                 else
                     game.Draw((int)Players.SecondPlayer, game.EnabledTips);
@@ -66,7 +64,7 @@ namespace Reversi
         private void cb_tips_Changed(object sender, EventArgs e)
         {
             game.EnabledTips = cb_tips.Checked;
-            if ((game.CurrentMove) % 2 == 0)
+            if (game.FirstPlayerMove())
                 game.Draw((int)Players.FirstPlayer, game.EnabledTips);
             else
                 game.Draw((int)Players.SecondPlayer, game.EnabledTips);
@@ -77,12 +75,7 @@ namespace Reversi
         public void ShowMessage(string message)
         {
             MessageBox.Show(null, message, "We have a winner", MessageBoxButtons.OK);
-        }
-        private void InitializeField()
-        {
-            pnl_Field.Width = Field.N * Field.Scale;
-            pnl_Field.Height = Field.N * Field.Scale;
-        }
+        }    
         private void InitializeDraw()
         {
             draw = new FormDrawing(pnl_Field, game.Field);
@@ -92,7 +85,7 @@ namespace Reversi
         {
             lbl_firstPlayerScore.Text = "Red player: " + game.Field.FirstPlayerPoints.ToString();
             lbl_secondPlayerScore.Text = "Blue player: " + game.Field.SecondPlayerPoints.ToString();
-            if ((game.CurrentMove) % 2 == 0)
+            if (game.FirstPlayerMove())
                 lbl_NextMove.Text = "Next move: red";
             else
                 lbl_NextMove.Text = "Next move: blue";

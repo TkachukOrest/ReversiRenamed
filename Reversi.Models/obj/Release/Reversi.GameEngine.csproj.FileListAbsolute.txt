@@ -4,3 +4,4 @@ D:\Programming\Програмування_EPAM\Reversi\Reversi.Models\bin\Releas
 D:\Programming\Програмування_EPAM\Reversi\Reversi.Models\bin\Release\Reversi.GameEngine.pdb
 D:\Programming\Програмування_EPAM\Reversi\Reversi.Models\obj\Release\Reversi.GameEngine.dll
 D:\Programming\Програмування_EPAM\Reversi\Reversi.Models\obj\Release\Reversi.GameEngine.pdb
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Models\obj\Release\Reversi.GameEngine.csprojResolveAssemblyReference.cache

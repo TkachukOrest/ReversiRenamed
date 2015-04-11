@@ -17,10 +17,7 @@ namespace Reversi.ConsoleProject
         private static Game game;
         #endregion
 
-        #region Methods for Events
-        private static void InitializeField()
-        {         
-        }
+        #region Methods for Events   
         private static void InitializeDraw()
         {
             draw = new ConsoleDrawing(game.Field);
@@ -39,8 +36,7 @@ namespace Reversi.ConsoleProject
         #region Main
         static void Main(string[] args)
         {
-            game = new Game();
-            game.InitPnlFieldHandler += InitializeField;
+            game = new Game();         
             game.InitDrawHandler += InitializeDraw;
             game.UpdateScoreLabelsHandler += UpdateScoreAndPlayerMove;
             game.ShomMessageHandler += ShowMessage;
