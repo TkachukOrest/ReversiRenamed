@@ -5,3 +5,5 @@ D:\Programming\Програмування_EPAM\Reversi\Reversi.TestProject\bin\R
 D:\Programming\Програмування_EPAM\Reversi\Reversi.TestProject\bin\Release\Reversi.TestProject.pdb
 D:\Programming\Програмування_EPAM\Reversi\Reversi.TestProject\bin\Release\Reversi.GameEngine.dll
 D:\Programming\Програмування_EPAM\Reversi\Reversi.TestProject\bin\Release\Reversi.GameEngine.pdb
+D:\Programming\Програмування_EPAM\Reversi\Reversi.TestProject\obj\Release\Reversi.TestProject.Properties.Resources.resources
+D:\Programming\Програмування_EPAM\Reversi\Reversi.TestProject\obj\Release\Reversi.GameEngine.Test.csproj.GenerateResource.Cache

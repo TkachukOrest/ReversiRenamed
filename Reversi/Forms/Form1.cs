@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Reversi.GameEngine;
+using Reversi.Handlers;
 
 namespace Reversi
 {
@@ -9,6 +10,7 @@ namespace Reversi
         #region Variables
         private Drawing _draw;
         private Game _game;
+        private GameSounds _music;
         #endregion
 
         #region Construcors
@@ -17,10 +19,14 @@ namespace Reversi
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
 
+            _music=new GameSounds();
+            
             _game = new Game();
             _game.InitDrawHandler += InitializeDraw;
             _game.UpdateScoreLabelsHandler += UpdateScoreAndPlayerMove;
             _game.ShomMessageHandler += ShowMessage;
+            _game.PlayGoodSoundHandler += _music.PlayGoodSound;
+            _game.PlayBadSoundHandler += _music.PlayBadSound;
 
             _game.InitializeField();
             _game.InitializeDraw();
@@ -92,13 +98,18 @@ namespace Reversi
         }
         private void saveGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (saveDialog.ShowDialog() == DialogResult.OK)
+            try
             {
-                if (!XmlSerializator.WriteToXML(_game.Field, _game.EnabledTips, _game.CurrentMove, saveDialog.FileName))
+                if (saveDialog.ShowDialog() == DialogResult.OK)
                 {
-                    MessageBox.Show("Виникла помилка при записуванні в файл.", "Помилка :(", MessageBoxButtons.OK);
+                   _game.WriteToXML(saveDialog.FileName);
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Помилка :(", MessageBoxButtons.OK);
+            }
+           
         }
         private void loadLastGameToolStripMenuItem_Click(object sender, EventArgs e)
         {

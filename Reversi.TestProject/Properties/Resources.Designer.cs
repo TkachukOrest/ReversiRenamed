@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Reversi.GameEngine.Properties {
+namespace Reversi.TestProject.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Reversi.GameEngine.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Reversi.GameEngine.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Reversi.TestProject.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,6 +57,34 @@ namespace Reversi.GameEngine.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
+        ///&lt;Field&gt;
+        ///  &lt;Matrix&gt;0 0 0 0 a 0 0 0 0 0 -1 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 0 -1 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 &lt;/Matrix&gt;
+        ///  &lt;Tips&gt;True&lt;/Tips&gt;
+        ///  &lt;CurrentMove&gt;7&lt;/CurrentMove&gt;
+        ///&lt;/Field&gt;.
+        /// </summary>
+        internal static string ErrorGame {
+            get {
+                return ResourceManager.GetString("ErrorGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
+        ///&lt;Field&gt;
+        ///  &lt;Matrix&gt;0 0 0 -1 0 0 0 0 0 0 -1 -1 0 0 0 0 0 0 0 -1 -1 0 0 0 0 1 1 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 &lt;/Matrix&gt;
+        ///  &lt;Tips&gt;False&lt;/Tips&gt;
+        ///  &lt;CurrentMove&gt;9&lt;/CurrentMove&gt;
+        ///&lt;/Field&gt;.
+        /// </summary>
+        internal static string SavedGame {
+            get {
+                return ResourceManager.GetString("SavedGame", resourceCulture);
             }
         }
     }

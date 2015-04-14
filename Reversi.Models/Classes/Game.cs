@@ -2,15 +2,12 @@
 using System.Media;
 using System.Timers;
 
+//TODO: write to xml here
 namespace Reversi.GameEngine
 {
     public class Game
     {
         #region Variables
-        //music
-        private SoundPlayer _sndBad;
-        private SoundPlayer _sndGood;
-
         //timer for compturer move
         private Timer _timer;
 
@@ -35,17 +32,13 @@ namespace Reversi.GameEngine
         public event Action UpdateScoreLabelsHandler;
         public event Action<string> ShomMessageHandler;
         public Action<int, bool> DrawHandler;//draw from Console|Form
+        public event Action PlayGoodSoundHandler;
+        public event Action PlayBadSoundHandler;
         #endregion
 
         #region Constructors
         public Game()
         {
-            //music initializating
-            _sndBad = new SoundPlayer(Properties.Resources.badMove1);
-            _sndGood = new SoundPlayer(Properties.Resources.goodMove1);
-            _sndBad.Load();
-            _sndGood.Load();
-
             //variables initializating
             AlreadyExitFromTimer = true;
             EnabledTips = true;
@@ -65,12 +58,14 @@ namespace Reversi.GameEngine
         }
         public void InitializeDraw()
         {
-            InitDrawHandler();
+            if (InitDrawHandler != null)
+                InitDrawHandler();
         }
         public void UpdateScoreAndPlayerMove()
         {
             _field.CalculatePlayersPoints();
-            UpdateScoreLabelsHandler();
+            if (UpdateScoreLabelsHandler != null)
+                UpdateScoreLabelsHandler();
         }
         public void UpdateGameFinish()
         {
@@ -89,7 +84,8 @@ namespace Reversi.GameEngine
         }
         public void Draw(int player, bool enabledTips)
         {
-            DrawHandler(player, enabledTips);
+            if (DrawHandler != null)
+                DrawHandler(player, enabledTips);
         }
         public void CreateNewGame()
         {
@@ -129,10 +125,10 @@ namespace Reversi.GameEngine
                             _currentMove++;
                             //draw new field for second player with tips which dependent from "bool enabledTips"                    
                             Draw((int)Players.SecondPlayer, _enabledTips);
-                            _sndGood.Play();
+                            PlayGoodSound();
                         }
                         else
-                            _sndBad.Play();
+                            PlayBadSound();
                     }
                 }
                 else
@@ -143,10 +139,10 @@ namespace Reversi.GameEngine
                         _currentMove++;
                         //draw new field for first player with tips which dependent from "bool enabledTips"
                         Draw((int)Players.FirstPlayer, _enabledTips);
-                        _sndGood.Play();
+                        PlayGoodSound();
                     }
                     else
-                        _sndBad.Play();
+                        PlayBadSound();
                 }
             }
         }
@@ -175,7 +171,7 @@ namespace Reversi.GameEngine
                 _field.DoComputerMove((int)Players.FirstPlayer);
                 //drawcomputermove with tips for second player
                 Draw((int)Players.SecondPlayer, _enabledTips);
-                _sndGood.Play();
+                PlayGoodSound();
                 //update scode and finish condition
                 UpdateScoreAndPlayerMove();
                 UpdateGameFinish();
@@ -183,6 +179,19 @@ namespace Reversi.GameEngine
                 AlreadyExitFromTimer = true;
             }
         }
+
+        #region Music
+        private void PlayGoodSound()
+        {
+            if (PlayGoodSoundHandler != null)
+                PlayGoodSoundHandler();
+        }
+        private void PlayBadSound()
+        {
+            if (PlayBadSoundHandler != null)
+                PlayBadSoundHandler();
+        }
+        #endregion
 
         #region XML
         public void LoadFromXML(string fileName)
@@ -200,6 +209,15 @@ namespace Reversi.GameEngine
                     Draw((int)Players.SecondPlayer, _enabledTips);
             }
         }
+
+        public void WriteToXML(string fileName)
+        {
+            if (!XmlSerializator.WriteToXML(this.Field, this.EnabledTips, this.CurrentMove, fileName))
+            {
+                throw new Exception("Виникла помилка при записуванні у файл");
+            }
+        }
+
         #endregion
         #endregion
     }

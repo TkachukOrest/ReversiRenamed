@@ -26,8 +26,8 @@ namespace Reversi.GameEngine
         //standard size of game field
         public const int N = 8;
         public const int Scale = 40;
-
-        private int kk = 0;
+        
+        public bool FirstMove { get; set; }
         //0 - empty, 1- first(red) , -1 - second player(blue)        
         private int[,] matrix;
 
@@ -68,9 +68,10 @@ namespace Reversi.GameEngine
             FirstPlayerPoints = 0;
             SecondPlayerPoints = 0;
             GameProcess = true;
-            kk = 0;
+            FirstMove = true;
 
             InitializeMatrix();
+            CalculatePlayersPoints();
         }
         public Field(Field field)
         {
@@ -99,11 +100,7 @@ namespace Reversi.GameEngine
             //red
             matrix[N / 2, N / 2 - 1] = 1;
             matrix[N / 2 - 1, N / 2] = 1;
-        }
-        /// <summary>
-        /// This method calls only in MainForm.UpdateScore() method
-        /// on button_click event
-        /// </summary>>
+        }        
         public void CalculatePlayersPoints()
         {
             int firstPoints = 0, secondPoints = 0; ;
@@ -199,10 +196,11 @@ namespace Reversi.GameEngine
                         willget = values[i];
                     }
             }
-            if (kk == 0)
+            if (FirstMove)
             {
-                Random rnd = new Random(); kk++;
-                return movePoints.Keys.ElementAt(rnd.Next(0, 3));
+                Random rnd = new Random();
+                FirstMove = false;
+                return movePoints.Keys.ElementAt(rnd.Next(0, 3));                
             }
             else
                 return movePoints.Keys.ElementAt(maxPos);

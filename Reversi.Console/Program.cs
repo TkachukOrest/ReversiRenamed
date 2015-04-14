@@ -1,5 +1,6 @@
 ﻿using System;
 using Reversi.GameEngine;
+using Reversi.Handlers;
 
 namespace Reversi.ConsoleUI
 {
@@ -8,6 +9,7 @@ namespace Reversi.ConsoleUI
         #region Variables
         private static Drawing _draw;
         private static Game _game;
+        private static GameSounds _music;
         #endregion
 
         #region Methods for Events   
@@ -29,13 +31,17 @@ namespace Reversi.ConsoleUI
         #region Main
         static void Main(string[] args)
         {
+            _music = new GameSounds();
             _game = new Game();         
             _game.InitDrawHandler += InitializeDraw;
             _game.UpdateScoreLabelsHandler += UpdateScoreAndPlayerMove;
             _game.ShomMessageHandler += ShowMessage;
+            _game.PlayGoodSoundHandler += _music.PlayGoodSound;
+            _game.PlayBadSoundHandler += _music.PlayBadSound;
 
             _game.InitializeField();
-            _game.InitializeDraw();       
+            _game.InitializeDraw();
+            
                         
             _game.Draw((int)Players.SecondPlayer, _game.EnabledTips);
             _game.EnabledComputerMoves = true;

@@ -33,7 +33,7 @@ namespace Reversi.GameEngine
 
                     writer.WriteEndElement();
                     writer.WriteEndDocument();
-                }                
+                }
                 result = true;
             }
             catch (Exception ex)
@@ -83,7 +83,7 @@ namespace Reversi.GameEngine
                                 break;
                         }
                     }
-                }                
+                }
                 field.CopyMatr(matrix);
                 enabledTips = tips;
                 currentMove = move;

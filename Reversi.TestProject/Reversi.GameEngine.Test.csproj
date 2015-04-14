@@ -50,14 +50,32 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Classes\GameTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FieldTest.cs" />
+    <Compile Include="Classes\FieldTest.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Reversi.Models\Reversi.GameEngine.csproj">
       <Project>{2dbdd066-e34a-4cc2-a3a6-df02737cadfd}</Project>
       <Name>Reversi.GameEngine</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ErrorGame.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SavedGame.xml" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

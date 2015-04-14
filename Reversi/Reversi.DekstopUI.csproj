@@ -88,6 +88,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Reversi.Handlers\Reversi.Handlers.csproj">
+      <Project>{1ffacfef-74d2-4b37-8374-62809e25f3d7}</Project>
+      <Name>Reversi.Handlers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Reversi.Models\Reversi.GameEngine.csproj">
       <Project>{2dbdd066-e34a-4cc2-a3a6-df02737cadfd}</Project>
       <Name>Reversi.GameEngine</Name>
