@@ -1,0 +1,10 @@
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Console\bin\Debug\Reversi.ConsoleUI.exe.config
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Console\bin\Debug\Reversi.ConsoleUI.exe
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Console\bin\Debug\Reversi.ConsoleUI.pdb
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Console\bin\Debug\Reversi.GameEngine.dll
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Console\bin\Debug\Reversi.Handlers.dll
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Console\bin\Debug\Reversi.Handlers.pdb
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Console\bin\Debug\Reversi.GameEngine.pdb
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Console\obj\Debug\Reversi.ConsoleUI.csprojResolveAssemblyReference.cache
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Console\obj\Debug\Reversi.ConsoleUI.exe
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Console\obj\Debug\Reversi.ConsoleUI.pdb

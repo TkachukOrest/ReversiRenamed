@@ -1,0 +1,7 @@
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Models\bin\Debug\Reversi.GameEngine.dll
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Models\bin\Debug\Reversi.GameEngine.pdb
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Models\obj\Debug\Reversi.GameEngine.csprojResolveAssemblyReference.cache
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Models\obj\Debug\Reversi.GameEngine.Properties.Resources.resources
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Models\obj\Debug\Reversi.GameEngine.csproj.GenerateResource.Cache
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Models\obj\Debug\Reversi.GameEngine.dll
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Models\obj\Debug\Reversi.GameEngine.pdb

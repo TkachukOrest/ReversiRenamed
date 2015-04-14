@@ -1,0 +1,9 @@
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Handlers\bin\Debug\Reversi.Handlers.dll
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Handlers\bin\Debug\Reversi.Handlers.pdb
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Handlers\bin\Debug\Reversi.GameEngine.dll
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Handlers\bin\Debug\Reversi.GameEngine.pdb
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Handlers\obj\Debug\Reversi.Handlers.csprojResolveAssemblyReference.cache
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Handlers\obj\Debug\Reversi.Handlers.Properties.Resources.resources
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Handlers\obj\Debug\Reversi.Handlers.csproj.GenerateResource.Cache
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Handlers\obj\Debug\Reversi.Handlers.dll
+D:\Programming\Програмування_EPAM\Reversi\Reversi.Handlers\obj\Debug\Reversi.Handlers.pdb
