@@ -2,19 +2,13 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Reversi.GameEngine;
 using System.IO;
+using Reversi.GameEngine.Classes;
 
 namespace Reversi.GameEngine.Test
 {
     [TestClass]
     public class GameTest
     {
-        private TestContext m_testContext;
-        public TestContext TestContext
-        {
-            get { return m_testContext; }
-            set { m_testContext = value; }
-        }
-
         [TestMethod]
         public void Test_CurentMove()
         {
@@ -80,46 +74,6 @@ namespace Reversi.GameEngine.Test
             game.Field.FindEnabledMoves((int)Players.SecondPlayer);
             game.Move(2, 4);
             Assert.IsTrue(game.Field[2, 4] == -1, "Move wasn`t done");
-        }
-
-
-        //чи правильно віддає стейт і чи правильний рестор
-        [TestMethod]
-        public void Test_XMLRead()
-        {
-            Game game = new Game();
-            game.CreateNewGame();
-            string path = Path.GetDirectoryName(Path.GetDirectoryName(TestContext.TestDir)) + @"\Reversi\bin\Debug\SavedGame.xml";
-            string spath = Path.GetDirectoryName(Path.GetDirectoryName(TestContext.TestDir)) + @"Reversi\bin\Debug\ErrorGame.xml";
-            try
-            {
-                game.LoadFromXML(path);
-            }
-            catch (Exception ex) { Assert.IsTrue(false, "Can`t load from good path"); }
-            try
-            {
-                game.LoadFromXML(spath);
-                Assert.IsTrue(false, "Loaded from bad path");
-            }
-            catch (Exception ex) { }
-            Assert.IsTrue(true, "Something wen`t wrong");
-        }
-
-        [TestMethod]
-        public void Test_XMLWrite()
-        {
-            Game game = new Game();
-            game.CreateNewGame();
-            string path = Path.GetDirectoryName(Path.GetDirectoryName(TestContext.TestDir)) + @"\Reversi\bin\Debug\TestGame.xml";
-            try
-            {
-                game.WriteToXML(path);
-                game.LoadFromXML(path);
-            }
-            catch (Exception ex)
-            {
-                Assert.IsTrue(false, "Can`t write to xml");
-            }
-        }
+        }            
     }
 }

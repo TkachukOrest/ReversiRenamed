@@ -63,9 +63,10 @@ namespace Reversi.TestProject.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
         ///&lt;Field&gt;
-        ///  &lt;Matrix&gt;0 0 0 0 a 0 0 0 0 0 -1 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 0 -1 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 &lt;/Matrix&gt;
-        ///  &lt;Tips&gt;True&lt;/Tips&gt;
-        ///  &lt;CurrentMove&gt;7&lt;/CurrentMove&gt;
+        ///  &lt;Matrix&gt;0 0 0 С„ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 1 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 &lt;/Matrix&gt;
+        ///  &lt;Tips&gt;Tue&lt;/Tips&gt;
+        ///  &lt;CurrentMove&gt;1&lt;/CurrentMove&gt;
+        ///  &lt;IsFirstAIMove&gt;True&lt;/IsFirstAIMove&gt;
         ///&lt;/Field&gt;.
         /// </summary>
         internal static string ErrorGame {
@@ -77,14 +78,30 @@ namespace Reversi.TestProject.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
         ///&lt;Field&gt;
-        ///  &lt;Matrix&gt;0 0 0 -1 0 0 0 0 0 0 -1 -1 0 0 0 0 0 0 0 -1 -1 0 0 0 0 1 1 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 &lt;/Matrix&gt;
-        ///  &lt;Tips&gt;False&lt;/Tips&gt;
-        ///  &lt;CurrentMove&gt;9&lt;/CurrentMove&gt;
+        ///  &lt;Matrix&gt;0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 1 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 &lt;/Matrix&gt;
+        ///  &lt;Tips&gt;True&lt;/Tips&gt;
+        ///  &lt;CurrentMove&gt;1&lt;/CurrentMove&gt;
+        ///  &lt;IsFirstAIMove&gt;True&lt;/IsFirstAIMove&gt;
         ///&lt;/Field&gt;.
         /// </summary>
         internal static string SavedGame {
             get {
                 return ResourceManager.GetString("SavedGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
+        ///&lt;Field&gt;
+        ///  &lt;Matrix&gt;0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 1 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 &lt;/Matrix&gt;
+        ///  &lt;Tips&gt;True&lt;/Tips&gt;
+        ///  &lt;CurrentMove&gt;1&lt;/CurrentMove&gt;
+        ///  &lt;IsFirstAIMove&gt;True&lt;/IsFirstAIMove&gt;
+        ///&lt;/Field&gt;.
+        /// </summary>
+        internal static string TestGame {
+            get {
+                return ResourceManager.GetString("TestGame", resourceCulture);
             }
         }
     }

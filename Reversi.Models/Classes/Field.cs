@@ -30,15 +30,15 @@ namespace Reversi.GameEngine
         //for correct AI work on first move
         public bool FirstMoveAI { get; set; }
         //0 - empty, 1- first(red) , -1 - second player(blue)        
-        private int[,] matrix;
+        private int[,] _matrix;
 
         //List of points
-        private Dictionary<Point, int> movePoints;
+        private Dictionary<Point, int> _movePoints;
         public Dictionary<Point, int> MovePoints
         {
             get
             {
-                return movePoints;
+                return _movePoints;
             }
         }
         #endregion
@@ -52,13 +52,13 @@ namespace Reversi.GameEngine
         {
             get
             {
-                return matrix[i, j];
+                return _matrix[i, j];
             }
             set
             {
                 if (value == (int)Players.FirstPlayer | value == (int)Players.SecondPlayer | value == 0)
                 {
-                    matrix[i, j] = value;
+                    _matrix[i, j] = value;
                 }
                 else
                 {
@@ -72,7 +72,7 @@ namespace Reversi.GameEngine
         #region Constructors
         public Field()
         {
-            movePoints = new Dictionary<Point, int>();
+            _movePoints = new Dictionary<Point, int>();
             FirstPlayerPoints = 0;
             SecondPlayerPoints = 0;
             GameProcess = true;
@@ -83,31 +83,31 @@ namespace Reversi.GameEngine
         }
         public Field(Field field)
         {
-            matrix = new int[N, N];
-            Array.Copy(field.matrix, matrix, field.matrix.Length);
-            movePoints = new Dictionary<Point, int>(field.movePoints);
+            _matrix = new int[N, N];
+            Array.Copy(field._matrix, _matrix, field._matrix.Length);
+            _movePoints = new Dictionary<Point, int>(field._movePoints);
         }
         #endregion
 
         #region Setup Methods
         private void InitializeMatrix()
         {
-            matrix = new int[N, N];
+            _matrix = new int[N, N];
             for (int i = 0; i < N; i++)
             {
                 for (int j = 0; j < N; j++)
                 {
-                    matrix[i, j] = 0;
+                    _matrix[i, j] = 0;
                 }
             }
 
             //blue
-            matrix[N / 2 - 1, N / 2 - 1] = -1;
-            matrix[N / 2, N / 2] = -1;
+            _matrix[N / 2 - 1, N / 2 - 1] = -1;
+            _matrix[N / 2, N / 2] = -1;
 
             //red
-            matrix[N / 2, N / 2 - 1] = 1;
-            matrix[N / 2 - 1, N / 2] = 1;
+            _matrix[N / 2, N / 2 - 1] = 1;
+            _matrix[N / 2 - 1, N / 2] = 1;
         }
         public void CalculatePlayersPoints()
         {
@@ -116,10 +116,10 @@ namespace Reversi.GameEngine
             {
                 for (int j = 0; j < N; j++)
                 {
-                    if (matrix[i, j] < 0)
+                    if (_matrix[i, j] < 0)
                         secondPoints++;
                     else
-                        if (matrix[i, j] > 0)
+                        if (_matrix[i, j] > 0)
                             firstPoints++;
                 }
             }
@@ -130,7 +130,7 @@ namespace Reversi.GameEngine
         {
             for (int i = 0; i < N; i++)
                 for (int j = 0; j < N; j++)
-                    matrix[i, j] = a[i, j];
+                    _matrix[i, j] = a[i, j];
         }
         #endregion
 
@@ -147,7 +147,7 @@ namespace Reversi.GameEngine
         }
         private Point RandomStep(out int count)
         {
-            int[] values = movePoints.Values.ToArray<int>();
+            int[] values = _movePoints.Values.ToArray<int>();
             int maxPos = 0, max = values[0];
             for (int i = 0; i < values.Length; i++)
             {
@@ -158,15 +158,15 @@ namespace Reversi.GameEngine
                 }
             }
             count = values[maxPos];
-            return movePoints.Keys.ElementAt(maxPos);
+            return _movePoints.Keys.ElementAt(maxPos);
         }
         private Point BestStep(int player)
         {
-            int[] values = movePoints.Values.ToArray<int>();
+            int[] values = _movePoints.Values.ToArray<int>();
             int[] ratings = new int[values.Length];
             int i = 0, playerCount;
 
-            foreach (Point point in movePoints.Keys.ToArray<Point>())
+            foreach (Point point in _movePoints.Keys.ToArray<Point>())
             {
                 ratings[i] = values[i];
                 Field field = new Field(this);
@@ -208,10 +208,10 @@ namespace Reversi.GameEngine
             {
                 Random rnd = new Random();
                 FirstMoveAI = false;
-                return movePoints.Keys.ElementAt(rnd.Next(0, 3));
+                return _movePoints.Keys.ElementAt(rnd.Next(0, 3));
             }
             else
-                return movePoints.Keys.ElementAt(maxPos);
+                return _movePoints.Keys.ElementAt(maxPos);
         }
         #endregion
 
@@ -247,7 +247,7 @@ namespace Reversi.GameEngine
         private int CanMove(int x, int y, int player, bool needToAdd = true)
         {
             int res = 0;
-            if (matrix[x, y] == 0)
+            if (_matrix[x, y] == 0)
             {
                 res = UpCheck(x, y - 1, player, needToAdd) +
                     DownCheck(x, y + 1, player, needToAdd) +
@@ -261,7 +261,7 @@ namespace Reversi.GameEngine
                 {
                     if (needToAdd)
                     {
-                        matrix[x, y] = player;
+                        _matrix[x, y] = player;
                     }
                 }
             }
@@ -278,14 +278,14 @@ namespace Reversi.GameEngine
             {
                 //якщо точка в яку ми клікнули не прилягає до жодної фішки (має відступ)
                 //використовуєтсья для правильного пошуку можливих ходів
-                if (matrix[x, i] == 0) return 0;
-                if (matrix[x, i] == -p) c++;
-                if (matrix[x, i] == p)
+                if (_matrix[x, i] == 0) return 0;
+                if (_matrix[x, i] == -p) c++;
+                if (_matrix[x, i] == p)
                 {
                     found = c > 0;
                     if (c > 0 && needToChange)
                         for (int j = y; j != i; j--)
-                            matrix[x, j] = p;
+                            _matrix[x, j] = p;
                     break;
                 }
             }
@@ -297,14 +297,14 @@ namespace Reversi.GameEngine
             int c = 0;
             for (int i = y; i < N; i++)
             {
-                if (matrix[x, i] == 0) return 0;
-                if (matrix[x, i] == -p) c++;
-                if (matrix[x, i] == p)
+                if (_matrix[x, i] == 0) return 0;
+                if (_matrix[x, i] == -p) c++;
+                if (_matrix[x, i] == p)
                 {
                     found = c > 0;
                     if (c > 0 && f)
                         for (int j = y; j != i; j++)
-                            matrix[x, j] = p;
+                            _matrix[x, j] = p;
                     break;
                 }
             }
@@ -316,14 +316,14 @@ namespace Reversi.GameEngine
             int c = 0;
             for (int i = x; i >= 0; i--)
             {
-                if (matrix[i, y] == 0) return 0;
-                if (matrix[i, y] == -p) c++;
-                if (matrix[i, y] == p)
+                if (_matrix[i, y] == 0) return 0;
+                if (_matrix[i, y] == -p) c++;
+                if (_matrix[i, y] == p)
                 {
                     found = c > 0;
                     if (c > 0 && f)
                         for (int j = x; j != i; j--)
-                            matrix[j, y] = p;
+                            _matrix[j, y] = p;
                     break;
                 }
             }
@@ -335,14 +335,14 @@ namespace Reversi.GameEngine
             int c = 0;
             for (int i = x; i < N; i++)
             {
-                if (matrix[i, y] == 0) return 0;
-                if (matrix[i, y] == -p) c++;
-                if (matrix[i, y] == p)
+                if (_matrix[i, y] == 0) return 0;
+                if (_matrix[i, y] == -p) c++;
+                if (_matrix[i, y] == p)
                 {
                     found = c > 0;
                     if (c > 0 && f)
                         for (int j = x; j != i; j++)
-                            matrix[j, y] = p;
+                            _matrix[j, y] = p;
                     break;
                 }
             }
@@ -359,14 +359,14 @@ namespace Reversi.GameEngine
             int c = 0;
             for (i = x, j = y; i >= 0 && j >= 0; i--, j--)
             {
-                if (matrix[i, j] == 0) return 0;
-                if (matrix[i, j] == -p) c++;
-                if (matrix[i, j] == p)
+                if (_matrix[i, j] == 0) return 0;
+                if (_matrix[i, j] == -p) c++;
+                if (_matrix[i, j] == p)
                 {
                     found = c > 0;
                     if (c > 0 && f)
                         for (a = x, b = y; a != i && b != j; a--, b--)
-                            matrix[a, b] = p;
+                            _matrix[a, b] = p;
                     break;
                 }
             }
@@ -381,20 +381,19 @@ namespace Reversi.GameEngine
             int c = 0;
             for (i = x, j = y; i < N && j >= 0; i++, j--)
             {
-                if (matrix[i, j] == 0) return 0;
-                if (matrix[i, j] == -p) c++;
-                if (matrix[i, j] == p)
+                if (_matrix[i, j] == 0) return 0;
+                if (_matrix[i, j] == -p) c++;
+                if (_matrix[i, j] == p)
                 {
                     found = c > 0;
                     if (c > 0 && f)
                         for (a = x, b = y; a != i && b != j; a++, b--)
-                            matrix[a, b] = p;
+                            _matrix[a, b] = p;
                     break;
                 }
             }
             return found ? c : 0;
         }
-
 
         private int DownRightCheck(int x, int y, int p, bool f)
         {
@@ -404,14 +403,14 @@ namespace Reversi.GameEngine
             int c = 0;
             for (i = x, j = y; i < N && j < N; i++, j++)
             {
-                if (matrix[i, j] == 0) return 0;
-                if (matrix[i, j] == -p) c++;
-                if (matrix[i, j] == p)
+                if (_matrix[i, j] == 0) return 0;
+                if (_matrix[i, j] == -p) c++;
+                if (_matrix[i, j] == p)
                 {
                     found = c > 0;
                     if (c > 0 && f)
                         for (a = x, b = y; a != i && b != j; a++, b++)
-                            matrix[a, b] = p;
+                            _matrix[a, b] = p;
                     break;
                 }
             }
@@ -426,14 +425,14 @@ namespace Reversi.GameEngine
             int c = 0;
             for (i = x, j = y; i >= 0 && j < N; i--, j++)
             {
-                if (matrix[i, j] == 0) return 0;
-                if (matrix[i, j] == -p) c++;
-                if (matrix[i, j] == p)
+                if (_matrix[i, j] == 0) return 0;
+                if (_matrix[i, j] == -p) c++;
+                if (_matrix[i, j] == p)
                 {
                     found = c > 0;
                     if (c > 0 && f)
                         for (a = x, b = y; a != i && b != j; a--, b++)
-                            matrix[a, b] = p;
+                            _matrix[a, b] = p;
                     break;
                 }
             }

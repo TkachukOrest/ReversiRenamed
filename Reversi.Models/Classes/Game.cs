@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Media;
 using System.Timers;
+using Reversi.GameEngine.Classes;
 
 namespace Reversi.GameEngine
 {
@@ -241,32 +242,22 @@ namespace Reversi.GameEngine
         }
         #endregion
 
-        #region XML
-        public void LoadFromXML(string fileName)
+        #region States
+        public GameState GetState()
         {
-            if (!XmlSerializator.ReadFromXML(ref _field, ref _enabledTips, ref _currentMove, fileName))
-            {
-                throw new Exception("Виникла помилка при зчитуванні з файлу");
-            }
-            else
-            {
-                OnUpdateScoreAndPlayerMove();
-                if (FirstPlayerMove())
-                    OnDraw((int)Players.FirstPlayer, _enabledTips);
-                else
-                    OnDraw((int)Players.SecondPlayer, _enabledTips);
-            }
+            return new GameState() { Field = new Field(_field), CurrentMove = _currentMove, EnabledTips = _enabledTips, FirstMoveAI = _field.FirstMoveAI};
         }
-
-        public void WriteToXML(string fileName)
-        {
-            if (!XmlSerializator.WriteToXML(this.Field, this.EnabledTips, this.CurrentMove, fileName))
-            {
-                throw new Exception("Виникла помилка при записуванні у файл");
-            }
-        }
-
-        //GameState містить поля для збереження
+        public void RestoreState(GameState state)
+        {            
+            this.Field = state.Field;
+            this.CurrentMove = state.CurrentMove;
+            this.EnabledTips = state.EnabledTips;
+            this.Field.FirstMoveAI = state.FirstMoveAI;
+            this.Field.FindEnabledMoves(FirstPlayerMove() ? (int)Players.FirstPlayer : (int)Players.SecondPlayer);
+            OnUpdateScoreAndPlayerMove();
+            OnInitializeDraw();
+            ReDraw();
+        }        
         #endregion
         #endregion
     }

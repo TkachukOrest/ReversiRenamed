@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Text;
 using System.Xml;
+using Reversi.GameEngine.Classes;
 
 namespace Reversi.GameEngine
 {
     public class XmlSerializator
     {
-        public static bool WriteToXML(Field field, bool enabledTips, int currentMove, string fileName)
+        public static bool WriteToXML(GameState state, string fileName)
         {
             bool result = false;
             try
@@ -17,7 +18,7 @@ namespace Reversi.GameEngine
                 {
                     for (int j = 0; j < Field.N; j++)
                     {
-                        matrix += field[i, j] + " ";
+                        matrix += state.Field[i, j] + " ";
                     }
                 }
 
@@ -28,8 +29,9 @@ namespace Reversi.GameEngine
                     writer.WriteStartDocument();
                     writer.WriteStartElement("Field");
                     writer.WriteElementString("Matrix", matrix.ToString());
-                    writer.WriteElementString("Tips", enabledTips.ToString());
-                    writer.WriteElementString("CurrentMove", currentMove.ToString());
+                    writer.WriteElementString("Tips", state.EnabledTips.ToString());
+                    writer.WriteElementString("CurrentMove", state.CurrentMove.ToString());
+                    writer.WriteElementString("IsFirstAIMove", state.FirstMoveAI.ToString());
 
                     writer.WriteEndElement();
                     writer.WriteEndDocument();
@@ -42,12 +44,13 @@ namespace Reversi.GameEngine
             }
             return result;
         }
-        public static bool ReadFromXML(ref Field field, ref bool enabledTips, ref int currentMove, string fileName)
+        public static bool ReadFromXML(ref GameState state, string fileName)
         {
             bool result = false; string name = "";
             int[,] matrix = new int[Field.N, Field.N];
             int move = 0;
-            bool tips = enabledTips;
+            bool tips = false;
+            bool firstMoveAI = false;
             try
             {
                 using (XmlTextReader reader = new XmlTextReader(fileName))
@@ -79,14 +82,18 @@ namespace Reversi.GameEngine
                                     case "CurrentMove":
                                         move = int.Parse(reader.Value);
                                         break;
+                                    case "IsFirstAIMove":
+                                        firstMoveAI = bool.Parse(reader.Value);
+                                        break;
                                 }
                                 break;
                         }
                     }
                 }
-                field.CopyMatr(matrix);
-                enabledTips = tips;
-                currentMove = move;
+                state.Field.CopyMatr(matrix);
+                state.EnabledTips = tips;
+                state.CurrentMove = move;
+                state.FirstMoveAI = firstMoveAI;
                 result = true;
             }
             catch (Exception ex)

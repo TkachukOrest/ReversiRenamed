@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Reversi.GameEngine;
+using Reversi.GameEngine.Classes;
 using Reversi.Handlers;
 
 namespace Reversi
@@ -92,7 +93,10 @@ namespace Reversi
             {
                 if (saveDialog.ShowDialog() == DialogResult.OK)
                 {
-                   _game.WriteToXML(saveDialog.FileName);
+                    if (!XmlSerializator.WriteToXML(_game.GetState(), saveDialog.FileName))
+                    {
+                        throw new Exception("Виникла помилка при записуванні у файл");
+                    }
                 }
             }
             catch (Exception ex)
@@ -107,7 +111,15 @@ namespace Reversi
             {
                 if (openDialog.ShowDialog() == DialogResult.OK)
                 {
-                    _game.LoadFromXML(openDialog.FileName);
+                    GameState state = new GameState();
+                    if (!XmlSerializator.ReadFromXML(ref state, openDialog.FileName))
+                    {
+                        throw new Exception("Виникла помилка при зчитуванні з файлу");
+                    }
+                    else
+                    {
+                        _game.RestoreState(state);
+                    }                    
                     cb_tips.Checked = _game.EnabledTips;
                 }
             }

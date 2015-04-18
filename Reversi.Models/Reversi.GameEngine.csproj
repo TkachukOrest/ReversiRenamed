@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Game.cs" />
+    <Compile Include="Classes\GameState.cs" />
     <Compile Include="Enums\Players.cs" />
     <Compile Include="Classes\Field.cs" />
     <Compile Include="Classes\XmlSerializator.cs" />
