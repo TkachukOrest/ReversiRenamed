@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Reversi.GameEngine;
 
 namespace Reversi.GameEngine.Test
@@ -30,8 +31,8 @@ namespace Reversi.GameEngine.Test
             Field field = new Field();
             Field field2 = new Field(field);
             //change field won`t change field2
-            field[1, 1] = 5;
-            Assert.IsTrue(field2[1, 1] != 5, "Matrix was copied by ref");
+            field[1, 1] = 1;
+            Assert.IsTrue(field2[1, 1] != 1, "Matrix was copied by ref");
         }
         [TestMethod]
         public void Test_CopyMatr()
@@ -47,7 +48,22 @@ namespace Reversi.GameEngine.Test
                         result = false;
             Assert.IsTrue(result, "Matrix wasn`t copied well");
         }
-        
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Test_FieldIndexationPositive()
+        {
+            Field field=new Field();
+            field[0, 4] = 5;
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Test_FieldIndexationNegative()
+        {
+            Field field = new Field();
+            field[0, 4] = -5;
+        }
+
         [TestMethod]
         public void Test_IsMovePoint()
         {
@@ -64,7 +80,7 @@ namespace Reversi.GameEngine.Test
         public void Test_FindEnabledMoves()
         {
             Field field = new Field();
-            field.FirstMove = false;
+            field.FirstMoveAI = false;
             //Do player move
             field[2, 3] = (int)Players.FirstPlayer;
             field[2, 4] = (int)Players.SecondPlayer;
@@ -87,7 +103,7 @@ namespace Reversi.GameEngine.Test
         public void Test_DoComputerMove()
         {
             Field field = new Field();
-            field.FirstMove = false;
+            field.FirstMoveAI = false;
             //Do player move
             field[2, 3] = (int)Players.FirstPlayer;
             field[2, 4] = (int)Players.SecondPlayer;

@@ -39,17 +39,13 @@ namespace Reversi.ConsoleUI
             _game.PlayGoodSoundHandler += _music.PlayGoodSound;
             _game.PlayBadSoundHandler += _music.PlayBadSound;
 
-            _game.InitializeField();
-            _game.InitializeDraw();
-            
-                        
-            _game.Draw((int)Players.SecondPlayer, _game.EnabledTips);
-            _game.EnabledComputerMoves = true;
-
+            _game.Initialize();
+            _game.ChangeComputerModeOn(true);    
+        
             string key;
             int x = 0, y = 0;
             do
-            {
+            {                
                 Console.Write("Move to row and column: ");
                 key = Console.ReadLine();
                 if (key.Length >= 2)

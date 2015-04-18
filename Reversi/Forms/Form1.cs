@@ -28,21 +28,14 @@ namespace Reversi
             _game.PlayGoodSoundHandler += _music.PlayGoodSound;
             _game.PlayBadSoundHandler += _music.PlayBadSound;
 
-            _game.InitializeField();
-            _game.InitializeDraw();
+            _game.Initialize();
         }
         #endregion
 
         #region Form events
         private void pnl_Field_Paint(object sender, PaintEventArgs e)
         {
-            if (_game.AlreadyExitFromTimer)
-            {
-                if (_game.FirstPlayerMove())
-                    _game.Draw((int)Players.FirstPlayer, _game.EnabledTips);
-                else
-                    _game.Draw((int)Players.SecondPlayer, _game.EnabledTips);
-            }
+           _game.ReDraw();
         }
         private void pnl_Field_MouseClick(object sender, MouseEventArgs e)
         {
@@ -52,7 +45,7 @@ namespace Reversi
         {
             pnl_Field.Enabled = true;
             _game.CreateNewGame();
-            _game.EnabledComputerMoves = true;
+            _game.ChangeComputerModeOn(true);
         }
         private void btn_newGame_Click(object sender, EventArgs e)
         {
@@ -61,11 +54,8 @@ namespace Reversi
         }
         private void cb_tips_Changed(object sender, EventArgs e)
         {
-            _game.EnabledTips = cb_tips.Checked;
-            if (_game.FirstPlayerMove())
-                _game.Draw((int)Players.FirstPlayer, _game.EnabledTips);
-            else
-                _game.Draw((int)Players.SecondPlayer, _game.EnabledTips);
+            _game.ChangeTips(cb_tips.Checked); 
+            _game.ReDraw();
         }
         #endregion
 

@@ -27,6 +27,21 @@ namespace Reversi.GameEngine.Test
         }
 
         [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Test_CurentMoveError()
+        {
+            Game game = new Game();
+            game.CurrentMove = 0;
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Test_CurentMoveErrorWithNegativeArgument()
+        {
+            Game game = new Game();
+            game.CurrentMove = -1;
+        }
+
+        [TestMethod]
         public void Test_Constructor()
         {
             Game game = new Game();
@@ -40,7 +55,7 @@ namespace Reversi.GameEngine.Test
         public void Test_InitializeField()
         {
             Game game = new Game();
-            game.InitializeField();
+            game.Initialize();
             Assert.IsTrue(game.CurrentMove == 1, "Current move ought to be 1 on start of game");
             Assert.IsTrue(game.Field.FirstPlayerPoints == 2, "First player on start have only 2 points");
             Assert.IsTrue(game.Field.SecondPlayerPoints == 2, "Second player on stat have only 2 points");
@@ -67,6 +82,8 @@ namespace Reversi.GameEngine.Test
             Assert.IsTrue(game.Field[2, 4] == -1, "Move wasn`t done");
         }
 
+
+        //чи правильно віддає стейт і чи правильний рестор
         [TestMethod]
         public void Test_XMLRead()
         {

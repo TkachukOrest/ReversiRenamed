@@ -26,8 +26,9 @@ namespace Reversi.GameEngine
         //standard size of game field
         public const int N = 8;
         public const int Scale = 40;
-        
-        public bool FirstMove { get; set; }
+
+        //for correct AI work on first move
+        public bool FirstMoveAI { get; set; }
         //0 - empty, 1- first(red) , -1 - second player(blue)        
         private int[,] matrix;
 
@@ -44,7 +45,7 @@ namespace Reversi.GameEngine
 
         #region Properties
         //modified only in DrawEnableMoves        
-        public bool GameProcess { get; set; }
+        public bool GameProcess { get; private set; }
         public int FirstPlayerPoints { get; private set; }
         public int SecondPlayerPoints { get; private set; }
         public int this[int i, int j]
@@ -55,7 +56,14 @@ namespace Reversi.GameEngine
             }
             set
             {
-                matrix[i, j] = value;
+                if (value == (int)Players.FirstPlayer | value == (int)Players.SecondPlayer | value == 0)
+                {
+                    matrix[i, j] = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Невірно введені дані");
+                }
             }
 
         }
@@ -68,7 +76,7 @@ namespace Reversi.GameEngine
             FirstPlayerPoints = 0;
             SecondPlayerPoints = 0;
             GameProcess = true;
-            FirstMove = true;
+            FirstMoveAI = true;
 
             InitializeMatrix();
             CalculatePlayersPoints();
@@ -100,7 +108,7 @@ namespace Reversi.GameEngine
             //red
             matrix[N / 2, N / 2 - 1] = 1;
             matrix[N / 2 - 1, N / 2] = 1;
-        }        
+        }
         public void CalculatePlayersPoints()
         {
             int firstPoints = 0, secondPoints = 0; ;
@@ -196,11 +204,11 @@ namespace Reversi.GameEngine
                         willget = values[i];
                     }
             }
-            if (FirstMove)
+            if (FirstMoveAI)
             {
                 Random rnd = new Random();
-                FirstMove = false;
-                return movePoints.Keys.ElementAt(rnd.Next(0, 3));                
+                FirstMoveAI = false;
+                return movePoints.Keys.ElementAt(rnd.Next(0, 3));
             }
             else
                 return movePoints.Keys.ElementAt(maxPos);

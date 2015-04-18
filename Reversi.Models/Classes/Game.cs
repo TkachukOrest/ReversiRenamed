@@ -2,7 +2,6 @@
 using System.Media;
 using System.Timers;
 
-//TODO: write to xml here
 namespace Reversi.GameEngine
 {
     public class Game
@@ -12,26 +11,41 @@ namespace Reversi.GameEngine
         private Timer _timer;
 
         //assurance of exit from timer
-        public bool AlreadyExitFromTimer { get; set; }
+        public bool AlreadyExitFromTimer { get; private set; }
 
-        public bool EnabledComputerMoves { get; set; }
+        public bool EnabledComputerMoves { get; private set; }
 
-        //could be changed only in LoadFromFile method or in cb_change
+        //could be changed only in LoadFromFile method or in cb_change        
         private bool _enabledTips = true;
-        public bool EnabledTips { get { return _enabledTips; } set { _enabledTips = value; } }
+        public bool EnabledTips { get { return _enabledTips; } private set { _enabledTips = value; } }
 
         private int _currentMove;
-        public int CurrentMove { get { return _currentMove; } set { _currentMove = value; } }
+        public int CurrentMove
+        {
+            get
+            {
+                return _currentMove;
+            }
+            set
+            {
+                if (value > 0)
+                    _currentMove = value;
+                else
+                {
+                    throw new ArgumentException("Неправильно введені дані");
+                }
+            }
+        }
 
         private Field _field;
-        public Field Field { get { return _field; } set { _field = value; } }
+        public Field Field { get { return _field; } private set { _field = value; } }
         #endregion
 
         #region Events
         public event Action InitDrawHandler;
         public event Action UpdateScoreLabelsHandler;
         public event Action<string> ShomMessageHandler;
-        public Action<int, bool> DrawHandler;//draw from Console|Form
+        public Action<int, bool> DrawHandler;
         public event Action PlayGoodSoundHandler;
         public event Action PlayBadSoundHandler;
         #endregion
@@ -50,51 +64,57 @@ namespace Reversi.GameEngine
 
         #region Methods
         #region Methods which using events
-        public void InitializeField()
+        private void OnInitializeField()
         {
-            _currentMove = 1;
             _field = new Field();
-            UpdateScoreAndPlayerMove();
+            OnUpdateScoreAndPlayerMove();
         }
-        public void InitializeDraw()
+        private void OnInitializeDraw()
         {
             if (InitDrawHandler != null)
+            {
                 InitDrawHandler();
+            }
         }
-        public void UpdateScoreAndPlayerMove()
+        private void OnUpdateScoreAndPlayerMove()
         {
-            _field.CalculatePlayersPoints();
-            if (UpdateScoreLabelsHandler != null)
-                UpdateScoreLabelsHandler();
+            if (_field.GameProcess)
+            {
+                _field.CalculatePlayersPoints();
+                if (UpdateScoreLabelsHandler != null)
+                {
+                    UpdateScoreLabelsHandler();
+                }
+            }
         }
-        public void UpdateGameFinish()
+        private void OnUpdateGameFinish()
         {
             //condition to finish game
             if (!Field.GameProcess)
             {
                 //pnl_Field.Enabled = false;
                 if (Field.FirstPlayerPoints > Field.SecondPlayerPoints)
-                    ShomMessageHandler(String.Format("{0} player win with score: {1}", "Red", Field.FirstPlayerPoints));
+                    ShomMessageHandler(String.Format("{0} player win with score: {1}", "First", Field.FirstPlayerPoints));
                 else
                     if (Field.FirstPlayerPoints < Field.SecondPlayerPoints)
-                        ShomMessageHandler(String.Format("{0} player win with score: {1}", "Blue", Field.SecondPlayerPoints));
+                        ShomMessageHandler(String.Format("{0} player win with score: {1}", "Second(you)", Field.SecondPlayerPoints));
                     else
                         ShomMessageHandler(String.Format("Draw:  {0}-{1}", Field.FirstPlayerPoints, Field.SecondPlayerPoints));
             }
         }
-        public void Draw(int player, bool enabledTips)
+        private void OnDraw(int player, bool enabledTips)
         {
             if (DrawHandler != null)
+            {
                 DrawHandler(player, enabledTips);
+            }
         }
         public void CreateNewGame()
         {
             AlreadyExitFromTimer = true;
             EnabledComputerMoves = false;
-            _currentMove = 1;
-            InitializeField();
-            InitializeDraw();
-            Draw((int)Players.SecondPlayer, _enabledTips);
+            CurrentMove = 1;
+            Initialize();
         }
         #endregion
 
@@ -103,11 +123,39 @@ namespace Reversi.GameEngine
             return (_currentMove) % 2 == 0;
         }
 
+        public void ChangeComputerModeOn(bool state)
+        {
+            EnabledComputerMoves = state;
+        }
+
+        public void ChangeTips(bool state)
+        {
+            _enabledTips = state;
+        }
+
+        public void Initialize()
+        {
+            OnInitializeField();
+            OnInitializeDraw();
+            ReDraw();
+        }
+
+        public void ReDraw()
+        {
+            if (AlreadyExitFromTimer)
+            {
+                if (FirstPlayerMove())
+                    OnDraw((int)Players.FirstPlayer, EnabledTips);
+                else
+                    OnDraw((int)Players.SecondPlayer, EnabledTips);
+            }
+        }
+
         public void Move(int x, int y)
         {
             DoPlayerMove(x, y);
-            UpdateScoreAndPlayerMove();
-            UpdateGameFinish();
+            OnUpdateScoreAndPlayerMove();
+            OnUpdateGameFinish();
             DoCompMoveIfNeed();
         }
 
@@ -124,7 +172,7 @@ namespace Reversi.GameEngine
                             _field[x, y] = (int)Players.FirstPlayer;
                             _currentMove++;
                             //draw new field for second player with tips which dependent from "bool enabledTips"                    
-                            Draw((int)Players.SecondPlayer, _enabledTips);
+                            OnDraw((int)Players.SecondPlayer, _enabledTips);
                             PlayGoodSound();
                         }
                         else
@@ -138,7 +186,7 @@ namespace Reversi.GameEngine
                         _field[x, y] = (int)Players.SecondPlayer;
                         _currentMove++;
                         //draw new field for first player with tips which dependent from "bool enabledTips"
-                        Draw((int)Players.FirstPlayer, _enabledTips);
+                        OnDraw((int)Players.FirstPlayer, _enabledTips);
                         PlayGoodSound();
                     }
                     else
@@ -170,11 +218,11 @@ namespace Reversi.GameEngine
                 //do computer move
                 _field.DoComputerMove((int)Players.FirstPlayer);
                 //drawcomputermove with tips for second player
-                Draw((int)Players.SecondPlayer, _enabledTips);
+                OnDraw((int)Players.SecondPlayer, _enabledTips);
                 PlayGoodSound();
                 //update scode and finish condition
-                UpdateScoreAndPlayerMove();
-                UpdateGameFinish();
+                OnUpdateScoreAndPlayerMove();
+                OnUpdateGameFinish();
                 _currentMove++;
                 AlreadyExitFromTimer = true;
             }
@@ -202,11 +250,11 @@ namespace Reversi.GameEngine
             }
             else
             {
-                UpdateScoreAndPlayerMove();
+                OnUpdateScoreAndPlayerMove();
                 if (FirstPlayerMove())
-                    Draw((int)Players.FirstPlayer, _enabledTips);
+                    OnDraw((int)Players.FirstPlayer, _enabledTips);
                 else
-                    Draw((int)Players.SecondPlayer, _enabledTips);
+                    OnDraw((int)Players.SecondPlayer, _enabledTips);
             }
         }
 
@@ -218,6 +266,7 @@ namespace Reversi.GameEngine
             }
         }
 
+        //GameState містить поля для збереження
         #endregion
         #endregion
     }
