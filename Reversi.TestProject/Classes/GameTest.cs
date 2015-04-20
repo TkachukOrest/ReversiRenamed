@@ -2,7 +2,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Reversi.GameEngine;
 using System.IO;
+using System.Threading;
+using System.Timers;
 using Reversi.GameEngine.Classes;
+using Timer = System.Threading.Timer;
 
 namespace Reversi.GameEngine.Test
 {
@@ -74,6 +77,183 @@ namespace Reversi.GameEngine.Test
             game.Field.FindEnabledMoves((int)Players.SecondPlayer);
             game.Move(2, 4);
             Assert.IsTrue(game.Field[2, 4] == -1, "Move wasn`t done");
-        }            
+        }
+        [TestMethod]
+        public void Test_MoveBad()
+        {
+            Game game = new Game();
+            game.CreateNewGame();
+            game.Field.FindEnabledMoves((int)Players.SecondPlayer);
+            game.Move(1, 1);
+            Assert.IsFalse(game.Field[1, 1] == -1, "Move was done");
+        }
+        [TestMethod]
+        public void Test_MoveWhenGameIsEnded()
+        {
+            Game game = new Game();
+            game.CreateNewGame();
+            game.Field[3, 3] = 1;
+            game.Field[3, 4] = 1;
+            game.Field[4, 3] = 1;
+            game.Field[4, 4] = 1;
+            game.Field.FindEnabledMoves((int)Players.SecondPlayer);
+            game.Move(2, 3);
+            Assert.IsFalse(game.Field[2, 3] == -1, "Move was done");
+        }
+
+        [TestMethod]
+        public void Test_ChangeComputerModeOn()
+        {
+            Game game = new Game();
+            game.ChangeComputerModeOn(true);
+            Assert.IsTrue(game.EnabledComputerMoves == true);
+        }
+        [TestMethod]
+        public void Test_ChangeComputerModeOff()
+        {
+            Game game = new Game();
+            game.ChangeComputerModeOn(false);
+            Assert.IsTrue(game.EnabledComputerMoves == false);
+        }
+
+        [TestMethod]
+        public void Test_ChangeTipsOn()
+        {
+            Game game = new Game();
+            game.ChangeTips(true);
+            Assert.IsTrue(game.EnabledTips == true);
+        }
+        [TestMethod]
+        public void Test_ChangeTipsOff()
+        {
+            Game game = new Game();
+            game.ChangeTips(false);
+            Assert.IsTrue(game.EnabledTips == false);
+        }
+        [TestMethod]
+        public void Test_MoveComputer()
+        {
+            Game game = new Game();
+            game.CreateNewGame();
+            game.ChangeComputerModeOn(true);
+            game.Field.FirstMoveAI = false;
+            game.Field[3, 3] = 0;
+            game.Field[3, 4] = 0;
+            game.Field[4, 3] = 0;
+            game.Field[4, 4] = 0;
+
+            game.Field[4, 3] = (int)Players.FirstPlayer;
+            game.Field[5, 3] = (int)Players.SecondPlayer;
+            game.Field[6, 3] = (int)Players.FirstPlayer;
+
+            game.Field.FindEnabledMoves((int)Players.SecondPlayer);
+
+            Assert.IsTrue(game.Field.MovePoints.ContainsKey(new Point(3, 3)), "Move Point doesn`t contains [3,3]");
+            Assert.IsTrue(game.Field.MovePoints.ContainsKey(new Point(7, 3)), "Move Point doesn`t contains [7,3]");
+
+            game.Move(3, 3);
+
+            Thread.Sleep(1500);
+
+            Assert.IsTrue((game.Field[2, 3] == 1), "Computer didn`t move");
+            Assert.IsTrue((game.Field[3, 3] == 1), "Didn`t convert");
+            Assert.IsTrue((game.Field[4, 3] == 1), "Didn`t convert");
+            Assert.IsTrue((game.Field[5, 3] == 1), "Didn`t convert");
+            Assert.IsTrue((game.Field[6, 3] == 1), "Didn`t convert");
+            Assert.IsTrue((game.AlreadyExitFromTimer == true), "Timer wasn`t closed");
+            Assert.IsTrue((game.FirstPlayerMove() == false), "It must be second player move");
+            Assert.IsTrue((game.Field.GameProcess == false), "Game procces must be setted to false");
+
+            for (int i = 0; i < Field.N; i++)
+                for (int j = 0; j < Field.N; j++)
+                    if (game.Field[i, j] == 1 || game.Field[i, j] == -1)
+                        if (!((i == 2 && j == 3) || (i == 3 && j == 3) || (i == 4 && j == 3) || (i == 5 && j == 3) || (i == 6 && j == 3)))
+                            Assert.IsTrue(false, String.Format("[{0};{1}]", i, j));
+        }
+
+        [TestMethod]
+        public void Test_MoveOtherPlayer()
+        {
+            Game game = new Game();
+            game.CreateNewGame();
+            game.ChangeComputerModeOn(false);
+            game.Field.FirstMoveAI = false;
+            game.Field[3, 3] = 0;
+            game.Field[3, 4] = 0;
+            game.Field[4, 3] = 0;
+            game.Field[4, 4] = 0;
+
+            game.Field[4, 3] = (int)Players.FirstPlayer;
+            game.Field[5, 3] = (int)Players.SecondPlayer;
+            game.Field[6, 3] = (int)Players.FirstPlayer;
+
+            game.Field.FindEnabledMoves((int)Players.SecondPlayer);
+
+            Assert.IsTrue(game.Field.MovePoints.ContainsKey(new Point(3, 3)), "Move Point doesn`t contains [3,3]");
+            Assert.IsTrue(game.Field.MovePoints.ContainsKey(new Point(7, 3)), "Move Point doesn`t contains [7,3]");
+
+            game.Move(3, 3);
+            game.Move(2, 3);
+
+            Assert.IsTrue((game.Field[2, 3] == 1), "Computer didn`t move");
+            Assert.IsTrue((game.Field[3, 3] == 1), "Didn`t convert");
+            Assert.IsTrue((game.Field[4, 3] == 1), "Didn`t convert");
+            Assert.IsTrue((game.Field[5, 3] == 1), "Didn`t convert");
+            Assert.IsTrue((game.Field[6, 3] == 1), "Didn`t convert");
+            Assert.IsTrue((game.AlreadyExitFromTimer == true), "Timer wasn`t closed");
+            Assert.IsTrue((game.FirstPlayerMove() == false), "It must be second player move");
+            Assert.IsTrue((game.Field.GameProcess == false), "Game procces must be setted to false");
+
+            for (int i = 0; i < Field.N; i++)
+                for (int j = 0; j < Field.N; j++)
+                    if (game.Field[i, j] == 1 || game.Field[i, j] == -1)
+                        if (!((i == 2 && j == 3) || (i == 3 && j == 3) || (i == 4 && j == 3) || (i == 5 && j == 3) || (i == 6 && j == 3)))
+                            Assert.IsTrue(false, String.Format("[{0};{1}]", i, j));
+        }
+
+        [TestMethod]
+        public void Test_GameFinish_FirstPlayerWin()
+        {
+            Game game = new Game();
+            game.ShomMessageHandler += (string s) => { };
+            game.CreateNewGame();
+            for (int i = 0; i < Field.N; i++)
+                for (int j = 0; j < Field.N; j++)
+                    game.Field[i, j] = 1;
+            game.Field.FindEnabledMoves((int)Players.SecondPlayer);
+            game.Move(1, 1);
+            Assert.IsTrue(game.Field.FirstPlayerPoints == 64, "game.Field.FirstPlayerPoints == 64");
+        }
+        [TestMethod]
+        public void Test_GameFinish_SecondPlayerWin()
+        {
+            Game game = new Game();
+            game.ShomMessageHandler += (string s) => { };
+            game.CreateNewGame();
+            for (int i = 0; i < Field.N; i++)
+                for (int j = 0; j < Field.N; j++)
+                    game.Field[i, j] = -1;
+            game.Field.FindEnabledMoves((int)Players.FirstPlayer);
+            game.Move(1, 1);
+            Assert.IsTrue(game.Field.SecondPlayerPoints == 64, "game.Field.SecondPlayerPoints == 64");
+        }
+        [TestMethod]
+        public void Test_GameFinish_Draw()
+        {
+            Game game = new Game();
+            game.ShomMessageHandler += (string s) => { };
+            game.CreateNewGame();
+            for (int i = 0; i < Field.N; i++)
+                for (int j = 0; j < Field.N; j++)
+                    if (j<Field.N/2)
+                        game.Field[i, j] = -1;
+                    else
+                        game.Field[i, j] = 1;
+            game.Field.FindEnabledMoves((int)Players.FirstPlayer);
+            game.Move(1, 1);
+            Assert.IsTrue(game.Field.FirstPlayerPoints == 32, "game.Field.FirstPlayerPoints == 32");
+            Assert.IsTrue(game.Field.SecondPlayerPoints == 32, "game.Field.SecondPlayerPoints == 32");
+        }
+
     }
 }

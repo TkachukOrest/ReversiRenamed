@@ -25,13 +25,13 @@ namespace Reversi.TestProject.Classes
             try
             {
                 GameState state = new GameState();
-                if (!XmlSerializator.ReadFromXML(ref state, path))
+                if (XmlSerializator.ReadFromXML(ref state, path))
                 {
-                    throw new Exception("Виникла помилка при зчитуванні з файлу");
+                    game.RestoreState(state);                    
                 }
                 else
                 {
-                    game.RestoreState(state);
+                    throw new Exception("Виникла помилка при зчитуванні з файлу");
                 }
             }
             catch (Exception ex)
@@ -40,20 +40,16 @@ namespace Reversi.TestProject.Classes
             }
         }
         [TestMethod]
+        [ExpectedException(typeof(Exception))]
         public void Test_XMLReadBadPath()
         {
             //в файлі є помилка, має викинутись експепшин
             string spath = Path.GetDirectoryName(Path.GetDirectoryName(TestContext.TestDir)) + @"\Reversi.TestProject\Resources\ErrorGame.xml";
-            try
+            GameState state = new GameState();
+            if (!XmlSerializator.ReadFromXML(ref state, spath))
             {
-                GameState state = new GameState();
-                if (XmlSerializator.ReadFromXML(ref state, spath))
-                {
-                    throw new Exception("Виникла помилка при зчитуванін з файлу");
-                    Assert.IsTrue(false, "Can load from bad path");
-                }
+                throw new Exception("Виникла помилка при зчитуванін з файлу");
             }
-            catch (Exception ex) { }
         }
 
         [TestMethod]
@@ -61,7 +57,7 @@ namespace Reversi.TestProject.Classes
         {
             Game game = new Game();
             game.CreateNewGame();
-            string path = Path.GetDirectoryName(Path.GetDirectoryName(TestContext.TestDir)) + @"\Reversi.TestProject\Resources\ErrorGame.xml";
+            string path = Path.GetDirectoryName(Path.GetDirectoryName(TestContext.TestDir)) + @"\Reversi.TestProject\Resources\TestGame.xml";
             try
             {
                 if (!XmlSerializator.WriteToXML(game.GetState(), path))

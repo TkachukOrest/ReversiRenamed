@@ -5,7 +5,7 @@ using Reversi.GameEngine;
 
 namespace Reversi.Handlers
 {
-    public sealed class FormDrawing:Drawing
+    public sealed class FormDrawing : Drawing
     {
         #region Variabels
         private Panel _panel;
@@ -14,7 +14,7 @@ namespace Reversi.Handlers
         #endregion
 
         #region Constructors
-        public FormDrawing(Panel panel,Field gameField)
+        public FormDrawing(Panel panel, Field gameField)
         {
             _imgForFirstPlayer = new Bitmap(Reversi.Handlers.Properties.Resources.red);
             _imgForSecondPlayer = new Bitmap(Reversi.Handlers.Properties.Resources.blue);
@@ -23,12 +23,12 @@ namespace Reversi.Handlers
         }
         #endregion
 
-        #region Overrided abstracts methods      
+        #region Overrided abstracts methods
         protected override void Draw(int player, bool enabledTips)
-        {            
+        {
             Graphics graphics = Graphics.FromHwnd(_panel.Handle);
-            Pen p = new Pen(Color.Black, (float)0.5);            
-            Bitmap image;           
+            Pen p = new Pen(Color.Black, (float)0.5);
+            Bitmap image;
             for (int i = 0; i < Field.N; i++)
             {
                 for (int j = 0; j < Field.N; j++)
@@ -53,12 +53,12 @@ namespace Reversi.Handlers
                         {
                             c = Color.Blue;
                             image = _imgForSecondPlayer;
-                        }                       
+                        }
                         try
                         {
                             graphics.DrawImage(image, new Rectangle(j * Field.Scale + 3, i * Field.Scale + 3, Field.Scale - 6, Field.Scale - 6));
                         }
-                        catch(InvalidOperationException ex)
+                        catch (InvalidOperationException ex)
                         {
                             if (GameField[i, j] == 1)
                             {
@@ -69,32 +69,29 @@ namespace Reversi.Handlers
                                 image = new Bitmap(Reversi.Handlers.Properties.Resources.blue);
                             }
                             graphics.DrawImage(image, new Rectangle(j * Field.Scale + 3, i * Field.Scale + 3, Field.Scale - 6, Field.Scale - 6));
-                            MessageBox.Show("Не так швидко)");                            
+                            MessageBox.Show("Не так швидко");
                         }
-
                     }
                 }
-            }            
+            }
         }
 
         protected override void DrawEnableMoves(int player, bool enabledTips)
         {
-            Graphics graphics = Graphics.FromHwnd(_panel.Handle);            
+            Graphics graphics = Graphics.FromHwnd(_panel.Handle);
             Pen pen;
             if (player == 1)
                 pen = new Pen(Color.FromArgb(220, 42, 71), (float)2.8);
             else
                 pen = new Pen(Color.FromArgb(42, 94, 146), (float)2.8);
 
-            GameField.FindEnabledMoves(player);
-
-            if (enabledTips&&GameField.GameProcess)
+            if (enabledTips && GameField.GameProcess)
             {
-                foreach(Point point in GameField.MovePoints.Keys)
-                        {                                              
-                             graphics.DrawRectangle(pen, point.Y * Field.Scale + 3, point.X * Field.Scale + 3, Field.Scale - 6, Field.Scale - 6);
-                         }
-            }                                    
+                foreach (Point point in GameField.MovePoints.Keys)
+                {
+                    graphics.DrawRectangle(pen, point.Y * Field.Scale + 3, point.X * Field.Scale + 3, Field.Scale - 6, Field.Scale - 6);
+                }
+            }
         }
         #endregion
     }

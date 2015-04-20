@@ -101,7 +101,7 @@ namespace Reversi
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Помилка :(", MessageBoxButtons.OK);
+                MessageBox.Show(ex.Message, "Помилка", MessageBoxButtons.OK);
             }
            
         }
@@ -125,7 +125,7 @@ namespace Reversi
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Помилка :(", MessageBoxButtons.OK);
+                MessageBox.Show(ex.Message, "Помилка", MessageBoxButtons.OK);
             }
         }
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)

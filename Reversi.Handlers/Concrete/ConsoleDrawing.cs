@@ -21,9 +21,7 @@ namespace Reversi.Handlers
         }
 
         protected override void DrawEnableMoves(int player, bool enabledTips)
-        {
-            GameField.FindEnabledMoves(player);
-
+        {            
             for (int i = 0; i < Field.N; i++)
             {
                 Console.Write(String.Format("{0} ",i+1));

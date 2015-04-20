@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Field>
-  <Matrix>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 1 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </Matrix>
+  <Matrix>0 0 0 0 0 0 a 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 1 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </Matrix>
   <Tips>True</Tips>
   <CurrentMove>1</CurrentMove>
   <IsFirstAIMove>True</IsFirstAIMove>

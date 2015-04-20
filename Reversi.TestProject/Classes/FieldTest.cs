@@ -53,7 +53,7 @@ namespace Reversi.GameEngine.Test
         [ExpectedException(typeof(ArgumentException))]
         public void Test_FieldIndexationPositive()
         {
-            Field field=new Field();
+            Field field = new Field();
             field[0, 4] = 5;
         }
         [TestMethod]
@@ -95,13 +95,14 @@ namespace Reversi.GameEngine.Test
             field.FindEnabledMoves((int)Players.FirstPlayer);
             Assert.IsTrue(field.MovePoints.Count == 4, "We have more than 4 points");
 
-            field.IsMovePoint(2, 1, (int) Players.FirstPlayer, true);
+            field.IsMovePoint(2, 1, (int)Players.FirstPlayer, true);
             field.FindEnabledMoves((int)Players.SecondPlayer);
-            Assert.IsTrue(field.MovePoints.Count == 7, "We haven`t 7 points");            
+            Assert.IsTrue(field.MovePoints.Count == 7, "We haven`t 7 points");
         }
         [TestMethod]
-        public void Test_DoComputerMove()
+        public void Test_DoComputerMoveF()
         {
+            //situation where better to take less points
             Field field = new Field();
             field.FirstMoveAI = false;
             //Do player move
@@ -119,8 +120,60 @@ namespace Reversi.GameEngine.Test
             field.DoComputerMove((int)Players.FirstPlayer);
 
             Assert.IsTrue((field[2, 1] == 1 || field[4, 1] == 1), "Computer do better move");
-            Assert.IsTrue((field[2, 5] != 1 && field[4, 5] != 1), "Computer do bad move");
+            Assert.IsFalse((field[2, 5] == 1 || field[4, 5] == 1), "Computer do bad move");
+        }
 
+        [TestMethod]
+        public void Test_DoComputerMoveS()
+        {
+            //situation where we can choose better move with equal finall score
+            Field field = new Field();
+            field.FirstMoveAI = false;
+
+            field[3, 3] = 0;
+            field[3, 4] = 0;
+            field[4, 3] = 0;
+            field[4, 4] = 0;
+
+            field[3, 4] = (int)Players.FirstPlayer;
+            field[2, 4] = (int)Players.SecondPlayer;
+            field[3, 5] = (int)Players.SecondPlayer;
+            field[4, 4] = (int)Players.SecondPlayer;
+            field[3, 3] = (int)Players.SecondPlayer;
+            field[3, 2] = (int)Players.SecondPlayer;
+
+            field.FindEnabledMoves((int)Players.FirstPlayer);
+            field.DoComputerMove((int)Players.FirstPlayer);
+
+            Assert.IsTrue((field[3, 1] == 1), "Computer do better move");
+            Assert.IsFalse((field[1, 4] == 1 || field[3, 6] == 1 || field[5, 4] == 1), "Computer do bad move");
+        }
+
+        [TestMethod]
+        public void Test_DoComputerMoveT()
+        {            
+            //get best count of points
+            Field field = new Field();
+            field.FirstMoveAI = false;
+
+            field[3, 3] = 0;
+            field[3, 4] = 0;
+            field[4, 3] = 0;
+            field[4, 4] = 0;
+
+            field[2, 3] = (int)Players.FirstPlayer;
+            field[1, 3] = (int)Players.SecondPlayer;
+            field[2, 4] = (int)Players.SecondPlayer;
+            field[3, 3] = (int)Players.SecondPlayer;
+            field[2, 2] = (int)Players.SecondPlayer;
+            field[2, 1] = (int)Players.SecondPlayer;
+
+            field.FindEnabledMoves((int)Players.FirstPlayer);
+            field.DoComputerMove((int)Players.FirstPlayer);
+
+
+            Assert.IsTrue((field[2, 0] == 1 ), "Computer do better move");
+            Assert.IsFalse((field[0, 3] == 1 || field[2, 5] == 1 || field[4, 3] == 1), "Computer do bad move");
         }
     }
 }

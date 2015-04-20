@@ -208,7 +208,7 @@ namespace Reversi.GameEngine
             {
                 Random rnd = new Random();
                 FirstMoveAI = false;
-                return _movePoints.Keys.ElementAt(rnd.Next(0, 3));
+                return _movePoints.Keys.ElementAt(rnd.Next(0, _movePoints.Count));
             }
             else
                 return _movePoints.Keys.ElementAt(maxPos);
