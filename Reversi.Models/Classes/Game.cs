@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Media;
 using System.Timers;
-using Reversi.GameEngine.Classes;
 
 namespace Reversi.GameEngine
 {

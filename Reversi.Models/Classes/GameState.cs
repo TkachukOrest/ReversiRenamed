@@ -1,4 +1,4 @@
-﻿namespace Reversi.GameEngine.Classes
+﻿namespace Reversi.GameEngine
 {
     public class GameState
     {

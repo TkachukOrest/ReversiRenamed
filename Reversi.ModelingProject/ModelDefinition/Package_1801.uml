@@ -1,0 +1,1956 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="715b4e86-5add-4edc-b7d9-4777ea9bf122"
+  name="Handlers"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="a876334f-bd6a-47dd-88b8-50c828ad4291"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DReversi.Handlers"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="8f184fd0-16e4-4cf4-8782-76f6ed44e3e0"
+        name="GameSounds"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="1d666934-00d5-49aa-b03d-5e0e4e252646"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DGameSounds"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="da35bdde-9bd0-4f21-96c8-57df4a6dbd2b"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="46ef87d2-1887-4da3-b488-255219205582">
+                <propertyInstance
+                  Id="1faab60e-4dc0-41f2-8f9e-91e6ccb4ca41"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4ebb7bf7-5c8a-42e0-91cc-aa9742c7f1d8">
+                <propertyInstance
+                  Id="5b7d9983-4700-4a5b-85ae-57497c8bde84"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="58832af0-f3c4-41d0-a362-e8da6bf67fe4">
+                <propertyInstance
+                  Id="20071e5f-c171-4696-a3c7-3eb8584499a5"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1278c382-aa19-4f6d-86f0-fd1a27536e54">
+                <propertyInstance
+                  Id="a10ea540-7e4e-4402-96eb-056738213896"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="edcd4d0a-936d-4bd9-a6c7-5fafe3d920e2">
+                <propertyInstance
+                  Id="b8cef08b-9649-4c23-8b0f-b58af1941923"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="79156d4e-1c7d-4d33-848d-29e7011458b4"
+            name="_sndBad"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="90b80a29-c0ab-4c05-a074-49c3ca76750f"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DGameSounds Member%3D_sndBad"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ce5acb26-921d-41f0-bb4c-f91a5f7f31e9"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f95527ff-1e06-406a-a126-097c77d3ba16">
+                    <propertyInstance
+                      Id="3f03b701-a587-4b52-b8da-d3b9419828a7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7f328a41-df22-43ec-9461-699cd7d519ee">
+                    <propertyInstance
+                      Id="6bf135f8-692e-4ad7-b954-c6b5492a6309"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="65efebc7-7592-4797-bc6c-c52f55843bec">
+                    <propertyInstance
+                      Id="97d4c386-2e46-4af0-9794-6341e15e5dd8"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="efe844f0-d23c-487e-9ca0-c088d531dcc1">
+                    <propertyInstance
+                      Id="c365e581-b99b-4608-8269-07333ffa6323"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bb6f22d7-6bc8-4756-9afa-9de90aff5d32">
+                    <propertyInstance
+                      Id="df2078b9-b2d2-444b-bdab-3c4b9da2b486"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="bade2f3d-f1ed-463e-9b1b-06cec31f58dd"
+                LastKnownName="SoundPlayer"
+                LastKnownLocation="Package1_1801.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="99c8d1db-13ee-4936-933d-01dc8dfa8fa3"
+            name="_sndGood"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="adb0ab96-6725-465d-bc31-34aaa43f8919"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DGameSounds Member%3D_sndGood"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b48d1d60-6b1c-4127-9dd2-5414271d2b1b"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="71dd28b3-d7e8-4f56-be7d-e7f588101aca">
+                    <propertyInstance
+                      Id="fc18bfdc-2d32-44f4-8f4e-0b5a04782e6d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8b0b19aa-7467-4bc6-8172-822a75b7c284">
+                    <propertyInstance
+                      Id="ff97d890-e99a-423d-9a53-8ce713067161"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a0bcb39a-5029-4775-b1d5-0f704b97c282">
+                    <propertyInstance
+                      Id="4c9ddb16-0771-4159-9bf3-e6025adaa34d"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="60e34c38-ea01-4cb8-8f65-c3cc52a10566">
+                    <propertyInstance
+                      Id="55fc5d37-f267-451c-ac85-6517059774d6"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a5caad46-fc44-48d1-8103-bdc3a33af263">
+                    <propertyInstance
+                      Id="bed9d174-3fd7-4867-a500-139dc7e61590"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="bade2f3d-f1ed-463e-9b1b-06cec31f58dd"
+                LastKnownName="SoundPlayer"
+                LastKnownLocation="Package1_1801.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="1ce1c74f-e820-4c2a-832a-c6633fb69d05"
+            name="GameSounds"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2cca6eae-3093-4806-a47c-043e6774ae33"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DGameSounds Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e21f7c58-1184-4e21-9401-f2f2f66348bb"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d4dfb03d-d111-4b39-96a6-b50024fd60d0">
+                    <propertyInstance
+                      Id="6e98d0e9-ccea-42d1-9dc8-e47daff920e5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="30da76cd-5705-46a8-9e5a-c828fa1bb86f">
+                    <propertyInstance
+                      Id="1764dc42-b0c2-4a77-a4d6-1efe9d61b427"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c0f3294f-984c-4ead-abc8-8d3d88bdf4df">
+                    <propertyInstance
+                      Id="2d3a9d75-c3b8-48e1-b19c-aab5dba6cde9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c4f3a2b9-50c9-4a57-931b-fd5cbaee466a">
+                    <propertyInstance
+                      Id="04c934d2-7e27-4819-a139-7ac7c72f199f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="46612645-6168-4587-a0b8-6f05f1443b72">
+                    <propertyInstance
+                      Id="4c8be32a-67a1-4ecf-89a5-08e5baa4782f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f079da25-1282-4d3b-801b-74e5b69d7cf6">
+                    <propertyInstance
+                      Id="aed246fa-2c24-441f-b33a-ab464f0df116"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="3afe44aa-1406-47d3-ad07-99a9a83a8594"
+            name="PlayBadSound"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="452dbe0c-0db5-4453-9779-0a839c5e9f71"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DGameSounds Member%3DPlayBadSound"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="06393d49-b490-4ab7-8ecc-930fb97bd9a7"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="41019430-b24b-4765-b18e-7306da1ce58e">
+                    <propertyInstance
+                      Id="1721a51b-3aca-44f3-89bb-f9c3025110fc"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="90edb847-b892-4e78-abbf-91e3e2baa1ac">
+                    <propertyInstance
+                      Id="8bfbd3ce-86c9-41d2-9d73-559b58bd4c3b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c22c055b-6845-4412-8d0c-63a949ed7381">
+                    <propertyInstance
+                      Id="b816d47a-9f7b-4f1c-abeb-044048a9cd5a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dea69376-9203-44fa-aaff-809c880cdeec">
+                    <propertyInstance
+                      Id="7f80630b-40e3-4b3c-8580-406781ee3598"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="089519a7-7f1c-4878-b4f0-b904e15b65ec">
+                    <propertyInstance
+                      Id="a8180490-f069-4f3b-9124-860785a2664a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c104d2e0-ebff-4746-9af1-ade191429e34">
+                    <propertyInstance
+                      Id="cfd2604a-a9e5-44e1-8a8b-6cfb3483c212"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="35a467f9-3b9d-4539-bc5f-4a7abb4aeefe"
+            name="PlayGoodSound"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3ac5f6a7-c258-49b7-b535-f3095cfc9179"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DGameSounds Member%3DPlayGoodSound"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8755a357-fe4c-40b7-a56a-7caa3ca488ac"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4ebf70b1-845c-42bf-a7bc-261f308d69fd">
+                    <propertyInstance
+                      Id="8b0567c1-6340-486e-8cba-6f66af95e877"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1454aa4b-8110-4be0-b6e7-e9acf0ed4077">
+                    <propertyInstance
+                      Id="34f94506-215d-4f1b-80bd-6bf0da1a3bb6"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8ecf4c8b-b14b-4137-a2cc-d0837d0e9432">
+                    <propertyInstance
+                      Id="75ca5bc6-2ac2-4b70-a3a4-b037971175cf"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e377510c-926d-4a09-a6f7-5ae45cf0462a">
+                    <propertyInstance
+                      Id="dfa23e73-9b50-4788-a575-17035bca6d25"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="659b1c00-e678-4aba-b18e-a2a206ddd076">
+                    <propertyInstance
+                      Id="19312233-aa97-4e15-b87a-9b5ca777411e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6596b8a6-04f3-4ebb-92ca-bfcd7e280e55">
+                    <propertyInstance
+                      Id="f1f52ebd-6223-496e-ac52-24a4902d9fcc"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="36cfc061-983d-4d10-b684-ce1f2aa1fa4a"
+        name="ConsoleDrawing"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="a58b9325-8ccc-4040-9657-6dc487a27bab"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DConsoleDrawing"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="fc8ca510-989f-4736-8c9b-8621eb421f93"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1ed6d094-b121-4710-a1e9-16f223df054d">
+                <propertyInstance
+                  Id="8ea84e86-7898-4250-8857-8bcb5d0b6e52"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="362cccec-a03b-45c6-bf49-f131165d94d9">
+                <propertyInstance
+                  Id="27056422-06b0-4954-b99b-5ee73dfd28b6"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f31a6b5c-7b6c-45da-ab5c-e330a26f52df">
+                <propertyInstance
+                  Id="773d0375-faa8-45ff-80e7-bd91c230cfe3"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a82d311d-10bd-4e99-98fc-5d94c375f184">
+                <propertyInstance
+                  Id="2ae333b2-5901-46ed-abdc-3e1311ea2aee"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="27525735-7434-4415-9a71-625c2f9d74c6">
+                <propertyInstance
+                  Id="a2128f3d-67ed-4022-8e51-832bb61ff28f"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="282851a8-a420-4812-9183-1eca2c54d79a"
+            isSubstitutable="false">
+            <classMoniker
+              Id="c334d498-0f6d-4186-b4e1-1f1104491425"
+              LastKnownName="Drawing"
+              LastKnownLocation="Package_1801.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="5cdb7816-e810-43b2-a8b1-807437c75ea6"
+            name="ConsoleDrawing"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="20e6a7bc-2be5-4fe9-9ede-fcdf9fdc1613"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DConsoleDrawing Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Models%2Fbin%2FRelease%2FReversi.GameEngine.dll Namespace%3DReversi.GameEngine Type%3DField)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="11e7377e-7867-4d02-8d8b-70e7352049c4"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="66812c4e-338e-4dc9-9779-2e9ed9bc8df2">
+                    <propertyInstance
+                      Id="5a208c2c-fc84-400c-ab52-ce08579abb9d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e8466a59-007a-4a4b-b861-90fcc959285f">
+                    <propertyInstance
+                      Id="db6f0c1c-5036-4284-b388-0adeea4d6493"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b458b88e-92cf-4760-9dee-db3603794bb0">
+                    <propertyInstance
+                      Id="ec38c776-fee3-48ed-b8d4-a10f5561d703"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d4e75f79-1641-4d86-ac8b-c5c92834cd73">
+                    <propertyInstance
+                      Id="bc481b50-29a6-48b7-962c-e2f4b956e2fc"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="474ea827-827f-4bb2-a55e-5deb10e0e2d9">
+                    <propertyInstance
+                      Id="6e38dcc3-811d-4dfe-ba3c-a0c862ef916a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fd918edd-0aa9-4d15-9484-cd73af86af90">
+                    <propertyInstance
+                      Id="1c334a65-e3ec-4114-846f-b00d8f681ecb"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cac982d6-c7db-4f1e-9df7-73757536b39b"
+                  name="gameField"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="69db7c4d-ed43-4504-8285-ef616bbf1dd8"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DConsoleDrawing Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Models%2Fbin%2FRelease%2FReversi.GameEngine.dll Namespace%3DReversi.GameEngine Type%3DField)]) ParameterIdentifier%3DgameField"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="042b3c7c-d275-4475-82f6-f05a38c85c3a"
+                      LastKnownName="Field"
+                      LastKnownLocation="Package1_1755.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="058410bb-6453-4be5-8ae2-8165e3b11ab4"
+            name="Draw"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="0658e0b9-8cb5-44ae-bfe6-3a9a316ffc8d"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DConsoleDrawing Member%3D(Name%3DDraw OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c15e497d-91fc-4efb-b23e-8eeb650699d0"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="575f6ddb-f557-44f6-b532-1943fc15b64f">
+                    <propertyInstance
+                      Id="988e9fac-e76d-44dd-8704-cf039b007536"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="132d568a-f29a-4fa9-9c2a-4a743ec62fe7">
+                    <propertyInstance
+                      Id="4688b7fb-3f6e-4a32-a15c-e9712ae7a967"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2929abe9-fca2-4620-ba26-a66e45ceceb8">
+                    <propertyInstance
+                      Id="2d09479c-a5a2-419c-828e-5156316553d8"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="37edecd2-a5df-4784-9458-95ed74bc3930">
+                    <propertyInstance
+                      Id="6579db91-6e92-40b5-b16a-7961e7223d9a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5170eac5-9226-4ca8-9ad7-cd1a968262bd">
+                    <propertyInstance
+                      Id="9f4a0316-42ad-44d7-acf3-8cb758828ee6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="39c3feaa-435f-4aca-9642-d7b6887aa057">
+                    <propertyInstance
+                      Id="ad788aa2-e623-4733-9a38-f49915212546"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="544d7104-80e8-4864-9ef8-1624031deeaa"
+                  name="player"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="0dd96bf0-c6ac-461e-9130-3ffb95060777"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DConsoleDrawing Member%3D(Name%3DDraw OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3Dplayer"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="Reversi.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="32cb3e12-62f3-4959-9108-9db844b0c02d"
+                  name="enabledTips"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="e1d0a6b8-756c-4cf8-b050-f698631d14a3"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DConsoleDrawing Member%3D(Name%3DDraw OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3DenabledTips"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="Reversi.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1fce795c-82bc-46cc-b432-fcd6c3a72227"
+            name="DrawEnableMoves"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="64b5b894-b6a8-48c0-a474-93ffdfa37008"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DConsoleDrawing Member%3D(Name%3DDrawEnableMoves OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d1c01414-75ef-44c8-8131-dd778da9e654"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d069f46a-bdb1-497f-b889-0bf7141b080f">
+                    <propertyInstance
+                      Id="34062aa0-26c2-4d8f-b1d4-a36e9465cdfb"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="89f1c0ec-d499-41f4-bef3-1e38b1bd507c">
+                    <propertyInstance
+                      Id="4a7345d5-22cd-4aa0-860b-bf69f9693a17"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0a75a079-6580-4d26-afa1-7e4aa3db5ca2">
+                    <propertyInstance
+                      Id="3e2fc28a-0353-474c-adb3-4835722150a5"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="206dfa3e-5006-45bd-bf5a-6073b7319534">
+                    <propertyInstance
+                      Id="a85d82af-dee0-4175-a36b-82bcae0ac8de"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="65f81ce7-bba0-48a8-b9f8-83aa58aac68d">
+                    <propertyInstance
+                      Id="cb87a8bc-13a6-436e-9dfd-ae4d4b625d75"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="26d1f1cb-9701-4cb3-9335-a7b60c353e82">
+                    <propertyInstance
+                      Id="6f2761ba-4822-4f88-b226-a94e21f40759"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1179c47c-277a-400a-a972-d75a66969af3"
+                  name="player"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="4fda14cc-0651-47ef-ab3c-f68098d1c594"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DConsoleDrawing Member%3D(Name%3DDrawEnableMoves OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3Dplayer"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="Reversi.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="db5b59fd-1c77-4760-92e3-215c3c7a12c0"
+                  name="enabledTips"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="0f05a3a7-a738-4ba5-a88c-1486cfc63db3"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DConsoleDrawing Member%3D(Name%3DDrawEnableMoves OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3DenabledTips"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="Reversi.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c334d498-0f6d-4186-b4e1-1f1104491425"
+        name="Drawing"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="a304327b-264b-4ad2-ae8d-882f4665219d"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DDrawing"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="4781f9a5-ae55-4ae6-8fdd-e949d0e63a81"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="81d00bf8-a23d-4d16-8731-f5cc52baafda">
+                <propertyInstance
+                  Id="213f825d-e539-4da3-80b1-db93dcfc03c5"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="81397926-6521-4a0f-afef-f6c19c60cb21">
+                <propertyInstance
+                  Id="d94be0dc-a3e2-4744-87e7-0e90f4e7914b"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="94da76cf-81c6-4ad5-94fd-6e679f678da7">
+                <propertyInstance
+                  Id="79e0799f-fb59-4cfb-a4af-48bae168bf85"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3ab3e517-ab52-49f8-aa45-e527ac7691c7">
+                <propertyInstance
+                  Id="64d4fd52-8c9e-4341-92c3-339c209a632d"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="52bae93c-2d60-4da4-a9d3-4a12bfb051ae">
+                <propertyInstance
+                  Id="16059b3f-360b-42e7-a454-cf0c35f0fe2b"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="0d18fbed-db44-45b4-a162-656efd85b915"
+            isDerived="false"
+            sourceEndRoleName="Drawing"
+            targetEndRoleName="GameField"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="042b3c7c-d275-4475-82f6-f05a38c85c3a"
+              LastKnownName="Field"
+              LastKnownLocation="Package1_1755.uml" />
+            <description>Property GameField references type Field.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="209c8eb4-bf4f-4859-88ff-94c6d528cb23"
+                  name="Drawing"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="e433f6c7-1934-4528-a490-1d292868accc"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="015be7d7-65cc-4cde-b766-62b1068942bd"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7221d27e-0cea-4fea-8757-400a49de26a1"
+                  name="GameField"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="f3018237-9793-4bf2-beac-f83f5bbc72d3"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="66276dc1-57ba-4feb-8bff-f2fd2850cb51"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="bbada052-5e5e-4c79-87a2-4f434ef93854"
+            name="GameField"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="2881cc1b-0bbf-4a96-ab13-08230156abd0"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DDrawing Member%3DGameField"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a1b25759-a79f-42dc-b973-e2b779facce9"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ddfc78c-ae54-4fdd-9e6b-34bac43df8f5">
+                    <propertyInstance
+                      Id="b3271206-f1af-42f8-84c5-f3be02352d3d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ea759891-d18b-4157-9c94-963e4a44cc45">
+                    <propertyInstance
+                      Id="addd0373-f02f-4816-93f9-a2758edae4dc"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fa4dc787-73ba-416b-ab00-eca7236aa234">
+                    <propertyInstance
+                      Id="ade56c3b-14a1-478e-babf-338cf19d8b7b"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2f07c808-d08f-4f5c-9b46-e45196bcdaa7">
+                    <propertyInstance
+                      Id="99d6461a-cd46-4d40-bb8b-14b29db6b5d7"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="419143cc-c0df-4a1c-b452-cfbbe0ce66bd">
+                    <propertyInstance
+                      Id="42e418b3-7537-4b97-b098-229017f7dcce"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9ed71549-9d82-4be2-9cd5-4d82cdd3ecea">
+                    <propertyInstance
+                      Id="11d30e7f-8df0-4035-88b7-1873c90f849a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c6704265-d6a2-4bb0-82f4-d6b1bbb05e2f">
+                    <propertyInstance
+                      Id="042789e9-f1b8-4fb7-9054-8fac252c6529"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="042b3c7c-d275-4475-82f6-f05a38c85c3a"
+                LastKnownName="Field"
+                LastKnownLocation="Package1_1755.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="1aa24445-771a-40e0-973e-2e25f7395038"
+            name="Draw"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d80c79c3-9292-47a5-b3f1-138146a426bb"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DDrawing Member%3D(Name%3DDraw OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1b7d123a-f43e-4c7d-84b8-66a932ea63ad"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ff9f5353-6b21-42de-90d9-b5e04f73874b">
+                    <propertyInstance
+                      Id="cba95d32-974f-402c-9343-080ca4d5a212"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="34db07b4-2291-4df7-a6e0-bd3446c7eeca">
+                    <propertyInstance
+                      Id="9f6b4da7-c77b-4025-9c73-59e1d643f087"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ad6cdb1d-aa73-4720-8fb1-527fae26a653">
+                    <propertyInstance
+                      Id="529b3391-4689-452c-912a-fb2093dfcb71"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8e95b5ca-e8cd-45ae-b29e-52428c38f18d">
+                    <propertyInstance
+                      Id="df89afb6-3a7d-45c1-beb8-19b39c6549a0"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e6ee8577-f646-4569-9e6a-e3159e7083e0">
+                    <propertyInstance
+                      Id="3d546e7f-3a64-4f67-ada3-9c164ae4b413"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="172a4929-a10c-41a4-af59-d2b9f54e3e64">
+                    <propertyInstance
+                      Id="eed57964-fbb4-4e2b-831c-d9f94256c345"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="60f4c0f4-364e-4616-aaf8-5467368cc97c"
+                  name="player"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="4c2a8280-94c7-410b-848e-042a276d49bf"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DDrawing Member%3D(Name%3DDraw OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3Dplayer"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="Reversi.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8498447d-fda9-4723-9ebe-02ff7b470c22"
+                  name="enabledTips"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="af5b4bfb-ded6-4bb9-82c0-d9fd1f233e0c"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DDrawing Member%3D(Name%3DDraw OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3DenabledTips"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="Reversi.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="70d9811a-88b7-4b87-8bdb-b227bce0f294"
+            name="DrawEnableMoves"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="5e221bb1-f813-4634-8e54-ed0dca550569"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DDrawing Member%3D(Name%3DDrawEnableMoves OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="218b4d43-aa12-465e-9b8b-3180c15694be"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8a5f5f30-296b-49eb-bc9f-ab6b2dc9d821">
+                    <propertyInstance
+                      Id="168a7b29-4af9-40ec-b929-14aeaa4765d3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dfcdba53-834d-4b24-9bde-458195c94631">
+                    <propertyInstance
+                      Id="686bcccb-7b69-459d-895a-7ca69a7649a3"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2af4e723-4b13-4edc-9e29-ba7280d76b4b">
+                    <propertyInstance
+                      Id="820f8ce6-219b-4fa1-a9d2-68b6dd8f3022"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="17c545b1-20c7-474f-9a57-db7735ceff1e">
+                    <propertyInstance
+                      Id="805aded9-9777-488a-9d6d-8070b6256908"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2f6c2dae-b813-481d-9442-b10ab7c3b1f5">
+                    <propertyInstance
+                      Id="2d3f3c65-fb6f-4e6e-99a1-0eb30aaaf9e2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b15e966f-8bfa-444a-9db3-7f2c106d4c56">
+                    <propertyInstance
+                      Id="2cd7152f-ee6c-40e4-8bec-7cb32d6bd5c1"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b176b7b8-42e7-470d-95e2-988ca2f58de1"
+                  name="player"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="041e1fb9-ff83-4122-9f17-e9f8261e45f2"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DDrawing Member%3D(Name%3DDrawEnableMoves OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3Dplayer"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="Reversi.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f17478a4-a8c5-481a-8b5b-64e14843cabf"
+                  name="enabledTips"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="36e70b63-8e09-4676-9bc9-32914ddaabda"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DDrawing Member%3D(Name%3DDrawEnableMoves OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3DenabledTips"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="Reversi.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e5b03eb6-5129-43f0-90d1-f714bfef1d0e"
+            name="DrawField"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="0c6e9261-d2bf-4a5a-acf3-d53774865c52"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DDrawing Member%3D(Name%3DDrawField OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9305f9ad-b74c-4c0f-a060-80d29fb1ad1a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="98a264d6-e038-47cd-9e42-a190791f23ce">
+                    <propertyInstance
+                      Id="46546ef0-67bb-4902-97e5-19b5a51031f6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="551de12d-0bc0-4909-97fc-2e5434462a1b">
+                    <propertyInstance
+                      Id="65c19f9f-f3a1-433e-bd8f-5a1e6acfc69d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="96232f12-9f06-4285-aafa-3e5e811d211b">
+                    <propertyInstance
+                      Id="df2ad1a8-f053-496e-8bf5-63c884af08f1"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a6e5b20b-bb0d-4007-b7d8-568a2f76279e">
+                    <propertyInstance
+                      Id="c5fabfd2-0caf-4671-b1e1-3f821f4b8a54"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9247d20e-d720-4906-9225-2e01995598a4">
+                    <propertyInstance
+                      Id="80cd903b-788b-4eee-a424-5c343e4311f7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="efee95bf-58fa-4ad5-9bed-bda81169c85f">
+                    <propertyInstance
+                      Id="c7ee2ef8-01b8-421a-b72c-ba5148d40d47"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="26a3b868-6fbf-41d0-a439-a75e37df48fe"
+                  name="player"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="1d500e65-ff76-4cd3-886d-42331a796682"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DDrawing Member%3D(Name%3DDrawField OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3Dplayer"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="Reversi.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2702a481-aa2e-4bef-8bfc-5539ceba5ee7"
+                  name="enabledTips"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="39007038-1025-4a97-8fdf-ea8a2b8a97d3"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DDrawing Member%3D(Name%3DDrawField OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3DenabledTips"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="Reversi.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="aa56a184-889b-4d9a-927f-cb3599781cc1"
+            name="Drawing"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="8a5929d7-5f09-4951-91ed-6595dc18f20f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DDrawing Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="787949ca-08e6-45ac-bcdc-ca8ac9da733e"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e8bea7f4-65ae-49eb-8cba-4c80ad556c89">
+                    <propertyInstance
+                      Id="cc1f8133-758c-43c9-ba09-1f603cbfddf6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ebe0931-03c4-4269-9021-6d5d94a47d40">
+                    <propertyInstance
+                      Id="6c67ddce-e1ca-4dc2-a2d3-657bad0e6cf9"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ea89c3e0-b869-4aee-a995-b3596ef7d1e8">
+                    <propertyInstance
+                      Id="e18f1cfa-cabe-4789-b56f-3268ee793bdf"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dd4b1575-3667-42fc-a316-67671e23c11a">
+                    <propertyInstance
+                      Id="d76a4da4-13c8-4a51-a217-03bff278922d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a530f94e-ef8c-4ee3-ad7d-426a58e49b69">
+                    <propertyInstance
+                      Id="4d9222b3-a8de-49ad-ac17-b414c80a1319"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e0a12a45-4d5f-4599-8637-9fab4ba5d98b">
+                    <propertyInstance
+                      Id="90b69a2a-e499-4256-992b-7515fce51729"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6af2d947-c1bd-4753-96dc-b5d651aed42f"
+        name="FormDrawing"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="f11e330c-c319-4d9b-b7df-42cc91a3a90f"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DFormDrawing"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="bfd348ce-ead0-40fb-80de-7880d921ff90"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b33440e4-e1a6-4e55-b605-ca815a734cf5">
+                <propertyInstance
+                  Id="2780399c-3c9e-4e84-a18b-b21ca1f3285c"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a50ff9e3-39ce-442b-8858-7872ffbf18aa">
+                <propertyInstance
+                  Id="d157c183-28de-4a12-8423-b7d4519977a4"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="909c0421-1f21-4c4f-bfcf-3ade37ba9ed6">
+                <propertyInstance
+                  Id="e126cb86-c41c-4ca1-b234-d1d3e9cf6947"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="046142e9-bd7a-48c7-a235-ff8cfc749d87">
+                <propertyInstance
+                  Id="17c00e3e-fc7c-4292-97a3-0e2fc54afc45"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="103e5a55-9a94-410e-b0a6-38a43db40fbd">
+                <propertyInstance
+                  Id="6a29b724-ccfc-45c2-a23d-5166093d7e75"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="ad8cb309-f7dc-4165-99bc-4fdcde3f255a"
+            isSubstitutable="false">
+            <classMoniker
+              Id="c334d498-0f6d-4186-b4e1-1f1104491425"
+              LastKnownName="Drawing"
+              LastKnownLocation="Package_1801.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="3752869b-1b32-4110-b8d5-81b9f50edeca"
+            name="_imgForFirstPlayer"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="2914c9cc-4821-4b00-a55b-c9126c69dcc7"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DFormDrawing Member%3D_imgForFirstPlayer"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="90d94dfb-4d4c-4010-a4cd-47e3a98a02b7"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="46658658-33da-4a1e-b397-7c23bb30afb7">
+                    <propertyInstance
+                      Id="73559775-91b5-4508-a2a3-7c3d702e2f89"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0961d5b1-b14d-4630-bc0f-1e2579833264">
+                    <propertyInstance
+                      Id="a1fd5612-c689-415d-a6f6-1a0562b0bfe8"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a46a79e3-1095-45a7-abf1-b919d897ae74">
+                    <propertyInstance
+                      Id="e0b2de78-838c-4f85-b623-2dfbfb1b449a"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f3cdfea4-7c5a-4684-9524-0aaa6e80b526">
+                    <propertyInstance
+                      Id="87323606-72bc-48a1-b794-c5f42ee4217d"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="492904b8-d298-48ab-b63b-8c5d71f14db2">
+                    <propertyInstance
+                      Id="876e8b97-df2a-449e-8730-dd14231cda84"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="a2658ab7-dd2d-4ba4-b832-5728cd2347df"
+                LastKnownName="Bitmap"
+                LastKnownLocation="Package4_1801.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="01075a86-3f4e-484e-940d-60e5c3fdb12e"
+            name="_imgForSecondPlayer"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="e07ac6d4-4d8f-4b39-bfb8-55349074a954"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DFormDrawing Member%3D_imgForSecondPlayer"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="35f108de-14f7-4897-be46-7e1edd0f45bb"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8159639b-1ae4-4cee-b12a-1e72a73ae07c">
+                    <propertyInstance
+                      Id="32f9aa07-2b37-40fe-ad63-d7049a58df90"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="99f18bad-d75a-475b-8700-237d63850ee8">
+                    <propertyInstance
+                      Id="c2ac888b-e630-443c-b7a5-82e5eb791f56"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3372bdb1-df4a-4080-a94b-0576bdf6801f">
+                    <propertyInstance
+                      Id="008a9893-f856-4329-9b12-b012598665be"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="042c6aea-352e-4777-84ce-1d78954d504e">
+                    <propertyInstance
+                      Id="3caa3905-28a0-4bad-8dd3-bfa05841a209"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e418e522-100a-42d2-9728-30edc4bb15b6">
+                    <propertyInstance
+                      Id="ff81792f-c835-4e9d-b9f7-d2576a059347"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="a2658ab7-dd2d-4ba4-b832-5728cd2347df"
+                LastKnownName="Bitmap"
+                LastKnownLocation="Package4_1801.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="207e4e57-3299-4332-b2d1-010172805d5f"
+            name="_panel"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="e53e3b2d-caee-4e4f-8ac1-e808235b1a8b"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DFormDrawing Member%3D_panel"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d4f62e87-2444-4930-8504-acaf9445c7a6"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3ea14747-04da-4ca5-bb4e-40cd2aa0ad81">
+                    <propertyInstance
+                      Id="2141559a-e0a3-4bc9-acb7-eac4087b2603"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cb152263-a11b-4f83-99f3-3ad8de84511c">
+                    <propertyInstance
+                      Id="a926aa7d-f989-452b-bbbe-a7b11dd28ac4"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cf38f0a0-a2bb-4b97-b228-ecb35f3ca60b">
+                    <propertyInstance
+                      Id="344f09ee-efe7-4771-a21f-51a456e49d7e"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f92d3a9e-d870-4344-9d9d-3c47e54de051">
+                    <propertyInstance
+                      Id="875371e2-4751-44c8-87d8-1d2aba0cc4c6"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="669aa1ae-2695-4492-8dad-8d447d27eb65">
+                    <propertyInstance
+                      Id="68bd6fbc-863c-4a79-bef0-5bbcda4ff0f5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="4cfb8f45-4876-43fe-8d20-54bf9eb49967"
+                LastKnownName="Panel"
+                LastKnownLocation="Package3_1801.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="883c90a8-f571-4af6-8d5d-84b4dde9abc1"
+            name="FormDrawing"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="c91c16d2-68aa-413e-9cf3-dc221676c8b3"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DFormDrawing Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Windows.Forms.dll&quot; Namespace%3DSystem.Windows.Forms Type%3DPanel)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Models%2Fbin%2FRelease%2FReversi.GameEngine.dll Namespace%3DReversi.GameEngine Type%3DField)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="49774329-610c-41fe-9354-3da0e23119f8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7b4f76ac-bb59-4e9c-8d67-c25c0674e176">
+                    <propertyInstance
+                      Id="e1b15eda-9328-4c54-8d7d-c684f7c4124b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="41587a44-15e2-4040-b238-1d7272dae103">
+                    <propertyInstance
+                      Id="6d599936-1337-4741-88bd-153af89c5af8"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e4751f60-5729-4017-aa86-5282b877c173">
+                    <propertyInstance
+                      Id="430ac856-ad6b-4084-80f9-a1112b432d48"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8ac22204-aa3b-4894-8d20-a13df115af66">
+                    <propertyInstance
+                      Id="baa6e3a5-9111-4f13-970d-b583d824d5a1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="436a1546-84e7-47ae-bc74-3feaa211e224">
+                    <propertyInstance
+                      Id="fb53b43b-7bad-49db-af29-4a50e4fa31d2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="889d8700-caf5-4393-80c2-9fb1cf0336fb">
+                    <propertyInstance
+                      Id="e1243660-d821-4b14-b557-ff4717cc631c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c7bbddc1-6a39-407a-aac6-a42feb861bb6"
+                  name="panel"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="735c75e7-1d21-4469-89d5-c3ea38c9694f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DFormDrawing Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Windows.Forms.dll&quot; Namespace%3DSystem.Windows.Forms Type%3DPanel)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Models%2Fbin%2FRelease%2FReversi.GameEngine.dll Namespace%3DReversi.GameEngine Type%3DField)]) ParameterIdentifier%3Dpanel"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="4cfb8f45-4876-43fe-8d20-54bf9eb49967"
+                      LastKnownName="Panel"
+                      LastKnownLocation="Package3_1801.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dbf8d12c-2cc4-458b-8d34-d15368115450"
+                  name="gameField"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ca7dd239-9fc1-40af-9dc8-152479e5e6c8"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DFormDrawing Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Windows.Forms.dll&quot; Namespace%3DSystem.Windows.Forms Type%3DPanel)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Models%2Fbin%2FRelease%2FReversi.GameEngine.dll Namespace%3DReversi.GameEngine Type%3DField)]) ParameterIdentifier%3DgameField"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="042b3c7c-d275-4475-82f6-f05a38c85c3a"
+                      LastKnownName="Field"
+                      LastKnownLocation="Package1_1755.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="61d66641-1bd8-4e30-ab77-73668b55283f"
+            name="Draw"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="38c0e6ed-072b-4701-81b0-d801e2f964af"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DFormDrawing Member%3D(Name%3DDraw OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d00e1f4d-1533-4d02-9976-97af03560b95"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="988638d1-bc67-4981-a240-faba09c7da75">
+                    <propertyInstance
+                      Id="33083e65-187d-4f72-8cf4-798818c13a1e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9e7abc0f-7237-49e3-ac4d-a16f97d3b885">
+                    <propertyInstance
+                      Id="cba41b18-2fd2-423e-aa3f-dfd0066b47b2"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5c099821-fddd-49ea-a101-79914ae6f744">
+                    <propertyInstance
+                      Id="8c7edc55-4877-4221-8e01-09dcc6aae729"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eb986bb1-0094-4a59-ab79-6a69fe50ed29">
+                    <propertyInstance
+                      Id="c556caca-f006-4e74-a250-fc0d14c5382b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a009eb0d-9dd7-4514-8c2e-e88f84e3658b">
+                    <propertyInstance
+                      Id="c6178f04-44be-40f2-a6dc-77eedb3d51ef"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a4da193f-96c8-4062-a570-49c2f8b3ee8f">
+                    <propertyInstance
+                      Id="ac4fc19b-c9e7-436c-acb9-29831f0bf102"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f55d9fd8-cdb5-4229-aa9d-598c4a39dac0"
+                  name="player"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="c72300a5-dc94-4b42-9aff-93b49a9fc260"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DFormDrawing Member%3D(Name%3DDraw OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3Dplayer"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="Reversi.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0393b920-2a54-46c3-9084-5271fbc5396d"
+                  name="enabledTips"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d65e57ab-3a37-4f1d-b465-d99bb8f504f2"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DFormDrawing Member%3D(Name%3DDraw OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3DenabledTips"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="Reversi.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="724db77f-b1cd-43b4-9a7d-9080d42d2cd9"
+            name="DrawEnableMoves"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="f40120e9-86ea-47d7-857d-32efa05441c5"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DFormDrawing Member%3D(Name%3DDrawEnableMoves OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d74cc6e4-c25e-4fa6-92ff-ff2c5ae7bcf4"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1ab41ac0-7bae-4d09-823a-a47ea110ff81">
+                    <propertyInstance
+                      Id="3a2049c1-0d7a-4d45-acfd-775e36132e94"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="608cf4e2-8d47-4eb2-8710-233d5f788d7d">
+                    <propertyInstance
+                      Id="cf572a8d-0e45-4d9c-8292-528f481464e9"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="729bea17-4290-442a-b0a8-ebf0a479846f">
+                    <propertyInstance
+                      Id="38806165-e0ca-4912-9ac3-baf3e5183ca0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f7bff1eb-d391-488a-ad5d-7c276b3ba377">
+                    <propertyInstance
+                      Id="50a04f0c-be34-433d-a381-07b91950662d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c4dad1c3-5b5a-4328-a1f9-1fc7bd6ce98a">
+                    <propertyInstance
+                      Id="7fb5ea06-82bd-4878-81d5-8a261fbbfecc"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c7409f65-266a-4447-a7fc-7d91c3d9229d">
+                    <propertyInstance
+                      Id="bde57126-263d-4edd-ad10-dd1279b933f4"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9eef74f5-cd70-420d-8ee5-d1cfb354dbe7"
+                  name="player"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="4bb01b4a-ae4b-4a05-9138-38b3dc8a40ab"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DFormDrawing Member%3D(Name%3DDrawEnableMoves OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3Dplayer"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="Reversi.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="74ec691f-e3db-44ba-abd0-cc63b9399638"
+                  name="enabledTips"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="dc482342-0ef3-405e-b4aa-d16c22002928"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Handlers%2Fbin%2FRelease%2FReversi.Handlers.dll Namespace%3DReversi.Handlers Type%3DFormDrawing Member%3D(Name%3DDrawEnableMoves OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3DenabledTips"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="Reversi.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

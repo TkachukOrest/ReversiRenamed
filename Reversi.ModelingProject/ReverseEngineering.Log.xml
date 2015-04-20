@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///D:/PROGRAMMING/VS_2013/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2015-04-20T18:01:16" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Boolean' -  (PrimitiveType)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Integer' -  (PrimitiveType)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi' -  (Package)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::GameEngine' -  (Package)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::GameEngine::Field' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers' -  (Package)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Medium" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::ConsoleDrawing' -  (Class)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::ConsoleDrawing::ConsoleDrawing' -  (Operation)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::ConsoleDrawing::ConsoleDrawing::gameField' -  (Parameter)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::ConsoleDrawing::Draw' -  (Operation)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::ConsoleDrawing::Draw::enabledTips' -  (Parameter)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::ConsoleDrawing::Draw::player' -  (Parameter)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::ConsoleDrawing::DrawEnableMoves' -  (Operation)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::ConsoleDrawing::DrawEnableMoves::enabledTips' -  (Parameter)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::ConsoleDrawing::DrawEnableMoves::player' -  (Parameter)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Medium" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::Drawing' -  (Class)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::Drawing::Draw' -  (Operation)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::Drawing::Draw::enabledTips' -  (Parameter)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::Drawing::Draw::player' -  (Parameter)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::Drawing::DrawEnableMoves' -  (Operation)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::Drawing::DrawEnableMoves::enabledTips' -  (Parameter)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::Drawing::DrawEnableMoves::player' -  (Parameter)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::Drawing::DrawField' -  (Operation)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::Drawing::DrawField::enabledTips' -  (Parameter)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::Drawing::DrawField::player' -  (Parameter)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::Drawing::Drawing' -  (Operation)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::Drawing::GameField' -  (Property)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Medium" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::FormDrawing' -  (Class)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::FormDrawing::_imgForFirstPlayer' -  (Property)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::FormDrawing::_imgForSecondPlayer' -  (Property)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::FormDrawing::_panel' -  (Property)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::FormDrawing::Draw' -  (Operation)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::FormDrawing::Draw::enabledTips' -  (Parameter)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::FormDrawing::Draw::player' -  (Parameter)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::FormDrawing::DrawEnableMoves' -  (Operation)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::FormDrawing::DrawEnableMoves::enabledTips' -  (Parameter)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::FormDrawing::DrawEnableMoves::player' -  (Parameter)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::FormDrawing::FormDrawing' -  (Operation)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::FormDrawing::FormDrawing::gameField' -  (Parameter)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::FormDrawing::FormDrawing::panel' -  (Parameter)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Medium" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::GameSounds' -  (Class)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::GameSounds::_sndBad' -  (Property)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::GameSounds::_sndGood' -  (Property)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::GameSounds::GameSounds' -  (Operation)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::GameSounds::PlayBadSound' -  (Operation)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::Reversi::Handlers::GameSounds::PlayGoodSound' -  (Operation)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::System' -  (Package)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::System::Drawing' -  (Package)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::System::Drawing::Bitmap' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::System::Media' -  (Package)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::System::Media::SoundPlayer' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::System::Windows' -  (Package)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::System::Windows::Forms' -  (Package)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Reversi.ModelingProject::System::Windows::Forms::Panel' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Reversi.ModelingProject::Reversi::Handlers::ConsoleDrawing to Reversi.ModelingProject::Reversi::Handlers::Drawing (Generalization)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Reversi.ModelingProject::Reversi::Handlers::Drawing to Reversi.ModelingProject::Reversi::GameEngine::Field (Association)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Reversi.ModelingProject::Reversi::Handlers::FormDrawing to Reversi.ModelingProject::Reversi::Handlers::Drawing (Generalization)" />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="High" Text="(4) type(s) fully reverse engineered." />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="High" Text="(4) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2015-04-20T18:01:18" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>

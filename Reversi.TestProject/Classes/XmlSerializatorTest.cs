@@ -2,7 +2,6 @@
 using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Reversi.GameEngine;
-using Reversi.GameEngine.Classes;
 
 namespace Reversi.TestProject.Classes
 {

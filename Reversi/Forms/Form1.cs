@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using Reversi.GameEngine;
-using Reversi.GameEngine.Classes;
 using Reversi.Handlers;
 
 namespace Reversi

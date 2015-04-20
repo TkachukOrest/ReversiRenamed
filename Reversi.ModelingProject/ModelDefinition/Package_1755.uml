@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="8f6846a1-deae-4dd7-b060-07033ff5d4b4"
+  name="Reversi"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="37b00a2f-3a0c-4e99-b473-f60d4c1ee534"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DReversi"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="3f9ccbac-a5da-480a-a8ff-878959fdc795"
+        LastKnownName="GameEngine"
+        LastKnownLocation="Package1_1755.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="715b4e86-5add-4edc-b7d9-4777ea9bf122"
+        LastKnownName="Handlers"
+        LastKnownLocation="Package_1801.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

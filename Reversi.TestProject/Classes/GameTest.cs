@@ -4,7 +4,6 @@ using Reversi.GameEngine;
 using System.IO;
 using System.Threading;
 using System.Timers;
-using Reversi.GameEngine.Classes;
 using Timer = System.Threading.Timer;
 
 namespace Reversi.GameEngine.Test

@@ -7,3 +7,12 @@ D:\Programming\Програмування_EPAM\Reversi\Reversi.Handlers\bin\Rele
 D:\Programming\Програмування_EPAM\Reversi\Reversi.Handlers\bin\Release\Reversi.GameEngine.pdb
 D:\Programming\Програмування_EPAM\Reversi\Reversi.Handlers\obj\Release\Reversi.Handlers.dll
 D:\Programming\Програмування_EPAM\Reversi\Reversi.Handlers\obj\Release\Reversi.Handlers.pdb
+D:\Programming\Reversi\Reversi.Handlers\bin\Release\Reversi.Handlers.dll
+D:\Programming\Reversi\Reversi.Handlers\bin\Release\Reversi.Handlers.pdb
+D:\Programming\Reversi\Reversi.Handlers\bin\Release\Reversi.GameEngine.dll
+D:\Programming\Reversi\Reversi.Handlers\bin\Release\Reversi.GameEngine.pdb
+D:\Programming\Reversi\Reversi.Handlers\obj\Release\Reversi.Handlers.csprojResolveAssemblyReference.cache
+D:\Programming\Reversi\Reversi.Handlers\obj\Release\Reversi.Handlers.Properties.Resources.resources
+D:\Programming\Reversi\Reversi.Handlers\obj\Release\Reversi.Handlers.csproj.GenerateResource.Cache
+D:\Programming\Reversi\Reversi.Handlers\obj\Release\Reversi.Handlers.dll
+D:\Programming\Reversi\Reversi.Handlers\obj\Release\Reversi.Handlers.pdb
