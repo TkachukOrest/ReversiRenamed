@@ -29,3 +29,17 @@ D:\Programming\Reversi\Reversi\bin\Release\Reversi.GameEngine.pdb
 D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload\Reversi\bin\Release\Reversi.exe.config
 D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload\Reversi\obj\Release\Reversi.exe
 D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload\Reversi\obj\Release\Reversi.pdb
+D:\Programming\Programming_EPAM\Reversi\Reversi\bin\Release\Reversi.exe.config
+D:\Programming\Programming_EPAM\Reversi\Reversi\obj\Release\Reversi.exe
+D:\Programming\Programming_EPAM\Reversi\Reversi\obj\Release\Reversi.pdb
+D:\Programming\Programming_EPAM\Reversi\Reversi\bin\Release\Reversi.exe
+D:\Programming\Programming_EPAM\Reversi\Reversi\bin\Release\Reversi.pdb
+D:\Programming\Programming_EPAM\Reversi\Reversi\bin\Release\Reversi.GameEngine.dll
+D:\Programming\Programming_EPAM\Reversi\Reversi\bin\Release\Reversi.Handlers.dll
+D:\Programming\Programming_EPAM\Reversi\Reversi\bin\Release\Reversi.Handlers.pdb
+D:\Programming\Programming_EPAM\Reversi\Reversi\bin\Release\Reversi.GameEngine.pdb
+D:\Programming\Programming_EPAM\Reversi\Reversi\obj\Release\Reversi.DekstopUI.csprojResolveAssemblyReference.cache
+D:\Programming\Programming_EPAM\Reversi\Reversi\obj\Release\Reversi.AboutForm.resources
+D:\Programming\Programming_EPAM\Reversi\Reversi\obj\Release\Reversi.MainForm.resources
+D:\Programming\Programming_EPAM\Reversi\Reversi\obj\Release\Reversi.Properties.Resources.resources
+D:\Programming\Programming_EPAM\Reversi\Reversi\obj\Release\Reversi.DekstopUI.csproj.GenerateResource.Cache

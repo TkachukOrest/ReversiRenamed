@@ -1,4 +1,5 @@
 ﻿using Reversi.GameEngine;
+using Reversi.GameEngine.Classes;
 
 namespace Reversi.Handlers
 {
@@ -9,10 +10,10 @@ namespace Reversi.Handlers
         #endregion
 
         #region Methods
-        public void DrawField(int player, bool enabledTips)
+        public void DrawField(object sender, DrawEventArgs args)
         {
-            Draw(player, enabledTips);
-            DrawEnableMoves(player, enabledTips);
+            Draw(args.Player, args.Tips);
+            DrawEnableMoves(args.Player, args.Tips);
         }
         #endregion
 

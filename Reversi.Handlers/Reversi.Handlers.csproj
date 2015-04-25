@@ -43,8 +43,10 @@
   <ItemGroup>
     <Compile Include="Abstract\Drawing.cs" />
     <Compile Include="Classes\GameSounds.cs" />
+    <Compile Include="Concrete\XmlSerializator.cs" />
     <Compile Include="Concrete\ConsoleDrawing.cs" />
     <Compile Include="Concrete\FormDrawing.cs" />
+    <Compile Include="Abstract\ISerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

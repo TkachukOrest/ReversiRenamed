@@ -2,6 +2,7 @@
 using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Reversi.GameEngine;
+using Reversi.Handlers;
 
 namespace Reversi.TestProject.Classes
 {
@@ -23,15 +24,9 @@ namespace Reversi.TestProject.Classes
             string path = Path.GetDirectoryName(Path.GetDirectoryName(TestContext.TestDir)) + @"\Reversi.TestProject\Resources\SavedGame.xml";
             try
             {
-                GameState state = new GameState();
-                if (XmlSerializator.ReadFromXML(ref state, path))
-                {
-                    game.RestoreState(state);                    
-                }
-                else
-                {
-                    throw new Exception("Виникла помилка при зчитуванні з файлу");
-                }
+                XmlSerializer serializer = new XmlSerializer();
+                GameState state = serializer.Deserialize(path);
+                game.RestoreState(state);
             }
             catch (Exception ex)
             {
@@ -39,16 +34,13 @@ namespace Reversi.TestProject.Classes
             }
         }
         [TestMethod]
-        [ExpectedException(typeof(Exception))]
+        [ExpectedException(typeof(FormatException))]
         public void Test_XMLReadBadPath()
         {
             //в файлі є помилка, має викинутись експепшин
             string spath = Path.GetDirectoryName(Path.GetDirectoryName(TestContext.TestDir)) + @"\Reversi.TestProject\Resources\ErrorGame.xml";
-            GameState state = new GameState();
-            if (!XmlSerializator.ReadFromXML(ref state, spath))
-            {
-                throw new Exception("Виникла помилка при зчитуванін з файлу");
-            }
+            XmlSerializer serializer = new XmlSerializer();
+            GameState state = serializer.Deserialize(spath);            
         }
 
         [TestMethod]
@@ -59,10 +51,8 @@ namespace Reversi.TestProject.Classes
             string path = Path.GetDirectoryName(Path.GetDirectoryName(TestContext.TestDir)) + @"\Reversi.TestProject\Resources\TestGame.xml";
             try
             {
-                if (!XmlSerializator.WriteToXML(game.GetState(), path))
-                {
-                    throw new Exception("Виникла помилка при записуванні у файл");
-                }
+                XmlSerializer serializer = new XmlSerializer();
+                serializer.Serialize(game.GetState(), path);
             }
             catch (Exception ex)
             {

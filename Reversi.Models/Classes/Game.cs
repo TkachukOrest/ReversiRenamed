@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Timers;
+using Reversi.GameEngine.Classes;
 
 namespace Reversi.GameEngine
 {
@@ -34,12 +35,12 @@ namespace Reversi.GameEngine
         #endregion
 
         #region Events
-        public event Action InitDrawHandler;
-        public event Action UpdateScoreLabelsHandler;
-        public event Action<string> ShomMessageHandler;
-        public Action<int, bool> DrawHandler;
-        public event Action PlayGoodSoundHandler;
-        public event Action PlayBadSoundHandler;
+        public event EventHandler InitDrawHandler;
+        public event EventHandler UpdateScoreHandler;
+        public event EventHandler<string> ShomMessageHandler;
+        public EventHandler<DrawEventArgs> DrawHandler;
+        public event EventHandler PlayGoodSoundHandler;
+        public event EventHandler PlayBadSoundHandler;
         #endregion
 
         #region Constructors
@@ -65,15 +66,29 @@ namespace Reversi.GameEngine
         {
             if (InitDrawHandler != null)
             {
-                InitDrawHandler();
+                InitDrawHandler(this, EventArgs.Empty);
+            }
+        }        
+        private void OnPlayGoodSound()
+        {
+            if (PlayGoodSoundHandler != null)
+            {
+                PlayGoodSoundHandler(this, EventArgs.Empty);
             }
         }
+        private void OnPlayBadSound()
+        {
+            if (PlayBadSoundHandler != null)
+            { 
+                PlayBadSoundHandler(this,EventArgs.Empty);
+            }
+        }        
         private void OnUpdateScoreAndPlayerMove()
         {
             Field.CalculatePlayersPoints();
-            if (UpdateScoreLabelsHandler != null)
+            if (UpdateScoreHandler != null)
             {
-                UpdateScoreLabelsHandler();
+                UpdateScoreHandler(this, EventArgs.Empty);
             }
         }
         private void OnUpdateGameFinish()
@@ -83,12 +98,12 @@ namespace Reversi.GameEngine
                 if (ShomMessageHandler != null)
                 {
                     if (Field.FirstPlayerPoints > Field.SecondPlayerPoints)
-                        ShomMessageHandler(String.Format("{0} player win with score: {1}", "First", Field.FirstPlayerPoints));
+                        ShomMessageHandler(this,String.Format("{0} player win with score: {1}", "First", Field.FirstPlayerPoints));
                     else
                         if (Field.FirstPlayerPoints < Field.SecondPlayerPoints)
-                            ShomMessageHandler(String.Format("{0} player win with score: {1}", "Second(you)", Field.SecondPlayerPoints));
+                            ShomMessageHandler(this,String.Format("{0} player win with score: {1}", "Second(you)", Field.SecondPlayerPoints));
                         else
-                            ShomMessageHandler(String.Format("Draw:  {0}-{1}", Field.FirstPlayerPoints, Field.SecondPlayerPoints));
+                            ShomMessageHandler(this,String.Format("Draw:  {0}-{1}", Field.FirstPlayerPoints, Field.SecondPlayerPoints));
                 }
             }
         }
@@ -96,7 +111,7 @@ namespace Reversi.GameEngine
         {
             if (DrawHandler != null)
             {
-                DrawHandler(player, enabledTips);
+                DrawHandler(null, new DrawEventArgs(player, enabledTips));
             }
         }
         public void CreateNewGame()
@@ -106,36 +121,37 @@ namespace Reversi.GameEngine
             CurrentMove = 1;
             Initialize();
         }
-        #endregion
-
-        public bool FirstPlayerMove()
-        {
-            return (_currentMove) % 2 == 0;
-        }
-
-        public void ChangeComputerModeOn(bool state)
-        {
-            EnabledComputerMoves = state;
-        }
-
-        public void ChangeTips(bool state)
-        {
-            EnabledTips = state;
-        }
-
-        public void Initialize()
+        private void Initialize()
         {
             OnInitializeField();
             OnInitializeDraw();
             ReDraw();
         }
+        #endregion
+     
+        public bool IsFirstPlayerMove()
+        {
+            return (_currentMove) % 2 == 0;
+        }
 
+        public void EnableComputerMode(bool state)
+        {
+            EnabledComputerMoves = state;
+        }
+
+        public void EnableTips(bool state)
+        {
+            EnabledTips = state;
+        }
+      
         public void ReDraw()
         {
             if (AlreadyExitFromTimer)
             {
-                if (FirstPlayerMove())
-                {
+                if (IsFirstPlayerMove())
+                {            
+                    //виклик цього блоку можливий тільки при згортанні мейн форми на деякий час та його розгортання згодом
+                    //внаслідок чого викликається event Paint() з форми - тому тест неможливий
                     Field.FindEnabledMoves((int)Players.FirstPlayer);
                     OnDraw((int)Players.FirstPlayer, EnabledTips);
                 }
@@ -147,19 +163,19 @@ namespace Reversi.GameEngine
             }
         }
 
-        public void Move(int x, int y)
+        public void MoveTo(int x, int y)
         {
             DoPlayerMove(x, y);
             OnUpdateScoreAndPlayerMove();
             OnUpdateGameFinish();
-            DoCompMoveIfNeed();
+            DoComputerMove();
         }
 
         private void DoPlayerMove(int x, int y)
         {
             if (Field.GameProcess)
             {
-                if (FirstPlayerMove())
+                if (IsFirstPlayerMove())
                 {
                     if (!EnabledComputerMoves)
                     {
@@ -170,10 +186,10 @@ namespace Reversi.GameEngine
                             Field.FindEnabledMoves((int)Players.SecondPlayer);
                             //draw new field for second player with tips which dependent from "bool enabledTips"                    
                             OnDraw((int)Players.SecondPlayer, EnabledTips);
-                            PlayGoodSound();
+                            OnPlayGoodSound();
                         }
                         else
-                            PlayBadSound();
+                            OnPlayBadSound();
                     }
                 }
                 else
@@ -185,17 +201,17 @@ namespace Reversi.GameEngine
                         Field.FindEnabledMoves((int)Players.FirstPlayer);
                         //draw new field for first player with tips which dependent from "bool enabledTips"
                         OnDraw((int)Players.FirstPlayer, EnabledTips);
-                        PlayGoodSound();
+                        OnPlayGoodSound();
                     }
                     else
-                        PlayBadSound();
+                        OnPlayBadSound();
                 }
             }
         }
 
-        private void DoCompMoveIfNeed()
+        private void DoComputerMove()
         {
-            if (EnabledComputerMoves && Field.GameProcess && FirstPlayerMove())
+            if (EnabledComputerMoves && Field.GameProcess && IsFirstPlayerMove())
             {
                 if (AlreadyExitFromTimer)
                 {
@@ -209,9 +225,8 @@ namespace Reversi.GameEngine
 
         private void TimerTick(Object myObject, ElapsedEventArgs myEventArgs)
         {
-            if (FirstPlayerMove() && EnabledComputerMoves && Field.GameProcess)
-            {
-                _timer.Stop();
+            if (IsFirstPlayerMove() && EnabledComputerMoves && Field.GameProcess)
+            {                
                 _timer.Enabled = false;
                 //do computer move
                 Field.DoComputerMove((int)Players.FirstPlayer);
@@ -219,28 +234,15 @@ namespace Reversi.GameEngine
                 //drawcomputermove with tips for second player
                 Field.FindEnabledMoves((int)Players.SecondPlayer);
                 OnDraw((int)Players.SecondPlayer, EnabledTips);
-                PlayGoodSound();
+                OnPlayGoodSound();
 
                 //update scode and finish condition
                 OnUpdateScoreAndPlayerMove();
                 OnUpdateGameFinish();
-                _currentMove++;
+                CurrentMove++;
                 AlreadyExitFromTimer = true;
             }
-        }
-
-        #region Music
-        private void PlayGoodSound()
-        {
-            if (PlayGoodSoundHandler != null)
-                PlayGoodSoundHandler();
-        }
-        private void PlayBadSound()
-        {
-            if (PlayBadSoundHandler != null)
-                PlayBadSoundHandler();
-        }
-        #endregion
+        } 
 
         #region States
         public GameState GetState()
@@ -253,7 +255,7 @@ namespace Reversi.GameEngine
             this.CurrentMove = state.CurrentMove;
             this.EnabledTips = state.EnabledTips;
             this.Field.FirstMoveAI = state.FirstMoveAI;
-            this.Field.FindEnabledMoves(FirstPlayerMove() ? (int)Players.FirstPlayer : (int)Players.SecondPlayer);
+            this.Field.FindEnabledMoves(IsFirstPlayerMove() ? (int)Players.FirstPlayer : (int)Players.SecondPlayer);
             OnUpdateScoreAndPlayerMove();
             OnInitializeDraw();
             ReDraw();

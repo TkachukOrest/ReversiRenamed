@@ -1,4 +1,5 @@
-﻿using System.Media;
+﻿using System;
+using System.Media;
 
 
 namespace Reversi.Handlers
@@ -23,11 +24,11 @@ namespace Reversi.Handlers
         #endregion
 
         #region Methods
-        public void PlayGoodSound()
+        public void PlayGoodSound(object sender, EventArgs e)
         {
             _sndGood.Play();
         }
-        public void PlayBadSound()
+        public void PlayBadSound(object sender, EventArgs e)
         {
             _sndBad.Play();
         }

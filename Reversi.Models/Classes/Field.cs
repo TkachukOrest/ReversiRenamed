@@ -137,8 +137,6 @@ namespace Reversi.GameEngine
         #region AI
         public void DoComputerMove(int player)
         {
-            //int count;
-            //Point point = RandomStep(out count);
             Point point = BestStep(player);
             if (IsMovePoint(point.X, point.Y, player, true))
             {
@@ -164,7 +162,7 @@ namespace Reversi.GameEngine
         {
             int[] values = _movePoints.Values.ToArray<int>();
             int[] ratings = new int[values.Length];
-            int i = 0, playerCount;
+            int i = 0;
 
             foreach (Point point in _movePoints.Keys.ToArray<Point>())
             {
@@ -176,6 +174,7 @@ namespace Reversi.GameEngine
                 //do player BestMove           
                 if (field.MovePoints.Count > 0)
                 {
+                    var playerCount = 0;
                     Point rationalPlayerMove = field.RandomStep(out playerCount);
                     ratings[i] -= playerCount;
                 }
@@ -257,19 +256,15 @@ namespace Reversi.GameEngine
                     UpRightCheck(x + 1, y - 1, player, needToAdd) +
                     DownRightCheck(x + 1, y + 1, player, needToAdd) +
                     DownLeftCheck(x - 1, y + 1, player, needToAdd);
-                if (res > 0)
+                if (res > 0 && needToAdd)
                 {
-                    if (needToAdd)
-                    {
-                        _matrix[x, y] = player;
-                    }
+                    _matrix[x, y] = player;
                 }
             }
             return res;
         }
 
         #region SideCheck
-        //справа на ліво(до 0)
         private int UpCheck(int x, int y, int p, bool needToChange)
         {
             bool found = false;
@@ -365,8 +360,10 @@ namespace Reversi.GameEngine
                 {
                     found = c > 0;
                     if (c > 0 && f)
+                    {
                         for (a = x, b = y; a != i && b != j; a--, b--)
                             _matrix[a, b] = p;
+                    }
                     break;
                 }
             }

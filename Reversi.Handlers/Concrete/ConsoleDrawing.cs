@@ -12,36 +12,48 @@ namespace Reversi.Handlers
         }
         #endregion
 
-        #region Overrided abstracts methods     
+        #region Overrided abstracts methods
 
         protected override void Draw(int player, bool enabledTips)
         {
             Console.Clear();
-            Console.WriteLine("  1 2 3 4 5 6 7 8");            
+            Console.WriteLine("  1 2 3 4 5 6 7 8");
         }
 
         protected override void DrawEnableMoves(int player, bool enabledTips)
-        {            
+        {
             for (int i = 0; i < Field.N; i++)
             {
-                Console.Write(String.Format("{0} ",i+1));
+                Console.Write(String.Format("{0} ", i + 1));
                 for (int j = 0; j < Field.N; j++)
                 {
                     if (GameField[i, j] == 1)
                     {
                         Console.Write("X ");
                     }
-                    if(GameField[i,j]==-1)
+                    if (GameField[i, j] == -1)
                     {
                         Console.Write("O ");
                     }
-                    if (GameField.MovePoints.ContainsKey(new Point(i, j)))
-                        Console.Write("! ");
+                    if (enabledTips)
+                    {
+                        if (GameField.MovePoints.ContainsKey(new Point(i, j)))
+                        {
+                            Console.Write("! ");
+                        }
+                        else
+                            if (GameField[i, j] == 0)
+                            {
+                                Console.Write("- ");
+                            }
+                    }
                     else
                         if (GameField[i, j] == 0)
                         {
                             Console.Write("- ");
                         }
+
+
                 }
                 Console.WriteLine();
             }

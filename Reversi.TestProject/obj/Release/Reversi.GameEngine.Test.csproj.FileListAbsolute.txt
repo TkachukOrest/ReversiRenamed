@@ -16,3 +16,14 @@ D:\Programming\Reversi\Reversi.TestProject\obj\Release\Reversi.TestProject.Prope
 D:\Programming\Reversi\Reversi.TestProject\obj\Release\Reversi.GameEngine.Test.csproj.GenerateResource.Cache
 D:\Programming\Reversi\Reversi.TestProject\obj\Release\Reversi.TestProject.dll
 D:\Programming\Reversi\Reversi.TestProject\obj\Release\Reversi.TestProject.pdb
+D:\Programming\Programming_EPAM\Reversi\Reversi.TestProject\bin\Release\Reversi.TestProject.dll
+D:\Programming\Programming_EPAM\Reversi\Reversi.TestProject\bin\Release\Reversi.TestProject.pdb
+D:\Programming\Programming_EPAM\Reversi\Reversi.TestProject\bin\Release\Reversi.GameEngine.dll
+D:\Programming\Programming_EPAM\Reversi\Reversi.TestProject\bin\Release\Reversi.GameEngine.pdb
+D:\Programming\Programming_EPAM\Reversi\Reversi.TestProject\obj\Release\Reversi.GameEngine.Test.csprojResolveAssemblyReference.cache
+D:\Programming\Programming_EPAM\Reversi\Reversi.TestProject\obj\Release\Reversi.TestProject.Properties.Resources.resources
+D:\Programming\Programming_EPAM\Reversi\Reversi.TestProject\obj\Release\Reversi.GameEngine.Test.csproj.GenerateResource.Cache
+D:\Programming\Programming_EPAM\Reversi\Reversi.TestProject\obj\Release\Reversi.TestProject.dll
+D:\Programming\Programming_EPAM\Reversi\Reversi.TestProject\obj\Release\Reversi.TestProject.pdb
+D:\Programming\Programming_EPAM\Reversi\Reversi.TestProject\bin\Release\Reversi.Handlers.dll
+D:\Programming\Programming_EPAM\Reversi\Reversi.TestProject\bin\Release\Reversi.Handlers.pdb
