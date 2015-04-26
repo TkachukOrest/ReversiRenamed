@@ -102,7 +102,6 @@ namespace Reversi.ConsoleUI
                 _game.ReDraw();                
             }
         }
-
         static void MenuProcess(char option, ref bool gameProcess)
         {
             switch (option)
@@ -140,6 +139,7 @@ namespace Reversi.ConsoleUI
             try
             {
                 SaveFileDialog  saveDialog =new SaveFileDialog();
+                saveDialog.Filter = @"XML|*.xml";
                 saveDialog.InitialDirectory = Path.GetDirectoryName(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
                 if (saveDialog.ShowDialog() == DialogResult.OK)
                 {
@@ -157,6 +157,7 @@ namespace Reversi.ConsoleUI
             try
             {
                 OpenFileDialog openDialog=new OpenFileDialog();
+                openDialog.Filter = @"XML|*.xml";
                 openDialog.InitialDirectory = Path.GetDirectoryName(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
                 if (openDialog.ShowDialog() == DialogResult.OK)
                 {
