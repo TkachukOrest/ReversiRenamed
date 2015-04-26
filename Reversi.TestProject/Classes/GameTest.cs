@@ -154,7 +154,7 @@ namespace Reversi.GameEngine.Test
 
             //player move      
             game.MoveTo(3, 3);
-            
+
             Thread.Sleep(1500);
             Assert.IsTrue((game.Field[2, 3] == 1), "Computer didn`t move");
             Assert.IsTrue((game.Field[3, 3] == 1), "Didn`t convert");
@@ -166,16 +166,19 @@ namespace Reversi.GameEngine.Test
             Assert.IsTrue((game.Field.GameProcess == false), "Game procces must be setted to false");
 
             for (int i = 0; i < Field.N; i++)
+            {
                 for (int j = 0; j < Field.N; j++)
+                {
                     if (game.Field[i, j] == 1 || game.Field[i, j] == -1)
                     {
-                        if (
-                            !((i == 2 && j == 3) || (i == 3 && j == 3) || (i == 4 && j == 3) ||
+                        if (!((i == 2 && j == 3) || (i == 3 && j == 3) || (i == 4 && j == 3) ||
                               (i == 5 && j == 3) || (i == 6 && j == 3)))
                         {
                             Assert.IsTrue(false, String.Format("[{0};{1}]", i, j));
                         }
-                    }            
+                    }
+                }
+            }
         }
 
         [TestMethod]
@@ -212,10 +215,18 @@ namespace Reversi.GameEngine.Test
             Assert.IsTrue((game.Field.GameProcess == false), "Game procces must be setted to false");
 
             for (int i = 0; i < Field.N; i++)
+            {
                 for (int j = 0; j < Field.N; j++)
+                {
                     if (game.Field[i, j] == 1 || game.Field[i, j] == -1)
+                    {
                         if (!((i == 2 && j == 3) || (i == 3 && j == 3) || (i == 4 && j == 3) || (i == 5 && j == 3) || (i == 6 && j == 3)))
+                        {
                             Assert.IsTrue(false, String.Format("[{0};{1}]", i, j));
+                        }
+                    }
+                }
+            }
         }
 
         [TestMethod]
@@ -225,8 +236,12 @@ namespace Reversi.GameEngine.Test
             game.ShomMessageHandler += (object sender, string s) => { };
             game.CreateNewGame();
             for (int i = 0; i < Field.N; i++)
+            {
                 for (int j = 0; j < Field.N; j++)
+                {
                     game.Field[i, j] = 1;
+                }
+            }
             game.Field.FindEnabledMoves((int)Players.SecondPlayer);
             game.MoveTo(1, 1);
             Assert.IsTrue(game.Field.FirstPlayerPoints == 64, "game.Field.FirstPlayerPoints == 64");
@@ -236,10 +251,14 @@ namespace Reversi.GameEngine.Test
         {
             Game game = new Game();
             game.ShomMessageHandler += (object sender, string s) => { };
-            game.CreateNewGame();
+            game.CreateNewGame();            
             for (int i = 0; i < Field.N; i++)
+            { 
                 for (int j = 0; j < Field.N; j++)
+                { 
                     game.Field[i, j] = -1;
+                }
+            }
             game.Field.FindEnabledMoves((int)Players.FirstPlayer);
             game.MoveTo(1, 1);
             Assert.IsTrue(game.Field.SecondPlayerPoints == 64, "game.Field.SecondPlayerPoints == 64");
@@ -251,11 +270,19 @@ namespace Reversi.GameEngine.Test
             game.ShomMessageHandler += (object sender, string s) => { };
             game.CreateNewGame();
             for (int i = 0; i < Field.N; i++)
+            {
                 for (int j = 0; j < Field.N; j++)
+                {
                     if (j < Field.N / 2)
+                    {
                         game.Field[i, j] = -1;
+                    }
                     else
+                    {
                         game.Field[i, j] = 1;
+                    }
+                }
+            }
             game.Field.FindEnabledMoves((int)Players.FirstPlayer);
             game.MoveTo(1, 1);
             Assert.IsTrue(game.Field.FirstPlayerPoints == 32, "game.Field.FirstPlayerPoints == 32");
@@ -264,7 +291,7 @@ namespace Reversi.GameEngine.Test
 
         [TestMethod]
         public void Test_GameEvents()
-        {           
+        {
             Game game = new Game();
             game.InitDrawHandler += (object sender, EventArgs args) => { }; ;
             game.UpdateScoreHandler += (object sender, EventArgs args) => { };
@@ -272,8 +299,8 @@ namespace Reversi.GameEngine.Test
             game.PlayGoodSoundHandler += (object sender, EventArgs args) => { };
             game.PlayBadSoundHandler += (object sender, EventArgs args) => { };
             game.DrawHandler = (sender, args) => { };
-            
-            game.CreateNewGame();            
+
+            game.CreateNewGame();
             game.Field.FindEnabledMoves((int)Players.SecondPlayer);
             //Seccond player move
             game.MoveTo(0, 0);
@@ -287,6 +314,6 @@ namespace Reversi.GameEngine.Test
             game.MoveTo(2, 3);
             Assert.IsTrue(game.Field[2, 3] == 1, "Move(first player) wasn`t done");
 
-        }      
+        }
     }
 }

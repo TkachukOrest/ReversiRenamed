@@ -49,6 +49,9 @@
     <Content Include="ModelDefinition\Package5_1755.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package_1549.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package_1755.uml">
       <SubType>Content</SubType>
     </Content>

@@ -1,6 +1,6 @@
 ﻿using Reversi.GameEngine;
 
-namespace Reversi.Handlers.Interfaces
+namespace Reversi.Handlers
 {
     interface ISerializer
     {

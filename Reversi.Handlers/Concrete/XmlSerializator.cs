@@ -1,9 +1,8 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 using System.Xml;
-using Reversi.Handlers.Interfaces;
+using Reversi.GameEngine;
 
-namespace Reversi.GameEngine
+namespace Reversi.Handlers
 {
     public class XmlSerializer:ISerializer
     {
@@ -45,7 +44,7 @@ namespace Reversi.GameEngine
             {
                 StringBuilder s = new StringBuilder();
                 while (reader.Read())
-                {
+                {                    
                     switch (reader.NodeType)
                     {
                         case XmlNodeType.Element:

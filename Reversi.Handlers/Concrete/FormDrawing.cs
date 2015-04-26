@@ -79,11 +79,15 @@ namespace Reversi.Handlers
         protected override void DrawEnableMoves(int player, bool enabledTips)
         {
             Graphics graphics = Graphics.FromHwnd(_panel.Handle);
-            Pen pen;
+            Pen pen;            
             if (player == 1)
+            {
                 pen = new Pen(Color.FromArgb(220, 42, 71), (float)2.8);
+            }
             else
+            {
                 pen = new Pen(Color.FromArgb(42, 94, 146), (float)2.8);
+            }
 
             if (enabledTips && GameField.GameProcess)
             {

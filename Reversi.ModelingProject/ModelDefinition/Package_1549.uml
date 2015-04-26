@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="eaf46741-a127-447b-8229-36c26f5d6396"
+  name="Classes"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="ac494e29-d595-4022-9bad-86fcf767e5d4"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DReversi.GameEngine.Classes"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="3dc3e627-56af-4d6b-bba0-74aff69b1c93"
+        name="DrawEventArgs"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="b67b9464-681f-426a-bb19-056f329e0d82"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FProgramming%2FProgramming_EPAM%2FCopy project%2FReversi_GitHub_Reload%2FReversi.Models%2Fbin%2FRelease%2FReversi.GameEngine.dll&quot; Namespace%3DReversi.GameEngine.Classes Type%3DDrawEventArgs"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="31fab79a-3ee1-42a4-98e8-9dffc59b610c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2b2cb6bd-bdde-4e71-8bfc-f35e76db4d8b">
+                <propertyInstance
+                  Id="de2f868e-1371-471d-8743-3395c7fd3b3f"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4f4eada8-0cac-4e86-af85-ae5d49cc2f53">
+                <propertyInstance
+                  Id="878d00fc-ca39-434e-8662-08f4a917b7d6"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="786a9e7e-ad8f-4392-a51a-cabb159c6659">
+                <propertyInstance
+                  Id="36d336f8-2853-4762-8d43-7f61edcda6e6"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="558137a6-0274-44c4-ad93-12cc318872dd">
+                <propertyInstance
+                  Id="c0cc8c7b-bb3d-480d-9a8b-8c1e9625c470"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c5d4a007-99b3-481a-b0e7-e24eb48fbcd0">
+                <propertyInstance
+                  Id="ed56bfb7-af6f-406d-b6e3-ba51c262ab91"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="ba76f1d1-2ce3-465e-8a48-c4259d63519b"
+            isSubstitutable="false">
+            <classMoniker
+              Id="a1dbcc51-d532-4d31-b2fc-1b2f8ac8cd39"
+              LastKnownName="EventArgs"
+              LastKnownLocation="Package2_1755.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

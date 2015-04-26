@@ -46,7 +46,7 @@
         <referencesInternal>
           <reference
             Id="50685761-bfbc-4f06-8100-6734f430b4d5"
-            handle="viewcode://./CodeSchema_Struct?Assembly%3Dfile:%2F%2F%2FD:%2FProgramming%2FReversi%2FReversi.Models%2Fbin%2FRelease%2FReversi.GameEngine.dll Type%3DPoint"
+            handle="viewcode://./CodeSchema_Struct?Assembly%3D&quot;file:%2F%2F%2FD:%2FProgramming%2FProgramming_EPAM%2FCopy project%2FReversi_GitHub_Reload%2FReversi.Models%2Fbin%2FRelease%2FReversi.GameEngine.dll&quot; Type%3DPoint"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>

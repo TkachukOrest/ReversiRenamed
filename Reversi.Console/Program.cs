@@ -18,7 +18,7 @@ namespace Reversi.ConsoleUI
 
         #region Methods for Events
         private static void InitializeDraw(object sender, EventArgs e)
-        {
+        {            
             _draw = new ConsoleDrawing(_game.Field);
             _game.DrawHandler = _draw.DrawField;
         }
@@ -40,15 +40,9 @@ namespace Reversi.ConsoleUI
 
             _music = new GameSounds();
             _game = new Game();
-
-            _game.InitDrawHandler += InitializeDraw;
-            _game.UpdateScoreHandler += UpdateScoreAndPlayerMove;
-            _game.ShomMessageHandler += ShowMessage;
-            _game.PlayGoodSoundHandler += _music.PlayGoodSound;
-            _game.PlayBadSoundHandler += _music.PlayBadSound;
-
-            _game.CreateNewGame();
-            _game.EnableComputerMode(true);
+                      
+            Subscribe();
+            CreateGame(true);
 
             string key;
             char option;
@@ -81,6 +75,18 @@ namespace Reversi.ConsoleUI
         }
         #endregion
 
+        #region Subscribe Events 
+
+        public static void Subscribe()
+        {
+            _game.InitDrawHandler += InitializeDraw;
+            _game.UpdateScoreHandler += UpdateScoreAndPlayerMove;
+            _game.ShomMessageHandler += ShowMessage;
+            _game.PlayGoodSoundHandler += _music.PlayGoodSound;
+            _game.PlayBadSoundHandler += _music.PlayBadSound;
+        }
+        #endregion
+
         #region Helpers
         static void ShowMenu()
         {
@@ -110,12 +116,10 @@ namespace Reversi.ConsoleUI
                     gameProcess = false;
                     break;
                 case 'N':
-                    _game.CreateNewGame();
-                    _game.EnableComputerMode(false);
+                    CreateGame(false);
                     break;
                 case 'C':
-                    _game.CreateNewGame();
-                    _game.EnableComputerMode(true);
+                    CreateGame(true);
                     break;
                 case 'T':
                     _game.EnableTips(!(_game.EnabledTips));
@@ -133,6 +137,12 @@ namespace Reversi.ConsoleUI
                 default:                    
                     break;
             }
+        }
+
+        static void CreateGame(bool computerMode)
+        {
+            _game.CreateNewGame();
+            _game.EnableComputerMode(computerMode);
         }
         static void SaveGame()
         {

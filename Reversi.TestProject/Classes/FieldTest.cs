@@ -41,8 +41,9 @@ namespace Reversi.GameEngine.Test
             int[,] matr = new int[Field.N, Field.N];
             field.CopyMatr(matr);
 
-            bool result = true;
+            bool result = true;            
             for (int i = 0; i < matr.GetLength(0); i++)
+            { 
                 for (int j = 0; j < matr.GetLength(0); j++)
                 {
                     if (matr[i, j] != field[i, j])
@@ -50,7 +51,7 @@ namespace Reversi.GameEngine.Test
                         result = false;
                     }
                 }
-
+            }
             Assert.IsTrue(result, "Matrix wasn`t copied well");
         }
 

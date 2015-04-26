@@ -11,8 +11,8 @@ namespace Reversi.TestProject.Classes
         [TestMethod]
         public void Test_DrawEventArgs()
         {
-            DrawEventArgs args=new DrawEventArgs((int)Players.FirstPlayer,true);
-            Assert.IsTrue(args.Tips==true);
+            DrawEventArgs args = new DrawEventArgs((int)Players.FirstPlayer, true);
+            Assert.IsTrue(args.Tips == true);
             Assert.IsTrue(args.Player == 1);
         }
     }

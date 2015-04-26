@@ -117,10 +117,16 @@ namespace Reversi.GameEngine
                 for (int j = 0; j < N; j++)
                 {
                     if (_matrix[i, j] < 0)
+                    {
                         secondPoints++;
+                    }
                     else
+                    {
                         if (_matrix[i, j] > 0)
+                        {
                             firstPoints++;
+                        }
+                    }
                 }
             }
             FirstPlayerPoints = firstPoints;
@@ -129,8 +135,12 @@ namespace Reversi.GameEngine
         public void CopyMatr(int[,] a)
         {
             for (int i = 0; i < N; i++)
+            {
                 for (int j = 0; j < N; j++)
+                {
                     _matrix[i, j] = a[i, j];
+                }
+            }
         }
         #endregion
 
@@ -179,8 +189,10 @@ namespace Reversi.GameEngine
                     ratings[i] -= playerCount;
                 }
                 else
+                {
                     //if we can end game - it`s best move
                     ratings[i] = 100;
+                }
                 i++;
             }
 
@@ -194,6 +206,7 @@ namespace Reversi.GameEngine
                     willget = values[i];
                 }
                 else
+                {
                     //якщо максимальний рейтинг точки співпадає з даним - вибираємо ту, яка  впершому ході забере більше фішок
                     //дасть перевагу, якщо гравець допустить помилку
                     if (max == ratings[i] && willget < values[i])
@@ -202,6 +215,7 @@ namespace Reversi.GameEngine
                         maxPos = i;
                         willget = values[i];
                     }
+                }
             }
             if (FirstMoveAI)
             {
@@ -248,14 +262,7 @@ namespace Reversi.GameEngine
             int res = 0;
             if (_matrix[x, y] == 0)
             {
-                res = UpCheck(x, y - 1, player, needToAdd) +
-                    DownCheck(x, y + 1, player, needToAdd) +
-                    LeftCheck(x - 1, y, player, needToAdd) +
-                    RightCheck(x + 1, y, player, needToAdd) +
-                    UpLeftCheck(x - 1, y - 1, player, needToAdd) +
-                    UpRightCheck(x + 1, y - 1, player, needToAdd) +
-                    DownRightCheck(x + 1, y + 1, player, needToAdd) +
-                    DownLeftCheck(x - 1, y + 1, player, needToAdd);
+                res = CheckAllDirections(x, y, player, needToAdd);
                 if (res > 0 && needToAdd)
                 {
                     _matrix[x, y] = player;
@@ -265,22 +272,36 @@ namespace Reversi.GameEngine
         }
 
         #region SideCheck
+
+        private int CheckAllDirections(int x, int y, int player, bool needToAdd = true)
+        {
+            return UpCheck(x, y - 1, player, needToAdd) +
+                    DownCheck(x, y + 1, player, needToAdd) +
+                    LeftCheck(x - 1, y, player, needToAdd) +
+                    RightCheck(x + 1, y, player, needToAdd) +
+                    UpLeftCheck(x - 1, y - 1, player, needToAdd) +
+                    UpRightCheck(x + 1, y - 1, player, needToAdd) +
+                    DownRightCheck(x + 1, y + 1, player, needToAdd) +
+                    DownLeftCheck(x - 1, y + 1, player, needToAdd);
+        }
         private int UpCheck(int x, int y, int p, bool needToChange)
         {
             bool found = false;
             int c = 0;
             for (int i = y; i >= 0; i--)
             {
-                //якщо точка в яку ми клікнули не прилягає до жодної фішки (має відступ)
-                //використовуєтсья для правильного пошуку можливих ходів
-                if (_matrix[x, i] == 0) return 0;
-                if (_matrix[x, i] == -p) c++;
+                if (_matrix[x, i] == 0) { return 0; }
+                if (_matrix[x, i] == -p) { c++; }
                 if (_matrix[x, i] == p)
                 {
                     found = c > 0;
                     if (c > 0 && needToChange)
+                    {
                         for (int j = y; j != i; j--)
+                        {
                             _matrix[x, j] = p;
+                        }
+                    }
                     break;
                 }
             }
@@ -292,8 +313,8 @@ namespace Reversi.GameEngine
             int c = 0;
             for (int i = y; i < N; i++)
             {
-                if (_matrix[x, i] == 0) return 0;
-                if (_matrix[x, i] == -p) c++;
+                if (_matrix[x, i] == 0) { return 0; }
+                if (_matrix[x, i] == -p) { c++; }
                 if (_matrix[x, i] == p)
                 {
                     found = c > 0;
@@ -311,14 +332,18 @@ namespace Reversi.GameEngine
             int c = 0;
             for (int i = x; i >= 0; i--)
             {
-                if (_matrix[i, y] == 0) return 0;
-                if (_matrix[i, y] == -p) c++;
+                if (_matrix[i, y] == 0) { return 0; }
+                if (_matrix[i, y] == -p) { c++; }
                 if (_matrix[i, y] == p)
                 {
                     found = c > 0;
                     if (c > 0 && f)
+                    {
                         for (int j = x; j != i; j--)
+                        {
                             _matrix[j, y] = p;
+                        }
+                    }
                     break;
                 }
             }
@@ -330,14 +355,18 @@ namespace Reversi.GameEngine
             int c = 0;
             for (int i = x; i < N; i++)
             {
-                if (_matrix[i, y] == 0) return 0;
-                if (_matrix[i, y] == -p) c++;
+                if (_matrix[i, y] == 0) { return 0; }
+                if (_matrix[i, y] == -p) { c++; }
                 if (_matrix[i, y] == p)
                 {
                     found = c > 0;
                     if (c > 0 && f)
+                    {
                         for (int j = x; j != i; j++)
+                        {
                             _matrix[j, y] = p;
+                        }
+                    }
                     break;
                 }
             }
@@ -354,15 +383,17 @@ namespace Reversi.GameEngine
             int c = 0;
             for (i = x, j = y; i >= 0 && j >= 0; i--, j--)
             {
-                if (_matrix[i, j] == 0) return 0;
-                if (_matrix[i, j] == -p) c++;
+                if (_matrix[i, j] == 0) { return 0; }
+                if (_matrix[i, j] == -p) { c++; }
                 if (_matrix[i, j] == p)
                 {
                     found = c > 0;
                     if (c > 0 && f)
                     {
                         for (a = x, b = y; a != i && b != j; a--, b--)
+                        {
                             _matrix[a, b] = p;
+                        }
                     }
                     break;
                 }
@@ -378,14 +409,18 @@ namespace Reversi.GameEngine
             int c = 0;
             for (i = x, j = y; i < N && j >= 0; i++, j--)
             {
-                if (_matrix[i, j] == 0) return 0;
-                if (_matrix[i, j] == -p) c++;
+                if (_matrix[i, j] == 0) { return 0; }
+                if (_matrix[i, j] == -p) { c++; }
                 if (_matrix[i, j] == p)
                 {
                     found = c > 0;
                     if (c > 0 && f)
+                    {
                         for (a = x, b = y; a != i && b != j; a++, b--)
+                        {
                             _matrix[a, b] = p;
+                        }
+                    }
                     break;
                 }
             }
@@ -400,14 +435,18 @@ namespace Reversi.GameEngine
             int c = 0;
             for (i = x, j = y; i < N && j < N; i++, j++)
             {
-                if (_matrix[i, j] == 0) return 0;
-                if (_matrix[i, j] == -p) c++;
+                if (_matrix[i, j] == 0) { return 0; }
+                if (_matrix[i, j] == -p) { c++; }
                 if (_matrix[i, j] == p)
                 {
                     found = c > 0;
                     if (c > 0 && f)
+                    {
                         for (a = x, b = y; a != i && b != j; a++, b++)
+                        {
                             _matrix[a, b] = p;
+                        }
+                    }
                     break;
                 }
             }
@@ -422,14 +461,18 @@ namespace Reversi.GameEngine
             int c = 0;
             for (i = x, j = y; i >= 0 && j < N; i--, j++)
             {
-                if (_matrix[i, j] == 0) return 0;
-                if (_matrix[i, j] == -p) c++;
+                if (_matrix[i, j] == 0) { return 0; }
+                if (_matrix[i, j] == -p) { c++; }
                 if (_matrix[i, j] == p)
                 {
                     found = c > 0;
                     if (c > 0 && f)
+                    {
                         for (a = x, b = y; a != i && b != j; a--, b++)
+                        {
                             _matrix[a, b] = p;
+                        }
+                    }
                     break;
                 }
             }
