@@ -60,3 +60,14 @@ D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_Copy\Reversi.
 D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_Copy\Reversi.TestProject\obj\Release\Reversi.GameEngine.Test.csproj.GenerateResource.Cache
 D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_Copy\Reversi.TestProject\obj\Release\Reversi.TestProject.dll
 D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_Copy\Reversi.TestProject\obj\Release\Reversi.TestProject.pdb
+D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_TryUML\Reversi.TestProject\bin\Release\Reversi.TestProject.dll
+D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_TryUML\Reversi.TestProject\bin\Release\Reversi.TestProject.pdb
+D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_TryUML\Reversi.TestProject\bin\Release\Reversi.GameEngine.dll
+D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_TryUML\Reversi.TestProject\bin\Release\Reversi.Handlers.dll
+D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_TryUML\Reversi.TestProject\bin\Release\Reversi.Handlers.pdb
+D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_TryUML\Reversi.TestProject\bin\Release\Reversi.GameEngine.pdb
+D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_TryUML\Reversi.TestProject\obj\Release\Reversi.GameEngine.Test.csprojResolveAssemblyReference.cache
+D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_TryUML\Reversi.TestProject\obj\Release\Reversi.TestProject.Properties.Resources.resources
+D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_TryUML\Reversi.TestProject\obj\Release\Reversi.GameEngine.Test.csproj.GenerateResource.Cache
+D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_TryUML\Reversi.TestProject\obj\Release\Reversi.TestProject.dll
+D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_TryUML\Reversi.TestProject\obj\Release\Reversi.TestProject.pdb

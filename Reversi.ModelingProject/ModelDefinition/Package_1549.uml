@@ -21,7 +21,7 @@
         <referencesInternal>
           <reference
             Id="b67b9464-681f-426a-bb19-056f329e0d82"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FProgramming%2FProgramming_EPAM%2FCopy project%2FReversi_GitHub_Reload%2FReversi.Models%2Fbin%2FRelease%2FReversi.GameEngine.dll&quot; Namespace%3DReversi.GameEngine.Classes Type%3DDrawEventArgs"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FProgramming%2FProgramming_EPAM%2FCopy project%2FReversi_GitHub_Reload_TryUML%2FReversi.Models%2Fbin%2FRelease%2FReversi.GameEngine.dll&quot; Namespace%3DReversi.GameEngine.Classes Type%3DDrawEventArgs"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>

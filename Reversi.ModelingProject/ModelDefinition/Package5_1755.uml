@@ -67,6 +67,16 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="fe9191df-ba62-4785-8780-9768337aa9ef"
+            isSubstitutable="false">
+            <classMoniker
+              Id="a1dbcc51-d532-4d31-b2fc-1b2f8ac8cd39"
+              LastKnownName="EventArgs"
+              LastKnownLocation="Package2_1755.uml" />
+          </generalization>
+        </generalsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>

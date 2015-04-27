@@ -51,3 +51,13 @@ D:\Programming\Programming_EPAM\Copy project\Reversi try with AI in game\Reversi
 D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_Copy\Reversi.Console\bin\Release\Reversi.ConsoleUI.exe.config
 D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_Copy\Reversi.Console\obj\Release\Reversi.ConsoleUI.exe
 D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_Copy\Reversi.Console\obj\Release\Reversi.ConsoleUI.pdb
+D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_TryUML\Reversi.Console\bin\Release\Reversi.ConsoleUI.exe.config
+D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_TryUML\Reversi.Console\obj\Release\Reversi.ConsoleUI.exe
+D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_TryUML\Reversi.Console\obj\Release\Reversi.ConsoleUI.pdb
+D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_TryUML\Reversi.Console\bin\Release\Reversi.ConsoleUI.exe
+D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_TryUML\Reversi.Console\bin\Release\Reversi.ConsoleUI.pdb
+D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_TryUML\Reversi.Console\bin\Release\Reversi.GameEngine.dll
+D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_TryUML\Reversi.Console\bin\Release\Reversi.Handlers.dll
+D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_TryUML\Reversi.Console\bin\Release\Reversi.Handlers.pdb
+D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_TryUML\Reversi.Console\bin\Release\Reversi.GameEngine.pdb
+D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload_TryUML\Reversi.Console\obj\Release\Reversi.ConsoleUI.csprojResolveAssemblyReference.cache
