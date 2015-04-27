@@ -14,6 +14,7 @@ namespace Reversi.GameEngine
         public bool EnabledComputerMoves { get; private set; }
         public bool EnabledTips { get; private set; }
         public Field Field { get; private set; }
+        private IArtificialIntelligence _computerIntelligence;
 
         private int _currentMove;
         public int CurrentMove
@@ -46,7 +47,7 @@ namespace Reversi.GameEngine
         #endregion
 
         #region Constructors
-        public Game()
+        public Game(IArtificialIntelligence computerIntelligence)
         {
             //variables initializating
             AlreadyExitFromTimer = true;
@@ -54,6 +55,7 @@ namespace Reversi.GameEngine
             EnabledComputerMoves = false;
             CurrentMove = 1;
             _timer = new Timer();
+            _computerIntelligence = computerIntelligence;
         }
         #endregion
 
@@ -245,7 +247,7 @@ namespace Reversi.GameEngine
             {
                 _timer.Enabled = false;
                 //do computer move
-                Field.DoComputerMove((int)Players.FirstPlayer);
+                _computerIntelligence.DoComputerMove(this.Field,(int)Players.FirstPlayer);
 
                 //drawcomputermove with tips for second player
                 Field.FindEnabledMoves((int)Players.SecondPlayer);

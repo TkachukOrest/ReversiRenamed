@@ -19,7 +19,8 @@ namespace Reversi.TestProject.Classes
         [TestMethod]
         public void Test_XmlReadGoodPath()
         {
-            Game game = new Game();
+            IArtificialIntelligence _computerIntelligence = new MinMaxAI();
+            Game game = new Game(_computerIntelligence);
             game.CreateNewGame();
             string path = Path.GetDirectoryName(Path.GetDirectoryName(TestContext.TestDir)) + @"\Reversi.TestProject\Resources\SavedGame.xml";
             try
@@ -46,7 +47,8 @@ namespace Reversi.TestProject.Classes
         [TestMethod]
         public void Test_XMLWrite()
         {
-            Game game = new Game();
+            IArtificialIntelligence _computerIntelligence = new MinMaxAI();
+            Game game = new Game(_computerIntelligence);
             game.CreateNewGame();
             string path = Path.GetDirectoryName(Path.GetDirectoryName(TestContext.TestDir)) + @"\Reversi.TestProject\Resources\TestGame.xml";
             try

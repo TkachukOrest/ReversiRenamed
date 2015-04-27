@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Classes\GameTest.cs" />
     <Compile Include="Classes\DrawEventArgsTest.cs" />
+    <Compile Include="Classes\MinMaxAITest.cs" />
     <Compile Include="Classes\XmlSerializatorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\FieldTest.cs" />

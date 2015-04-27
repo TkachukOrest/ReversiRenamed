@@ -34,3 +34,12 @@ D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload\Reversi.Handl
 D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload\Reversi.Handlers\obj\Release\Reversi.Handlers.csproj.GenerateResource.Cache
 D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload\Reversi.Handlers\obj\Release\Reversi.Handlers.dll
 D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload\Reversi.Handlers\obj\Release\Reversi.Handlers.pdb
+D:\Programming\Programming_EPAM\Copy project\Reversi try with AI in game\Reversi.Handlers\bin\Release\Reversi.Handlers.dll
+D:\Programming\Programming_EPAM\Copy project\Reversi try with AI in game\Reversi.Handlers\bin\Release\Reversi.Handlers.pdb
+D:\Programming\Programming_EPAM\Copy project\Reversi try with AI in game\Reversi.Handlers\bin\Release\Reversi.GameEngine.dll
+D:\Programming\Programming_EPAM\Copy project\Reversi try with AI in game\Reversi.Handlers\bin\Release\Reversi.GameEngine.pdb
+D:\Programming\Programming_EPAM\Copy project\Reversi try with AI in game\Reversi.Handlers\obj\Release\Reversi.Handlers.csprojResolveAssemblyReference.cache
+D:\Programming\Programming_EPAM\Copy project\Reversi try with AI in game\Reversi.Handlers\obj\Release\Reversi.Handlers.Properties.Resources.resources
+D:\Programming\Programming_EPAM\Copy project\Reversi try with AI in game\Reversi.Handlers\obj\Release\Reversi.Handlers.csproj.GenerateResource.Cache
+D:\Programming\Programming_EPAM\Copy project\Reversi try with AI in game\Reversi.Handlers\obj\Release\Reversi.Handlers.dll
+D:\Programming\Programming_EPAM\Copy project\Reversi try with AI in game\Reversi.Handlers\obj\Release\Reversi.Handlers.pdb

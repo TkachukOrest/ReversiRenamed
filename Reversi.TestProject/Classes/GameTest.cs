@@ -13,10 +13,11 @@ namespace Reversi.GameEngine.Test
     [TestClass]
     public class GameTest
     {
+        private IArtificialIntelligence _computerIntelligence = new MinMaxAI();
         [TestMethod]
         public void Test_CurentMove()
-        {
-            Game game = new Game();
+        {            
+            Game game = new Game(_computerIntelligence);
             game.CurrentMove = 4;
             Assert.IsTrue(game.IsFirstPlayerMove() == true, "It`s time for first`s player move");
 
@@ -27,22 +28,22 @@ namespace Reversi.GameEngine.Test
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void Test_CurentMoveError()
-        {
-            Game game = new Game();
+        {            
+            Game game = new Game(_computerIntelligence);
             game.CurrentMove = 0;
         }
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void Test_CurentMoveErrorWithNegativeArgument()
-        {
-            Game game = new Game();
+        {            
+            Game game = new Game(_computerIntelligence);
             game.CurrentMove = -1;
         }
 
         [TestMethod]
         public void Test_Constructor()
-        {
-            Game game = new Game();
+        {            
+            Game game = new Game(_computerIntelligence);
             Assert.IsTrue(game.AlreadyExitFromTimer == true, "AlreadyExitFromTimer wasn`t initialized");
             Assert.IsTrue(game.EnabledTips == true, "EnabledTips wasn`t initialized");
             Assert.IsTrue(game.EnabledComputerMoves == false, "EnabledComputerMoves wasn`t initialized");
@@ -51,8 +52,8 @@ namespace Reversi.GameEngine.Test
 
         [TestMethod]
         public void Test_InitializeField()
-        {
-            Game game = new Game();
+        {            
+            Game game = new Game(_computerIntelligence);
             game.CreateNewGame();
             Assert.IsTrue(game.CurrentMove == 1, "Current move ought to be 1 on start of game");
             Assert.IsTrue(game.Field.FirstPlayerPoints == 2, "First player on start have only 2 points");
@@ -61,8 +62,8 @@ namespace Reversi.GameEngine.Test
 
         [TestMethod]
         public void Test_CreateNewGame()
-        {
-            Game game = new Game();
+        {            
+            Game game = new Game(_computerIntelligence);
             game.CreateNewGame();
             Assert.IsTrue(game.CurrentMove == 1, "Current move ought to be 1 on start of game");
             Assert.IsTrue(game.Field.FirstPlayerPoints == 2, "First player on start have only 2 points");
@@ -72,8 +73,8 @@ namespace Reversi.GameEngine.Test
 
         [TestMethod]
         public void Test_Move()
-        {
-            Game game = new Game();
+        {            
+            Game game = new Game(_computerIntelligence);
             game.CreateNewGame();
             game.Field.FindEnabledMoves((int)Players.SecondPlayer);
             game.MoveTo(2, 4);
@@ -81,8 +82,8 @@ namespace Reversi.GameEngine.Test
         }
         [TestMethod]
         public void Test_MoveBad()
-        {
-            Game game = new Game();
+        {            
+            Game game = new Game(_computerIntelligence);
             game.CreateNewGame();
             game.Field.FindEnabledMoves((int)Players.SecondPlayer);
             game.MoveTo(1, 1);
@@ -90,8 +91,8 @@ namespace Reversi.GameEngine.Test
         }
         [TestMethod]
         public void Test_MoveWhenGameIsEnded()
-        {
-            Game game = new Game();
+        {            
+            Game game = new Game(_computerIntelligence);
             game.CreateNewGame();
             game.Field[3, 3] = 1;
             game.Field[3, 4] = 1;
@@ -104,15 +105,15 @@ namespace Reversi.GameEngine.Test
 
         [TestMethod]
         public void Test_ChangeComputerModeOn()
-        {
-            Game game = new Game();
+        {            
+            Game game = new Game(_computerIntelligence);
             game.EnableComputerMode(true);
             Assert.IsTrue(game.EnabledComputerMoves == true);
         }
         [TestMethod]
         public void Test_ChangeComputerModeOff()
-        {
-            Game game = new Game();
+        {            
+            Game game = new Game(_computerIntelligence);
             game.EnableComputerMode(false);
             Assert.IsTrue(game.EnabledComputerMoves == false);
         }
@@ -120,21 +121,21 @@ namespace Reversi.GameEngine.Test
         [TestMethod]
         public void Test_ChangeTipsOn()
         {
-            Game game = new Game();
+            Game game = new Game(_computerIntelligence);
             game.EnableTips(true);
             Assert.IsTrue(game.EnabledTips == true);
         }
         [TestMethod]
         public void Test_ChangeTipsOff()
         {
-            Game game = new Game();
+            Game game = new Game(_computerIntelligence);
             game.EnableTips(false);
             Assert.IsTrue(game.EnabledTips == false);
         }
         [TestMethod]
         public void Test_MoveComputer()
         {
-            Game game = new Game();
+            Game game = new Game(_computerIntelligence);
             game.CreateNewGame();
             game.EnableComputerMode(true);
             game.Field.FirstMoveAI = false;
@@ -184,7 +185,7 @@ namespace Reversi.GameEngine.Test
         [TestMethod]
         public void Test_MoveOtherPlayer()
         {
-            Game game = new Game();
+            Game game = new Game(_computerIntelligence);
             game.CreateNewGame();
             game.EnableComputerMode(false);
             game.Field.FirstMoveAI = false;
@@ -232,7 +233,7 @@ namespace Reversi.GameEngine.Test
         [TestMethod]
         public void Test_GameFinish_FirstPlayerWin()
         {
-            Game game = new Game();
+            Game game = new Game(_computerIntelligence);
             game.ShomMessageHandler += (object sender, string s) => { };
             game.CreateNewGame();
             for (int i = 0; i < Field.N; i++)
@@ -249,7 +250,7 @@ namespace Reversi.GameEngine.Test
         [TestMethod]
         public void Test_GameFinish_SecondPlayerWin()
         {
-            Game game = new Game();
+            Game game = new Game(_computerIntelligence);
             game.ShomMessageHandler += (object sender, string s) => { };
             game.CreateNewGame();            
             for (int i = 0; i < Field.N; i++)
@@ -266,7 +267,7 @@ namespace Reversi.GameEngine.Test
         [TestMethod]
         public void Test_GameFinish_Draw()
         {
-            Game game = new Game();
+            Game game = new Game(_computerIntelligence);
             game.ShomMessageHandler += (object sender, string s) => { };
             game.CreateNewGame();
             for (int i = 0; i < Field.N; i++)
@@ -292,7 +293,7 @@ namespace Reversi.GameEngine.Test
         [TestMethod]
         public void Test_GameEvents()
         {
-            Game game = new Game();
+            Game game = new Game(_computerIntelligence);
             game.InitDrawHandler += (object sender, EventArgs args) => { }; ;
             game.UpdateScoreHandler += (object sender, EventArgs args) => { };
             game.ShomMessageHandler += (object sender, string s) => { }; ;

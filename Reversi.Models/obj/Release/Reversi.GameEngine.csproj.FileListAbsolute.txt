@@ -26,3 +26,10 @@ D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload\Reversi.Model
 D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload\Reversi.Models\obj\Release\Reversi.GameEngine.csproj.GenerateResource.Cache
 D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload\Reversi.Models\obj\Release\Reversi.GameEngine.dll
 D:\Programming\Programming_EPAM\Copy project\Reversi_GitHub_Reload\Reversi.Models\obj\Release\Reversi.GameEngine.pdb
+D:\Programming\Programming_EPAM\Copy project\Reversi try with AI in game\Reversi.Models\obj\Release\Reversi.GameEngine.csprojResolveAssemblyReference.cache
+D:\Programming\Programming_EPAM\Copy project\Reversi try with AI in game\Reversi.Models\obj\Release\Reversi.GameEngine.Properties.Resources.resources
+D:\Programming\Programming_EPAM\Copy project\Reversi try with AI in game\Reversi.Models\obj\Release\Reversi.GameEngine.csproj.GenerateResource.Cache
+D:\Programming\Programming_EPAM\Copy project\Reversi try with AI in game\Reversi.Models\obj\Release\Reversi.GameEngine.dll
+D:\Programming\Programming_EPAM\Copy project\Reversi try with AI in game\Reversi.Models\obj\Release\Reversi.GameEngine.pdb
+D:\Programming\Programming_EPAM\Copy project\Reversi try with AI in game\Reversi.Models\bin\Release\Reversi.GameEngine.dll
+D:\Programming\Programming_EPAM\Copy project\Reversi try with AI in game\Reversi.Models\bin\Release\Reversi.GameEngine.pdb

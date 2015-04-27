@@ -14,6 +14,7 @@ namespace Reversi.ConsoleUI
         private static Drawing _draw;
         private static Game _game;
         private static GameSounds _music;
+        private static IArtificialIntelligence _computerIntelligence;
         #endregion
 
         #region Methods for Events
@@ -38,8 +39,9 @@ namespace Reversi.ConsoleUI
         {
             ShowMenu();
 
+            _computerIntelligence = new MinMaxAI();
             _music = new GameSounds();
-            _game = new Game();
+            _game = new Game(_computerIntelligence);
                       
             Subscribe();
             CreateGame(true);

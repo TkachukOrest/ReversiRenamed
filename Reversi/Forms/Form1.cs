@@ -13,6 +13,7 @@ namespace Reversi
         private Drawing _draw;
         private Game _game;
         private GameSounds _music;
+        private IArtificialIntelligence _computerIntelligence;
         #endregion
 
         #region Construcors
@@ -21,9 +22,10 @@ namespace Reversi
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
 
+            _computerIntelligence = new MinMaxAI();
             _music = new GameSounds();
-
-            _game = new Game();
+            
+            _game = new Game(_computerIntelligence);
             _game.InitDrawHandler += InitializeDraw;
             _game.UpdateScoreHandler += UpdateScoreAndPlayerMove;
             _game.ShomMessageHandler += ShowMessage;
