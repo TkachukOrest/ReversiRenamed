@@ -19,6 +19,7 @@ public struct Point
 
 namespace Reversi.GameEngine
 {
+    // Review VV: why should this class be serializable?
     [Serializable]
     public class Field
     {
