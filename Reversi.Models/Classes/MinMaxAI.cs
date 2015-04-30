@@ -86,8 +86,8 @@ namespace Reversi.GameEngine
                 gameField.FirstMoveAI = false;
                 return gameField.MovePoints.Keys.ElementAt(rnd.Next(0, gameField.MovePoints.Count));
             }
-            else
-                return gameField.MovePoints.Keys.ElementAt(maxPos);
+            else 
+                return gameField.MovePoints.Keys.ElementAt(maxPos); //цей блок краще помістити в {}
         }
     }
 }

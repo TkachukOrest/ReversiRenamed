@@ -19,11 +19,13 @@ public struct Point
 
 namespace Reversi.GameEngine
 {
+	//Peer:яким чином клас користується Serializable?
     [Serializable]
     public class Field
     {
         #region Variables
         //standard size of game field
+		//Peer:краще замість константи дати можливість гравцю самому обирати розмір поля
         public const int N = 8;
         public const int Scale = 40;
 
@@ -188,7 +190,7 @@ namespace Reversi.GameEngine
         }
 
         #region SideCheck
-
+		//забагато методів в return,  написати допоміжні методи, або порефакторити секцію Check
         private int CheckAllDirections(int x, int y, int player, bool needToAdd = true)
         {
             return UpCheck(x, y - 1, player, needToAdd) +
@@ -200,6 +202,9 @@ namespace Reversi.GameEngine
                     DownRightCheck(x + 1, y + 1, player, needToAdd) +
                     DownLeftCheck(x - 1, y + 1, player, needToAdd);
         }
+	//Peer:рядки 207-216 повторюються в наступних 4 методах. Можливо винести це в окремий метод? 
+	//Цикли for відрізняються не суттєво в тих самих методах. Думаю можна  порефакторити або обєднати їх в один метод  
+	//параметр методу needToChange краще зробити з тою самою назвою, як і в наступних є f
         private int UpCheck(int x, int y, int p, bool needToChange)
         {
             bool found = false;
@@ -291,6 +296,7 @@ namespace Reversi.GameEngine
         #endregion SideCheck
 
         #region Diagonal
+		//Peer: Аналогічно для наступних 4 методів
         private int UpLeftCheck(int x, int y, int p, bool f)
         {
             bool found = false;
