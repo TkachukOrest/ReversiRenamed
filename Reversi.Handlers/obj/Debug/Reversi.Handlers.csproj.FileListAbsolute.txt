@@ -25,3 +25,12 @@ C:\Users\Орест\Desktop\ReversiRenamed-master\ReversiRenamed-master\Reversi.
 C:\Users\Орест\Desktop\ReversiRenamed-master\ReversiRenamed-master\Reversi.Handlers\obj\Debug\Reversi.Handlers.csproj.GenerateResource.Cache
 C:\Users\Орест\Desktop\ReversiRenamed-master\ReversiRenamed-master\Reversi.Handlers\obj\Debug\Reversi.Handlers.dll
 C:\Users\Орест\Desktop\ReversiRenamed-master\ReversiRenamed-master\Reversi.Handlers\obj\Debug\Reversi.Handlers.pdb
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Handlers\bin\Debug\Reversi.Handlers.dll
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Handlers\bin\Debug\Reversi.Handlers.pdb
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Handlers\bin\Debug\Reversi.GameEngine.dll
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Handlers\bin\Debug\Reversi.GameEngine.pdb
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Handlers\obj\Debug\Reversi.Handlers.csprojResolveAssemblyReference.cache
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Handlers\obj\Debug\Reversi.Handlers.Properties.Resources.resources
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Handlers\obj\Debug\Reversi.Handlers.csproj.GenerateResource.Cache
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Handlers\obj\Debug\Reversi.Handlers.dll
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Handlers\obj\Debug\Reversi.Handlers.pdb

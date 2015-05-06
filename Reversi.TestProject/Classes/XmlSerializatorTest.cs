@@ -16,7 +16,7 @@ namespace Reversi.TestProject.Classes
             set { m_testContext = value; }
         }
 
-        [TestMethod]
+        [TestMethod]        
         public void Test_XmlReadGoodPath()
         {
             IArtificialIntelligence _computerIntelligence = new MinMaxAI();
@@ -31,6 +31,12 @@ namespace Reversi.TestProject.Classes
             }
             catch (Exception ex)
             {
+                /*			
+			        Review VV:
+			            наступну конструкцію можна замінити на один із наступних варіантів:
+                            1) Assert.Fail()
+                            2) [ExpectedException()]
+		        */
                 Assert.IsTrue(false, "Can`t load from good path");
             }
         }
@@ -58,6 +64,12 @@ namespace Reversi.TestProject.Classes
             }
             catch (Exception ex)
             {
+                /*			
+			        Review VV:
+			            наступну конструкцію можна замінити на один із наступних варіантів:
+                            1) Assert.Fail()
+                            2) [ExpectedException()]
+		        */
                 Assert.IsTrue(false, "Can`t write or load from xml");
             }
         }

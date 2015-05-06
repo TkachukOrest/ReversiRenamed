@@ -67,6 +67,10 @@ namespace Reversi.ConsoleUI
                         x--;
                         y--;
                     }
+                    /*			
+			            Review VV:
+			                додати фігурні дужки
+		            */
                     else
                         continue;
                     _game.MoveTo(x, y);                    

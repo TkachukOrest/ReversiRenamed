@@ -28,3 +28,13 @@ C:\Users\Орест\Desktop\ReversiRenamed-master\ReversiRenamed-master\Reversi.
 C:\Users\Орест\Desktop\ReversiRenamed-master\ReversiRenamed-master\Reversi.Console\obj\Debug\Reversi.ConsoleUI.csprojResolveAssemblyReference.cache
 C:\Users\Орест\Desktop\ReversiRenamed-master\ReversiRenamed-master\Reversi.Console\obj\Debug\Reversi.ConsoleUI.exe
 C:\Users\Орест\Desktop\ReversiRenamed-master\ReversiRenamed-master\Reversi.Console\obj\Debug\Reversi.ConsoleUI.pdb
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Console\bin\Debug\Reversi.ConsoleUI.exe.config
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Console\bin\Debug\Reversi.ConsoleUI.exe
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Console\bin\Debug\Reversi.ConsoleUI.pdb
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Console\bin\Debug\Reversi.GameEngine.dll
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Console\bin\Debug\Reversi.Handlers.dll
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Console\bin\Debug\Reversi.Handlers.pdb
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Console\bin\Debug\Reversi.GameEngine.pdb
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Console\obj\Debug\Reversi.ConsoleUI.csprojResolveAssemblyReference.cache
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Console\obj\Debug\Reversi.ConsoleUI.exe
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Console\obj\Debug\Reversi.ConsoleUI.pdb
