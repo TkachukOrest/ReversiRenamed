@@ -29,3 +29,14 @@ C:\Users\Орест\Desktop\ReversiRenamed-master\ReversiRenamed-master\Reversi.
 C:\Users\Орест\Desktop\ReversiRenamed-master\ReversiRenamed-master\Reversi.TestProject\obj\Debug\Reversi.GameEngine.Test.csproj.GenerateResource.Cache
 C:\Users\Орест\Desktop\ReversiRenamed-master\ReversiRenamed-master\Reversi.TestProject\obj\Debug\Reversi.TestProject.dll
 C:\Users\Орест\Desktop\ReversiRenamed-master\ReversiRenamed-master\Reversi.TestProject\obj\Debug\Reversi.TestProject.pdb
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.TestProject\bin\Debug\Reversi.TestProject.dll
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.TestProject\bin\Debug\Reversi.TestProject.pdb
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.TestProject\bin\Debug\Reversi.GameEngine.dll
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.TestProject\bin\Debug\Reversi.Handlers.dll
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.TestProject\bin\Debug\Reversi.Handlers.pdb
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.TestProject\bin\Debug\Reversi.GameEngine.pdb
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.TestProject\obj\Debug\Reversi.GameEngine.Test.csprojResolveAssemblyReference.cache
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.TestProject\obj\Debug\Reversi.TestProject.Properties.Resources.resources
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.TestProject\obj\Debug\Reversi.GameEngine.Test.csproj.GenerateResource.Cache
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.TestProject\obj\Debug\Reversi.TestProject.dll
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.TestProject\obj\Debug\Reversi.TestProject.pdb

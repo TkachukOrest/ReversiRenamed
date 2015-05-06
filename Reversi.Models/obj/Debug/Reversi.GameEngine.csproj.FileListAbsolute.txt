@@ -18,3 +18,10 @@ C:\Users\Орест\Desktop\ReversiRenamed-master\ReversiRenamed-master\Reversi.
 C:\Users\Орест\Desktop\ReversiRenamed-master\ReversiRenamed-master\Reversi.Models\obj\Debug\Reversi.GameEngine.csproj.GenerateResource.Cache
 C:\Users\Орест\Desktop\ReversiRenamed-master\ReversiRenamed-master\Reversi.Models\obj\Debug\Reversi.GameEngine.dll
 C:\Users\Орест\Desktop\ReversiRenamed-master\ReversiRenamed-master\Reversi.Models\obj\Debug\Reversi.GameEngine.pdb
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Models\bin\Debug\Reversi.GameEngine.dll
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Models\bin\Debug\Reversi.GameEngine.pdb
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Models\obj\Debug\Reversi.GameEngine.csprojResolveAssemblyReference.cache
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Models\obj\Debug\Reversi.GameEngine.Properties.Resources.resources
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Models\obj\Debug\Reversi.GameEngine.csproj.GenerateResource.Cache
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Models\obj\Debug\Reversi.GameEngine.dll
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi.Models\obj\Debug\Reversi.GameEngine.pdb

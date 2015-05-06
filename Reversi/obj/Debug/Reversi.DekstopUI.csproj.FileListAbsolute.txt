@@ -40,3 +40,17 @@ C:\Users\Орест\Desktop\ReversiRenamed-master\ReversiRenamed-master\Reversi\
 C:\Users\Орест\Desktop\ReversiRenamed-master\ReversiRenamed-master\Reversi\obj\Debug\Reversi.MainForm.resources
 C:\Users\Орест\Desktop\ReversiRenamed-master\ReversiRenamed-master\Reversi\obj\Debug\Reversi.Properties.Resources.resources
 C:\Users\Орест\Desktop\ReversiRenamed-master\ReversiRenamed-master\Reversi\obj\Debug\Reversi.DekstopUI.csproj.GenerateResource.Cache
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi\bin\Debug\Reversi.exe.config
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi\bin\Debug\Reversi.exe
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi\bin\Debug\Reversi.pdb
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi\bin\Debug\Reversi.GameEngine.dll
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi\bin\Debug\Reversi.Handlers.dll
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi\bin\Debug\Reversi.Handlers.pdb
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi\bin\Debug\Reversi.GameEngine.pdb
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi\obj\Debug\Reversi.DekstopUI.csprojResolveAssemblyReference.cache
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi\obj\Debug\Reversi.AboutForm.resources
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi\obj\Debug\Reversi.MainForm.resources
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi\obj\Debug\Reversi.Properties.Resources.resources
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi\obj\Debug\Reversi.DekstopUI.csproj.GenerateResource.Cache
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi\obj\Debug\Reversi.exe
+D:\Projects\EPAM .NET IT LAB\IndividualProject\Phase1\ReversiRenamed\ReversiRenamed\Reversi\obj\Debug\Reversi.pdb

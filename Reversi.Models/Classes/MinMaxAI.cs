@@ -86,6 +86,10 @@ namespace Reversi.GameEngine
                 gameField.FirstMoveAI = false;
                 return gameField.MovePoints.Keys.ElementAt(rnd.Next(0, gameField.MovePoints.Count));
             }
+            /*			
+                Review VV:
+                    додати фігурні дужки
+            */
             else
                 return gameField.MovePoints.Keys.ElementAt(maxPos);
         }

@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 
+/*			
+	Review VV:
+	    Ця структура повинна бути в просторі імен Reversi.GameEngine		
+*/
 public struct Point
 {
     private int _x;
@@ -56,6 +60,10 @@ namespace Reversi.GameEngine
             }
             set
             {
+                /*			
+			        Review VV:
+			            чому тут використовується оператор |, а не ||?
+		        */
                 if (value == (int)Players.FirstPlayer | value == (int)Players.SecondPlayer | value == 0)
                 {
                     _matrix[i, j] = value;

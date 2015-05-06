@@ -31,6 +31,10 @@ namespace Reversi.GameEngine
                 }
                 else
                 {
+                    /*			
+			            Review VV:
+			                валідацію краще робити на початку функції і брати в регіон Validation
+		            */
                     throw new ArgumentException("Неправильно введені дані");
                 }
             }
@@ -41,6 +45,10 @@ namespace Reversi.GameEngine
         public event EventHandler InitDrawHandler;
         public event EventHandler UpdateScoreHandler;
         public event EventHandler<string> ShomMessageHandler;
+        /*			
+			Review VV:
+			    слід додати event для ціжї події
+		*/
         public EventHandler<DrawEventArgs> DrawHandler;
         public event EventHandler PlayGoodSoundHandler;
         public event EventHandler PlayBadSoundHandler;
@@ -101,6 +109,10 @@ namespace Reversi.GameEngine
             {
                 if (ShomMessageHandler != null)
                 {
+                    /*			
+			            Review VV:
+			                додати фігурні дужки
+		            */  
                     if (Field.FirstPlayerPoints > Field.SecondPlayerPoints)
                         ShomMessageHandler(this, String.Format("{0} player win with score: {1}", "First", Field.FirstPlayerPoints));
                     else
@@ -115,6 +127,10 @@ namespace Reversi.GameEngine
         {
             if (DrawHandler != null)
             {
+                /*			
+			        Review VV:
+			            я якості першого аргумента слід передавати this
+		        */
                 DrawHandler(null, new DrawEventArgs(player, enabledTips));
             }
         }
