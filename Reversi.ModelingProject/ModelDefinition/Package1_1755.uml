@@ -75,73 +75,16 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
-        <targetEnds>
-          <association
-            Id="cf784007-660e-4b01-8662-9bdf7c27ecc3"
-            isDerived="false"
-            sourceEndRoleName="Game"
-            targetEndRoleName="Field"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="042b3c7c-d275-4475-82f6-f05a38c85c3a"
-              LastKnownName="Field"
+        <suppliersInternal>
+          <dependency
+            Id="39ea6ed2-43f3-4797-bd3a-88481811ee57">
+            <enumerationMoniker
+              Id="85c54ab0-8229-4d8a-9c35-4b277c527277"
+              LastKnownName="Players"
               LastKnownLocation="Package1_1755.uml" />
-            <description>Property Field references type Field.</description>
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="b7f195a5-7ea6-436b-8684-cc3d9e048f98"
-                  name="Game"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="8b95ac6e-6340-49ad-9a43-98a8db72126a"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="e6643472-6974-4a9e-b1ad-d3b8a6a46b06"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="58b5a017-5bda-4898-be53-7eee889d88b7"
-                  name="Field"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="1942d576-aa70-46e2-a8c0-e4801bb5d4e0"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="14791e4c-2370-4854-a907-4fe28bb0cdf5"
-                      name="Upper"
-                      value="1" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
           <association
             Id="d85e5c4b-beb4-4925-a8c9-9ef1d59ee2a6"
             isDerived="false"
@@ -178,6 +121,45 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b2059020-a9e1-4830-aa24-346eb328118e"
+            isDerived="false"
+            sourceEndRoleName="Game"
+            targetEndRoleName="Field"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="042b3c7c-d275-4475-82f6-f05a38c85c3a"
+              LastKnownName="Field"
+              LastKnownLocation="Package1_1755.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a10a3f19-30a8-4c23-b4d6-28bddf7afcf8"
+                  name="Game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d10bc1b0-0463-4cd4-ba32-717955ab0fe9"
+                  name="Field"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -4055,6 +4037,15 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="37c81eb4-c4f3-4979-bb5f-a77d02145ec6">
+            <enumerationMoniker
+              Id="85c54ab0-8229-4d8a-9c35-4b277c527277"
+              LastKnownName="Players"
+              LastKnownLocation="Package1_1755.uml" />
+          </dependency>
+        </suppliersInternal>
         <targetEnds>
           <association
             Id="7bd283c6-5584-4d37-96c3-ee0b6fc31e18"

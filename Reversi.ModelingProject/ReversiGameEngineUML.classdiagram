@@ -1155,6 +1155,12 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
         <elementDefinition Id="042b3c7c-d275-4475-82f6-f05a38c85c3a" />
+        <suppliersInternal>
+          <dependency Id="dff60364-6120-439f-8827-9dd383ad1edb">
+            <enumerationMoniker Id="2a29c462-5100-47ba-9819-e232e7d5e976" LastKnownName="Players" />
+            <elementDefinition Id="37c81eb4-c4f3-4979-bb5f-a77d02145ec6" />
+          </dependency>
+        </suppliersInternal>
         <ownedAttributesInternal>
           <property Id="3d2a479f-5f0d-4ef4-8ebc-4a8b389b78d1" name="FirstMoveAI" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <referencesInternal>
@@ -3398,44 +3404,13 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
         <elementDefinition Id="e7c12edc-e671-48d1-8a80-dc3893194ebd" />
+        <suppliersInternal>
+          <dependency Id="b3f43d1b-c37d-4f88-83b6-33decaf9e079">
+            <enumerationMoniker Id="2a29c462-5100-47ba-9819-e232e7d5e976" LastKnownName="Players" />
+            <elementDefinition Id="39ea6ed2-43f3-4797-bd3a-88481811ee57" />
+          </dependency>
+        </suppliersInternal>
         <targetEnds>
-          <association Id="88c3bdd8-ee27-400e-9fc5-9377fec4f2b4" isDerived="false" sourceEndRoleName="Game" targetEndRoleName="Field" isLeaf="false" isAbstract="false">
-            <classMoniker Id="f5f8ef02-5ffd-43c1-9eb7-20f4b34454d0" LastKnownName="Field" />
-            <description>Property Field references type Field.</description>
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="08272887-3a9b-4683-8a43-979c3dbf9d47" name="Game" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString Id="31dc9dad-5c89-480b-b22f-b64031f1ba7c" name="Lower" value="*">
-                      <elementDefinition Id="8b95ac6e-6340-49ad-9a43-98a8db72126a" />
-                    </literalString>
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString Id="e4645ba2-90b3-4bef-b2fe-2c08a9df5387" name="Upper" value="*">
-                      <elementDefinition Id="e6643472-6974-4a9e-b1ad-d3b8a6a46b06" />
-                    </literalString>
-                  </upperValueInternal>
-                  <elementDefinition Id="b7f195a5-7ea6-436b-8684-cc3d9e048f98" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="c287eebc-7be8-4ad2-a262-26d85a30f3a6" name="Field" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <lowerValueInternal>
-                    <literalString Id="e6a9b185-f317-44b8-920a-6449a825ba96" name="Lower" value="1">
-                      <elementDefinition Id="1942d576-aa70-46e2-a8c0-e4801bb5d4e0" />
-                    </literalString>
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString Id="c1c5a186-573f-4b74-9b64-06e630d8927c" name="Upper" value="1">
-                      <elementDefinition Id="14791e4c-2370-4854-a907-4fe28bb0cdf5" />
-                    </literalString>
-                  </upperValueInternal>
-                  <elementDefinition Id="58b5a017-5bda-4898-be53-7eee889d88b7" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="cf784007-660e-4b01-8662-9bdf7c27ecc3" />
-          </association>
           <association Id="8be75e04-1585-4609-8597-cc53ba16844f" isDerived="false" sourceEndRoleName="Game" targetEndRoleName="IArtificialIntelligence" isLeaf="false" isAbstract="false">
             <interfaceMoniker Id="2eb4f456-9d63-455a-9e03-2943c548df0d" LastKnownName="IArtificialIntelligence" />
             <relationshipOwnedElementsInternal>
@@ -3451,6 +3426,22 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="d85e5c4b-beb4-4925-a8c9-9ef1d59ee2a6" />
+          </association>
+          <association Id="51738056-70f0-42de-b5aa-ec104bbf75d3" isDerived="false" sourceEndRoleName="Game" targetEndRoleName="Field" isLeaf="false" isAbstract="false">
+            <classMoniker Id="f5f8ef02-5ffd-43c1-9eb7-20f4b34454d0" LastKnownName="Field" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="07957e46-7a3e-46dd-a68c-aed8691a6d8a" name="Game" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a10a3f19-30a8-4c23-b4d6-28bddf7afcf8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b9b0422a-b71b-4b8a-8442-590bf7fb5cae" name="Field" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="d10bc1b0-0463-4cd4-ba32-717955ab0fe9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b2059020-a9e1-4830-aa24-346eb328118e" />
           </association>
         </targetEnds>
         <ownedAttributesInternal>
