@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Timers;
 using Reversi.GameEngine.Classes;
-
+/*Try to commit into Phase2*/
 namespace Reversi.GameEngine
 {
     public class Game
