@@ -29,3 +29,14 @@ C:\Users\Орест\Desktop\ReversiRenamed-master\ReversiRenamed-master\Reversi.
 C:\Users\Орест\Desktop\ReversiRenamed-master\ReversiRenamed-master\Reversi.TestProject\obj\Debug\Reversi.GameEngine.Test.csproj.GenerateResource.Cache
 C:\Users\Орест\Desktop\ReversiRenamed-master\ReversiRenamed-master\Reversi.TestProject\obj\Debug\Reversi.TestProject.dll
 C:\Users\Орест\Desktop\ReversiRenamed-master\ReversiRenamed-master\Reversi.TestProject\obj\Debug\Reversi.TestProject.pdb
+D:\Programming\Programming_EPAM\Copy project\ReversiRenamedGit\Reversi.TestProject\bin\Debug\Reversi.TestProject.dll
+D:\Programming\Programming_EPAM\Copy project\ReversiRenamedGit\Reversi.TestProject\bin\Debug\Reversi.TestProject.pdb
+D:\Programming\Programming_EPAM\Copy project\ReversiRenamedGit\Reversi.TestProject\bin\Debug\Reversi.GameEngine.dll
+D:\Programming\Programming_EPAM\Copy project\ReversiRenamedGit\Reversi.TestProject\bin\Debug\Reversi.Handlers.dll
+D:\Programming\Programming_EPAM\Copy project\ReversiRenamedGit\Reversi.TestProject\bin\Debug\Reversi.Handlers.pdb
+D:\Programming\Programming_EPAM\Copy project\ReversiRenamedGit\Reversi.TestProject\bin\Debug\Reversi.GameEngine.pdb
+D:\Programming\Programming_EPAM\Copy project\ReversiRenamedGit\Reversi.TestProject\obj\Debug\Reversi.GameEngine.Test.csprojResolveAssemblyReference.cache
+D:\Programming\Programming_EPAM\Copy project\ReversiRenamedGit\Reversi.TestProject\obj\Debug\Reversi.TestProject.Properties.Resources.resources
+D:\Programming\Programming_EPAM\Copy project\ReversiRenamedGit\Reversi.TestProject\obj\Debug\Reversi.GameEngine.Test.csproj.GenerateResource.Cache
+D:\Programming\Programming_EPAM\Copy project\ReversiRenamedGit\Reversi.TestProject\obj\Debug\Reversi.TestProject.dll
+D:\Programming\Programming_EPAM\Copy project\ReversiRenamedGit\Reversi.TestProject\obj\Debug\Reversi.TestProject.pdb

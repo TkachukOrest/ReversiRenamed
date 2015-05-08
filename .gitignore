@@ -1,6 +1,6 @@
 **/bin/
 **/obj/
-TestResults
+**/TestResults/
 *.suo
 *.user
 *.dbmdl
