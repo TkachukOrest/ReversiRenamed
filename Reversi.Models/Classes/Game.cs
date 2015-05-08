@@ -25,13 +25,13 @@ namespace Reversi.GameEngine
             }
             set
             {
-                if (value > 0)
+                if (value <= 0)
                 {
-                    _currentMove = value;
+                    throw new ArgumentException("Неправильно введені дані");                    
                 }
                 else
                 {
-                    throw new ArgumentException("Неправильно введені дані");
+                    _currentMove = value;
                 }
             }
         }
@@ -102,12 +102,20 @@ namespace Reversi.GameEngine
                 if (ShomMessageHandler != null)
                 {
                     if (Field.FirstPlayerPoints > Field.SecondPlayerPoints)
+                    {
                         ShomMessageHandler(this, String.Format("{0} player win with score: {1}", "First", Field.FirstPlayerPoints));
+                    }
                     else
+                    { 
                         if (Field.FirstPlayerPoints < Field.SecondPlayerPoints)
+                        {
                             ShomMessageHandler(this, String.Format("{0} player win with score: {1}", "Second(you)", Field.SecondPlayerPoints));
+                        }
                         else
+                        { 
                             ShomMessageHandler(this, String.Format("Draw:  {0}-{1}", Field.FirstPlayerPoints, Field.SecondPlayerPoints));
+                        }
+                    }
                 }
             }
         }
@@ -115,7 +123,7 @@ namespace Reversi.GameEngine
         {
             if (DrawHandler != null)
             {
-                DrawHandler(null, new DrawEventArgs(player, enabledTips));
+                DrawHandler(this, new DrawEventArgs(player, enabledTips));
             }
         }
         public void CreateNewGame()
@@ -153,9 +161,7 @@ namespace Reversi.GameEngine
             if (AlreadyExitFromTimer)
             {
                 if (IsFirstPlayerMove())
-                {
-                    //виклик цього блоку можливий тільки при згортанні мейн форми на деякий час та його розгортання згодом
-                    //внаслідок чого викликається event Paint() з форми - тому тест неможливий
+                {                  
                     Field.FindEnabledMoves((int)Players.FirstPlayer);
                     OnDraw((int)Players.FirstPlayer, EnabledTips);
                 }
@@ -168,11 +174,11 @@ namespace Reversi.GameEngine
         }
 
         public void MoveTo(int x, int y)
-        {
+        {            
             DoPlayerMove(x, y);
             OnUpdateScoreAndPlayerMove();
             OnUpdateGameFinish();
-            DoComputerMove();
+            DoComputerMove();            
         }
 
         private void DoPlayerMove(int x, int y)
@@ -236,7 +242,7 @@ namespace Reversi.GameEngine
                     AlreadyExitFromTimer = false;
                     _timer.Elapsed += new ElapsedEventHandler(TimerTick);
                     _timer.Interval = 1000;
-                    _timer.Enabled = true;
+                    _timer.Enabled = true;                    
                 }
             }
         }
@@ -245,20 +251,18 @@ namespace Reversi.GameEngine
         {
             if (ComputerMoveCondition())
             {
-                _timer.Enabled = false;
-                //do computer move
+                _timer.Enabled = false;                
                 _computerIntelligence.DoComputerMove(this.Field,(int)Players.FirstPlayer);
 
                 //drawcomputermove with tips for second player
                 Field.FindEnabledMoves((int)Players.SecondPlayer);
                 OnDraw((int)Players.SecondPlayer, EnabledTips);
                 OnPlayGoodSound();
-
-                //update scode and finish condition
+                
                 OnUpdateScoreAndPlayerMove();
                 OnUpdateGameFinish();
                 CurrentMove++;
-                AlreadyExitFromTimer = true;
+                AlreadyExitFromTimer = true;                
             }
         }
 

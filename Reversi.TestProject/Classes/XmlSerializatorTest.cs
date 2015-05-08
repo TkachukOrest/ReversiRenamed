@@ -31,7 +31,7 @@ namespace Reversi.TestProject.Classes
             }
             catch (Exception ex)
             {
-                Assert.IsTrue(false, "Can`t load from good path");
+                Assert.Fail("Can`t load from good path");
             }
         }
         [TestMethod]
@@ -58,7 +58,7 @@ namespace Reversi.TestProject.Classes
             }
             catch (Exception ex)
             {
-                Assert.IsTrue(false, "Can`t write or load from xml");
+                Assert.Fail("Can`t write or load from xml");
             }
         }
     }

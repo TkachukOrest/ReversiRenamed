@@ -68,7 +68,9 @@ namespace Reversi.ConsoleUI
                         y--;
                     }
                     else
+                    { 
                         continue;
+                    }
                     _game.MoveTo(x, y);                    
                 }
             }

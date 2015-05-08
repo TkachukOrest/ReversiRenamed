@@ -91,7 +91,7 @@ namespace Reversi.Handlers
 
             if (enabledTips && GameField.GameProcess)
             {
-                foreach (Point point in GameField.MovePoints.Keys)
+                foreach (Reversi.GameEngine.Point point in GameField.MovePoints.Keys)
                 {
                     graphics.DrawRectangle(pen, point.Y * Field.Scale + 3, point.X * Field.Scale + 3, Field.Scale - 6, Field.Scale - 6);
                 }

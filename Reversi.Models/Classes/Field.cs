@@ -1,35 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-
-public struct Point
-{
-    private int _x;
-    private int _y;
-    public int X { get { return _x; } }
-    public int Y { get { return _y; } }
-
-    public Point(int x, int y)
-    {
-        _x = x;
-        _y = y;
-    }
-
-}
 
 namespace Reversi.GameEngine
-{
-    [Serializable]
+{ 
     public class Field
     {
-        #region Variables
-        //standard size of game field
+        #region Variables        
         public const int N = 8;
         public const int Scale = 40;
+      
+        public bool FirstMoveAI { get; set; }        
 
-        //for correct AI work on first move
-        public bool FirstMoveAI { get; set; }
-        //0 - empty, 1- first(red) , -1 - second player(blue)        
         private int[,] _matrix;
 
         //List of points
@@ -43,8 +24,7 @@ namespace Reversi.GameEngine
         }
         #endregion
 
-        #region Properties
-        //modified only in DrawEnableMoves        
+        #region Properties               
         public bool GameProcess { get; private set; }
         public int FirstPlayerPoints { get; private set; }
         public int SecondPlayerPoints { get; private set; }
@@ -56,7 +36,7 @@ namespace Reversi.GameEngine
             }
             set
             {
-                if (value == (int)Players.FirstPlayer | value == (int)Players.SecondPlayer | value == 0)
+                if (value == (int)Players.FirstPlayer || value == (int)Players.SecondPlayer || value == 0)
                 {
                     _matrix[i, j] = value;
                 }
