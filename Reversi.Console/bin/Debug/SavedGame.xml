@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<Field>
-  <Matrix>-1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 -1 1 -1 1 -1 -1 -1 1 1 -1 -1 1 -1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 0 0 0 0 0 1 1 1 1 1 0 0 0 1 1 1 1 1 1 0 0 </Matrix>
-  <Tips>True</Tips>
-  <CurrentMove>51</CurrentMove>
-  <IsFirstAIMove>False</IsFirstAIMove>
-</Field>
