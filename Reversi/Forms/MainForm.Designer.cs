@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnl_Field = new System.Windows.Forms.Panel();
             this.btn_newGame = new System.Windows.Forms.Button();
             this.lbl_firstPlayerScore = new System.Windows.Forms.Label();
@@ -36,6 +37,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_NewGame = new System.Windows.Forms.ToolStripMenuItem();
+            this.newComputerGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadLastGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
@@ -46,7 +48,6 @@
             this.cb_tips = new System.Windows.Forms.CheckBox();
             this.lbl_tips = new System.Windows.Forms.Label();
             this.btn_newGameComputer = new System.Windows.Forms.Button();
-            this.newComputerGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,7 +69,7 @@
             this.btn_newGame.Name = "btn_newGame";
             this.btn_newGame.Size = new System.Drawing.Size(320, 23);
             this.btn_newGame.TabIndex = 0;
-            this.btn_newGame.Text = "Нова гра з гравцем";
+            this.btn_newGame.Text = "New game with player";
             this.btn_newGame.UseVisualStyleBackColor = false;
             this.btn_newGame.Click += new System.EventHandler(this.btn_newGame_Click);
             // 
@@ -110,7 +111,7 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(342, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(338, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -133,6 +134,13 @@
             this.menu_NewGame.Size = new System.Drawing.Size(186, 22);
             this.menu_NewGame.Text = "&New  game";
             this.menu_NewGame.Click += new System.EventHandler(this.menu_NewGame_Click);
+            // 
+            // newComputerGameToolStripMenuItem
+            // 
+            this.newComputerGameToolStripMenuItem.Name = "newComputerGameToolStripMenuItem";
+            this.newComputerGameToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.newComputerGameToolStripMenuItem.Text = "New computer game";
+            this.newComputerGameToolStripMenuItem.Click += new System.EventHandler(this.newComputerGameToolStripMenuItem_Click);
             // 
             // saveGameToolStripMenuItem
             // 
@@ -207,22 +215,15 @@
             this.btn_newGameComputer.Name = "btn_newGameComputer";
             this.btn_newGameComputer.Size = new System.Drawing.Size(320, 23);
             this.btn_newGameComputer.TabIndex = 7;
-            this.btn_newGameComputer.Text = "Нова гра з комп\'ютером";
+            this.btn_newGameComputer.Text = "New game with computer";
             this.btn_newGameComputer.UseVisualStyleBackColor = false;
             this.btn_newGameComputer.Click += new System.EventHandler(this.btn_newGameComputer_Click);
-            // 
-            // newComputerGameToolStripMenuItem
-            // 
-            this.newComputerGameToolStripMenuItem.Name = "newComputerGameToolStripMenuItem";
-            this.newComputerGameToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.newComputerGameToolStripMenuItem.Text = "New computer game";
-            this.newComputerGameToolStripMenuItem.Click += new System.EventHandler(this.newComputerGameToolStripMenuItem_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(342, 486);
+            this.ClientSize = new System.Drawing.Size(338, 478);
             this.Controls.Add(this.btn_newGameComputer);
             this.Controls.Add(this.lbl_tips);
             this.Controls.Add(this.cb_tips);
@@ -234,11 +235,12 @@
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximumSize = new System.Drawing.Size(358, 520);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Reversi";
+            this.Text = "MegaReversi";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

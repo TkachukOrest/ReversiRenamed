@@ -42,9 +42,9 @@
             this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label2.Location = new System.Drawing.Point(12, 292);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 13);
+            this.label2.Size = new System.Drawing.Size(143, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Виконав: Ткачук Орест";
+            this.label2.Text = "Designed by: Tkachuk Orest";
             // 
             // label3
             // 
@@ -52,9 +52,9 @@
             this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label3.Location = new System.Drawing.Point(12, 18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 13);
+            this.label3.Size = new System.Drawing.Size(92, 13);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Опис гри:";
+            this.label3.Text = "Game description:";
             // 
             // label4
             // 
@@ -62,9 +62,9 @@
             this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label4.Location = new System.Drawing.Point(12, 323);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 13);
+            this.label4.Size = new System.Drawing.Size(86, 13);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Місце: EPAM IT Lab";
+            this.label4.Text = "In: EPAM IT Lab";
             // 
             // richTextBox1
             // 
@@ -81,9 +81,9 @@
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Location = new System.Drawing.Point(12, 351);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Рік: 2015";
+            this.label1.Text = "Year: 2015";
             // 
             // AboutForm
             // 
@@ -97,7 +97,7 @@
             this.Controls.Add(this.label2);
             this.Name = "AboutForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Про гру та автора";
+            this.Text = "About MegaReversi";
             this.ResumeLayout(false);
             this.PerformLayout();
 
