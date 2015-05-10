@@ -33,7 +33,6 @@
             this.btn_newGame = new System.Windows.Forms.Button();
             this.lbl_firstPlayerScore = new System.Windows.Forms.Label();
             this.lbl_secondPlayerScore = new System.Windows.Forms.Label();
-            this.lbl_NextMove = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_NewGame = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,18 +44,22 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveDialog = new System.Windows.Forms.SaveFileDialog();
-            this.cb_tips = new System.Windows.Forms.CheckBox();
-            this.lbl_tips = new System.Windows.Forms.Label();
             this.btn_newGameComputer = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.tipsOnOffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_Field
             // 
             this.pnl_Field.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.pnl_Field.Location = new System.Drawing.Point(12, 154);
+            this.pnl_Field.Location = new System.Drawing.Point(8, 130);
             this.pnl_Field.Name = "pnl_Field";
-            this.pnl_Field.Size = new System.Drawing.Size(320, 320);
+            this.pnl_Field.Size = new System.Drawing.Size(321, 321);
             this.pnl_Field.TabIndex = 0;
             this.pnl_Field.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_Field_Paint);
             this.pnl_Field.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnl_Field_MouseClick);
@@ -65,9 +68,9 @@
             // 
             this.btn_newGame.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_newGame.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_newGame.Location = new System.Drawing.Point(12, 82);
+            this.btn_newGame.Location = new System.Drawing.Point(8, 68);
             this.btn_newGame.Name = "btn_newGame";
-            this.btn_newGame.Size = new System.Drawing.Size(320, 23);
+            this.btn_newGame.Size = new System.Drawing.Size(321, 23);
             this.btn_newGame.TabIndex = 0;
             this.btn_newGame.Text = "New game with player";
             this.btn_newGame.UseVisualStyleBackColor = false;
@@ -77,31 +80,21 @@
             // 
             this.lbl_firstPlayerScore.AutoSize = true;
             this.lbl_firstPlayerScore.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbl_firstPlayerScore.Location = new System.Drawing.Point(12, 38);
+            this.lbl_firstPlayerScore.Location = new System.Drawing.Point(132, 40);
             this.lbl_firstPlayerScore.Name = "lbl_firstPlayerScore";
-            this.lbl_firstPlayerScore.Size = new System.Drawing.Size(48, 13);
+            this.lbl_firstPlayerScore.Size = new System.Drawing.Size(22, 13);
             this.lbl_firstPlayerScore.TabIndex = 1;
-            this.lbl_firstPlayerScore.Text = "Player 1:";
+            this.lbl_firstPlayerScore.Text = "11:";
             // 
             // lbl_secondPlayerScore
             // 
             this.lbl_secondPlayerScore.AutoSize = true;
             this.lbl_secondPlayerScore.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbl_secondPlayerScore.Location = new System.Drawing.Point(12, 62);
+            this.lbl_secondPlayerScore.Location = new System.Drawing.Point(211, 40);
             this.lbl_secondPlayerScore.Name = "lbl_secondPlayerScore";
-            this.lbl_secondPlayerScore.Size = new System.Drawing.Size(48, 13);
+            this.lbl_secondPlayerScore.Size = new System.Drawing.Size(25, 13);
             this.lbl_secondPlayerScore.TabIndex = 2;
-            this.lbl_secondPlayerScore.Text = "Player 2:";
-            // 
-            // lbl_NextMove
-            // 
-            this.lbl_NextMove.AutoSize = true;
-            this.lbl_NextMove.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbl_NextMove.Location = new System.Drawing.Point(169, 38);
-            this.lbl_NextMove.Name = "lbl_NextMove";
-            this.lbl_NextMove.Size = new System.Drawing.Size(61, 13);
-            this.lbl_NextMove.TabIndex = 3;
-            this.lbl_NextMove.Text = "Next move:";
+            this.lbl_secondPlayerScore.Text = " 22:";
             // 
             // menuStrip1
             // 
@@ -120,6 +113,8 @@
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu_NewGame,
             this.newComputerGameToolStripMenuItem,
+            this.tipsOnOffToolStripMenuItem,
+            this.toolStripMenuItem3,
             this.saveGameToolStripMenuItem,
             this.loadLastGameToolStripMenuItem,
             this.toolStripMenuItem1,
@@ -184,50 +179,60 @@
             // 
             this.saveDialog.Filter = "XML|*.xml";
             // 
-            // cb_tips
-            // 
-            this.cb_tips.AutoSize = true;
-            this.cb_tips.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.cb_tips.Checked = true;
-            this.cb_tips.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_tips.Location = new System.Drawing.Point(232, 58);
-            this.cb_tips.Name = "cb_tips";
-            this.cb_tips.Size = new System.Drawing.Size(15, 14);
-            this.cb_tips.TabIndex = 5;
-            this.cb_tips.UseVisualStyleBackColor = false;
-            this.cb_tips.CheckedChanged += new System.EventHandler(this.cb_tips_Changed);
-            // 
-            // lbl_tips
-            // 
-            this.lbl_tips.AutoSize = true;
-            this.lbl_tips.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbl_tips.Location = new System.Drawing.Point(169, 59);
-            this.lbl_tips.Name = "lbl_tips";
-            this.lbl_tips.Size = new System.Drawing.Size(30, 13);
-            this.lbl_tips.TabIndex = 6;
-            this.lbl_tips.Text = "Tips:";
-            // 
             // btn_newGameComputer
             // 
             this.btn_newGameComputer.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_newGameComputer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_newGameComputer.Location = new System.Drawing.Point(12, 111);
+            this.btn_newGameComputer.Location = new System.Drawing.Point(8, 97);
             this.btn_newGameComputer.Name = "btn_newGameComputer";
-            this.btn_newGameComputer.Size = new System.Drawing.Size(320, 23);
+            this.btn_newGameComputer.Size = new System.Drawing.Size(321, 23);
             this.btn_newGameComputer.TabIndex = 7;
             this.btn_newGameComputer.Text = "New game with computer";
             this.btn_newGameComputer.UseVisualStyleBackColor = false;
             this.btn_newGameComputer.Click += new System.EventHandler(this.btn_newGameComputer_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = global::Reversi.Properties.Resources.red;
+            this.pictureBox1.Location = new System.Drawing.Point(102, 32);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 21);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox2.Image = global::Reversi.Properties.Resources.blue2;
+            this.pictureBox2.Location = new System.Drawing.Point(181, 32);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 21);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
+            // tipsOnOffToolStripMenuItem
+            // 
+            this.tipsOnOffToolStripMenuItem.Name = "tipsOnOffToolStripMenuItem";
+            this.tipsOnOffToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.tipsOnOffToolStripMenuItem.Text = "Tips On/Off";
+            this.tipsOnOffToolStripMenuItem.Click += new System.EventHandler(this.tipsOnOffToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(183, 6);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(338, 478);
+            this.ClientSize = new System.Drawing.Size(338, 460);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_newGameComputer);
-            this.Controls.Add(this.lbl_tips);
-            this.Controls.Add(this.cb_tips);
-            this.Controls.Add(this.lbl_NextMove);
             this.Controls.Add(this.lbl_secondPlayerScore);
             this.Controls.Add(this.lbl_firstPlayerScore);
             this.Controls.Add(this.btn_newGame);
@@ -237,12 +242,14 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximumSize = new System.Drawing.Size(358, 520);
+            this.MaximumSize = new System.Drawing.Size(354, 494);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MegaReversi";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,7 +261,6 @@
         private System.Windows.Forms.Button btn_newGame;
         private System.Windows.Forms.Label lbl_firstPlayerScore;
         private System.Windows.Forms.Label lbl_secondPlayerScore;
-        private System.Windows.Forms.Label lbl_NextMove;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menu_NewGame;
@@ -264,11 +270,13 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openDialog;
         private System.Windows.Forms.SaveFileDialog saveDialog;
-        private System.Windows.Forms.CheckBox cb_tips;
-        private System.Windows.Forms.Label lbl_tips;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Button btn_newGameComputer;
         private System.Windows.Forms.ToolStripMenuItem newComputerGameToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ToolStripMenuItem tipsOnOffToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
     }
 }
 

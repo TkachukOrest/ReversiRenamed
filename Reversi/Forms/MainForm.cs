@@ -51,9 +51,9 @@ namespace Reversi
             pnl_Field.Enabled = true;
             _game.CreateNewGame();
         }
-        private void cb_tips_Changed(object sender, EventArgs e)
+        private void tipsOnOffToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _game.EnableTips(cb_tips.Checked);
+            _game.EnableTips(!_game.EnabledTips);
             _game.ReDraw();
         }
         #endregion
@@ -81,9 +81,8 @@ namespace Reversi
 
         private void UpdateScoreAndPlayerMove(object sender, EventArgs e)
         {
-            lbl_firstPlayerScore.Text = "Red player: " + _game.Field.FirstPlayerPoints.ToString();
-            lbl_secondPlayerScore.Text = "Blue player: " + _game.Field.SecondPlayerPoints.ToString();
-            lbl_NextMove.Text = _game.IsFirstPlayerMove() ? "Next move: red" : "Next move: blue";            
+            lbl_firstPlayerScore.Text = ": " + _game.Field.FirstPlayerPoints.ToString();
+            lbl_secondPlayerScore.Text = ": " + _game.Field.SecondPlayerPoints.ToString();            
         }
         #endregion
 
@@ -122,8 +121,7 @@ namespace Reversi
                 {
                     XmlSerializer serializer=new XmlSerializer();
                     GameState state = serializer.Deserialize(openDialog.FileName);
-                        _game.RestoreState(state);                   
-                    cb_tips.Checked = _game.EnabledTips;
+                        _game.RestoreState(state);                                       
                 }
             }
             catch (Exception ex)
@@ -140,6 +138,6 @@ namespace Reversi
             AboutForm about = new AboutForm();
             about.ShowDialog();
         }
-        #endregion
+        #endregion   
     }
 }
