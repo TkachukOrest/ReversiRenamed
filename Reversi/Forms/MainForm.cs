@@ -27,7 +27,7 @@ namespace Reversi
             
             _game = new Game(_computerIntelligence);
             SubscribeEvents();
-            _game.CreateNewGame();
+            _game.CreateNewGame();            
         }
         #endregion
 
@@ -68,9 +68,9 @@ namespace Reversi
             _game.PlayBadSoundHandler += _music.PlayBadSound;
         }
 
-        private void ShowMessage(object sender,string message)
+        private void ShowMessage(object sender, string message)
         {
-            MessageBox.Show(null, message, "We have a winner", MessageBoxButtons.OK);
+            MessageBox.Show(this, message, "We have a winner", MessageBoxButtons.OK);                                   
         }
 
         private void InitializeDraw(object sender, EventArgs e)
@@ -108,7 +108,7 @@ namespace Reversi
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Неможливо зберегти гру", "Помилка", MessageBoxButtons.OK);
+                MessageBox.Show("Неможливо зберегти гру", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -121,12 +121,12 @@ namespace Reversi
                 {
                     XmlSerializer serializer=new XmlSerializer();
                     GameState state = serializer.Deserialize(openDialog.FileName);
-                        _game.RestoreState(state);                                       
+                    _game.RestoreState(state);                                       
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Неможливо загрузити збережену гру.", "Помилка", MessageBoxButtons.OK);
+                MessageBox.Show("Неможливо загрузити збережену гру.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
