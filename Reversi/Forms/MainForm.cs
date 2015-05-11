@@ -8,7 +8,7 @@ using Reversi.Handlers;
 namespace Reversi
 {
     public partial class MainForm : Form
-    {
+    {      
         #region Variables
         private Drawing _draw;
         private Game _game;
