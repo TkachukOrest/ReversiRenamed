@@ -108,7 +108,7 @@ namespace Reversi
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Неможливо зберегти гру", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Can`t save the game", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -126,7 +126,7 @@ namespace Reversi
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Неможливо загрузити збережену гру.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Can`t load saved game.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
