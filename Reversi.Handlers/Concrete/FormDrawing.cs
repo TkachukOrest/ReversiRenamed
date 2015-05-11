@@ -44,7 +44,7 @@ namespace Reversi.Handlers
                     }
                     else
                     {
-                        if (GameField[i, j] == 1)
+                        if (GameField[i, j] == (int)Players.FirstPlayer)
                         {
                             c = Color.Red;
                             image = _imgForFirstPlayer;
@@ -60,7 +60,7 @@ namespace Reversi.Handlers
                         }
                         catch (InvalidOperationException ex)
                         {
-                            if (GameField[i, j] == 1)
+                            if (GameField[i, j] == (int)Players.FirstPlayer)
                             {
                                 image = new Bitmap(Reversi.Handlers.Properties.Resources.red);
                             }
@@ -69,7 +69,7 @@ namespace Reversi.Handlers
                                 image = new Bitmap(Reversi.Handlers.Properties.Resources.blue);
                             }
                             graphics.DrawImage(image, new Rectangle(j * Field.Scale + 3, i * Field.Scale + 3, Field.Scale - 6, Field.Scale - 6));
-                            MessageBox.Show("Не так швидко");
+                            MessageBox.Show("Not so fast");
                         }
                     }
                 }
@@ -80,7 +80,7 @@ namespace Reversi.Handlers
         {
             Graphics graphics = Graphics.FromHwnd(_panel.Handle);
             Pen pen;            
-            if (player == 1)
+            if (player == (int)Players.FirstPlayer)
             {
                 pen = new Pen(Color.FromArgb(220, 42, 71), (float)2.8);
             }
