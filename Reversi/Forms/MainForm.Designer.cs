@@ -29,14 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.pnl_Field = new System.Windows.Forms.Panel();
-            this.btn_newGame = new System.Windows.Forms.Button();
-            this.lbl_firstPlayerScore = new System.Windows.Forms.Label();
-            this.lbl_secondPlayerScore = new System.Windows.Forms.Label();
+            this.pnlField = new System.Windows.Forms.Panel();
+            this.btnNewGame = new System.Windows.Forms.Button();
+            this.lblFirstPlayerScore = new System.Windows.Forms.Label();
+            this.lblSecondPlayerScore = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_NewGame = new System.Windows.Forms.ToolStripMenuItem();
             this.newComputerGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipsOnOffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.saveGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadLastGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
@@ -44,57 +46,55 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveDialog = new System.Windows.Forms.SaveFileDialog();
-            this.btn_newGameComputer = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.tipsOnOffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnNewGameComputer = new System.Windows.Forms.Button();
+            this.pbRed = new System.Windows.Forms.PictureBox();
+            this.pbBlue = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBlue)).BeginInit();
             this.SuspendLayout();
             // 
-            // pnl_Field
+            // pnlField
             // 
-            this.pnl_Field.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.pnl_Field.Location = new System.Drawing.Point(8, 130);
-            this.pnl_Field.Name = "pnl_Field";
-            this.pnl_Field.Size = new System.Drawing.Size(321, 321);
-            this.pnl_Field.TabIndex = 0;
-            this.pnl_Field.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_Field_Paint);
-            this.pnl_Field.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnl_Field_MouseClick);
+            this.pnlField.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pnlField.Location = new System.Drawing.Point(8, 130);
+            this.pnlField.Name = "pnlField";
+            this.pnlField.Size = new System.Drawing.Size(321, 321);
+            this.pnlField.TabIndex = 0;
+            this.pnlField.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlField_Paint);
+            this.pnlField.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlField_MouseClick);
             // 
-            // btn_newGame
+            // btnNewGame
             // 
-            this.btn_newGame.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_newGame.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_newGame.Location = new System.Drawing.Point(8, 68);
-            this.btn_newGame.Name = "btn_newGame";
-            this.btn_newGame.Size = new System.Drawing.Size(321, 23);
-            this.btn_newGame.TabIndex = 0;
-            this.btn_newGame.Text = "New game with player";
-            this.btn_newGame.UseVisualStyleBackColor = false;
-            this.btn_newGame.Click += new System.EventHandler(this.btn_newGame_Click);
+            this.btnNewGame.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnNewGame.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNewGame.Location = new System.Drawing.Point(8, 68);
+            this.btnNewGame.Name = "btnNewGame";
+            this.btnNewGame.Size = new System.Drawing.Size(321, 23);
+            this.btnNewGame.TabIndex = 0;
+            this.btnNewGame.Text = "New game with player";
+            this.btnNewGame.UseVisualStyleBackColor = false;
+            this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
             // 
-            // lbl_firstPlayerScore
+            // lblFirstPlayerScore
             // 
-            this.lbl_firstPlayerScore.AutoSize = true;
-            this.lbl_firstPlayerScore.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbl_firstPlayerScore.Location = new System.Drawing.Point(132, 40);
-            this.lbl_firstPlayerScore.Name = "lbl_firstPlayerScore";
-            this.lbl_firstPlayerScore.Size = new System.Drawing.Size(22, 13);
-            this.lbl_firstPlayerScore.TabIndex = 1;
-            this.lbl_firstPlayerScore.Text = "11:";
+            this.lblFirstPlayerScore.AutoSize = true;
+            this.lblFirstPlayerScore.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblFirstPlayerScore.Location = new System.Drawing.Point(132, 40);
+            this.lblFirstPlayerScore.Name = "lblFirstPlayerScore";
+            this.lblFirstPlayerScore.Size = new System.Drawing.Size(22, 13);
+            this.lblFirstPlayerScore.TabIndex = 1;
+            this.lblFirstPlayerScore.Text = "11:";
             // 
-            // lbl_secondPlayerScore
+            // lblSecondPlayerScore
             // 
-            this.lbl_secondPlayerScore.AutoSize = true;
-            this.lbl_secondPlayerScore.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbl_secondPlayerScore.Location = new System.Drawing.Point(211, 40);
-            this.lbl_secondPlayerScore.Name = "lbl_secondPlayerScore";
-            this.lbl_secondPlayerScore.Size = new System.Drawing.Size(25, 13);
-            this.lbl_secondPlayerScore.TabIndex = 2;
-            this.lbl_secondPlayerScore.Text = " 22:";
+            this.lblSecondPlayerScore.AutoSize = true;
+            this.lblSecondPlayerScore.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblSecondPlayerScore.Location = new System.Drawing.Point(211, 40);
+            this.lblSecondPlayerScore.Name = "lblSecondPlayerScore";
+            this.lblSecondPlayerScore.Size = new System.Drawing.Size(25, 13);
+            this.lblSecondPlayerScore.TabIndex = 2;
+            this.lblSecondPlayerScore.Text = " 22:";
             // 
             // menuStrip1
             // 
@@ -136,6 +136,18 @@
             this.newComputerGameToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.newComputerGameToolStripMenuItem.Text = "New computer game";
             this.newComputerGameToolStripMenuItem.Click += new System.EventHandler(this.newComputerGameToolStripMenuItem_Click);
+            // 
+            // tipsOnOffToolStripMenuItem
+            // 
+            this.tipsOnOffToolStripMenuItem.Name = "tipsOnOffToolStripMenuItem";
+            this.tipsOnOffToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.tipsOnOffToolStripMenuItem.Text = "Tips On/Off";
+            this.tipsOnOffToolStripMenuItem.Click += new System.EventHandler(this.tipsOnOffToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(183, 6);
             // 
             // saveGameToolStripMenuItem
             // 
@@ -179,64 +191,52 @@
             // 
             this.saveDialog.Filter = "XML|*.xml";
             // 
-            // btn_newGameComputer
+            // btnNewGameComputer
             // 
-            this.btn_newGameComputer.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_newGameComputer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_newGameComputer.Location = new System.Drawing.Point(8, 97);
-            this.btn_newGameComputer.Name = "btn_newGameComputer";
-            this.btn_newGameComputer.Size = new System.Drawing.Size(321, 23);
-            this.btn_newGameComputer.TabIndex = 7;
-            this.btn_newGameComputer.Text = "New game with computer";
-            this.btn_newGameComputer.UseVisualStyleBackColor = false;
-            this.btn_newGameComputer.Click += new System.EventHandler(this.btn_newGameComputer_Click);
+            this.btnNewGameComputer.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnNewGameComputer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNewGameComputer.Location = new System.Drawing.Point(8, 97);
+            this.btnNewGameComputer.Name = "btnNewGameComputer";
+            this.btnNewGameComputer.Size = new System.Drawing.Size(321, 23);
+            this.btnNewGameComputer.TabIndex = 7;
+            this.btnNewGameComputer.Text = "New game with computer";
+            this.btnNewGameComputer.UseVisualStyleBackColor = false;
+            this.btnNewGameComputer.Click += new System.EventHandler(this.btnNewGameComputer_Click);
             // 
-            // pictureBox1
+            // pbRed
             // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Image = global::Reversi.Properties.Resources.red;
-            this.pictureBox1.Location = new System.Drawing.Point(102, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 21);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.pbRed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbRed.Image = global::Reversi.Properties.Resources.red;
+            this.pbRed.Location = new System.Drawing.Point(102, 32);
+            this.pbRed.Name = "pbRed";
+            this.pbRed.Size = new System.Drawing.Size(24, 21);
+            this.pbRed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbRed.TabIndex = 8;
+            this.pbRed.TabStop = false;
             // 
-            // pictureBox2
+            // pbBlue
             // 
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox2.Image = global::Reversi.Properties.Resources.blue2;
-            this.pictureBox2.Location = new System.Drawing.Point(181, 32);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 21);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-            // 
-            // tipsOnOffToolStripMenuItem
-            // 
-            this.tipsOnOffToolStripMenuItem.Name = "tipsOnOffToolStripMenuItem";
-            this.tipsOnOffToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.tipsOnOffToolStripMenuItem.Text = "Tips On/Off";
-            this.tipsOnOffToolStripMenuItem.Click += new System.EventHandler(this.tipsOnOffToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(183, 6);
+            this.pbBlue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbBlue.Image = global::Reversi.Properties.Resources.blue2;
+            this.pbBlue.Location = new System.Drawing.Point(181, 32);
+            this.pbBlue.Name = "pbBlue";
+            this.pbBlue.Size = new System.Drawing.Size(24, 21);
+            this.pbBlue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbBlue.TabIndex = 9;
+            this.pbBlue.TabStop = false;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(338, 460);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btn_newGameComputer);
-            this.Controls.Add(this.lbl_secondPlayerScore);
-            this.Controls.Add(this.lbl_firstPlayerScore);
-            this.Controls.Add(this.btn_newGame);
-            this.Controls.Add(this.pnl_Field);
+            this.Controls.Add(this.pbBlue);
+            this.Controls.Add(this.pbRed);
+            this.Controls.Add(this.btnNewGameComputer);
+            this.Controls.Add(this.lblSecondPlayerScore);
+            this.Controls.Add(this.lblFirstPlayerScore);
+            this.Controls.Add(this.btnNewGame);
+            this.Controls.Add(this.pnlField);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -248,8 +248,8 @@
             this.Text = "MegaReversi";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBlue)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,10 +257,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel pnl_Field;
-        private System.Windows.Forms.Button btn_newGame;
-        private System.Windows.Forms.Label lbl_firstPlayerScore;
-        private System.Windows.Forms.Label lbl_secondPlayerScore;
+        private System.Windows.Forms.Panel pnlField;
+        private System.Windows.Forms.Button btnNewGame;
+        private System.Windows.Forms.Label lblFirstPlayerScore;
+        private System.Windows.Forms.Label lblSecondPlayerScore;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menu_NewGame;
@@ -271,10 +271,10 @@
         private System.Windows.Forms.OpenFileDialog openDialog;
         private System.Windows.Forms.SaveFileDialog saveDialog;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.Button btn_newGameComputer;
+        private System.Windows.Forms.Button btnNewGameComputer;
         private System.Windows.Forms.ToolStripMenuItem newComputerGameToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pbRed;
+        private System.Windows.Forms.PictureBox pbBlue;
         private System.Windows.Forms.ToolStripMenuItem tipsOnOffToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
     }

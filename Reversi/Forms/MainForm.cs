@@ -32,30 +32,25 @@ namespace Reversi
         #endregion
 
         #region Form events
-        private void pnl_Field_Paint(object sender, PaintEventArgs e)
+        private void pnlField_Paint(object sender, PaintEventArgs e)
         {
             _game.ReDraw();
         }
-        private void pnl_Field_MouseClick(object sender, MouseEventArgs e)
+        private void pnlField_MouseClick(object sender, MouseEventArgs e)
         {
             _game.MoveTo(e.Y / Field.Scale, e.X / Field.Scale);            
         }
-        private void btn_newGameComputer_Click(object sender, EventArgs e)
+        private void btnNewGameComputer_Click(object sender, EventArgs e)
         {
-            pnl_Field.Enabled = true;
+            pnlField.Enabled = true;
             _game.CreateNewGame();
             _game.EnableComputerMode(true);
         }
-        private void btn_newGame_Click(object sender, EventArgs e)
+        private void btnNewGame_Click(object sender, EventArgs e)
         {
-            pnl_Field.Enabled = true;
+            pnlField.Enabled = true;
             _game.CreateNewGame();
-        }
-        private void tipsOnOffToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            _game.EnableTips(!_game.EnabledTips);
-            _game.ReDraw();
-        }
+        }     
         #endregion
 
         #region Methods for events
@@ -75,25 +70,30 @@ namespace Reversi
 
         private void InitializeDraw(object sender, EventArgs e)
         {
-            _draw = new FormDrawing(pnl_Field, _game.Field);
+            _draw = new FormDrawing(pnlField, _game.Field);
             _game.DrawHandler = _draw.DrawField;
         }
 
         private void UpdateScoreAndPlayerMove(object sender, EventArgs e)
         {
-            lbl_firstPlayerScore.Text = ": " + _game.Field.FirstPlayerPoints.ToString();
-            lbl_secondPlayerScore.Text = ": " + _game.Field.SecondPlayerPoints.ToString();            
+            lblFirstPlayerScore.Text = ": " + _game.Field.FirstPlayerPoints.ToString();
+            lblSecondPlayerScore.Text = ": " + _game.Field.SecondPlayerPoints.ToString();            
         }
         #endregion
 
         #region MainMenu
         private void menu_NewGame_Click(object sender, EventArgs e)
         {
-            btn_newGame.PerformClick();
+            btnNewGame.PerformClick();
         }
         private void newComputerGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            btn_newGameComputer.PerformClick();
+            btnNewGameComputer.PerformClick();
+        }
+        private void tipsOnOffToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _game.EnableTips(!_game.EnabledTips);
+            _game.ReDraw();
         }
         private void saveGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -138,6 +138,6 @@ namespace Reversi
             AboutForm about = new AboutForm();
             about.ShowDialog();
         }
-        #endregion   
+        #endregion            
     }
 }
