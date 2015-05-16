@@ -38,7 +38,7 @@ namespace Reversi
         }
         private void pnlField_MouseClick(object sender, MouseEventArgs e)
         {
-            _game.MoveTo(e.Y / Field.Scale, e.X / Field.Scale);            
+            _game.MoveTo(e.Y / Field.SCALE, e.X / Field.SCALE);            
         }
         private void btnNewGameComputer_Click(object sender, EventArgs e)
         {

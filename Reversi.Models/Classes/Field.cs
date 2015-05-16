@@ -7,14 +7,17 @@ namespace Reversi.GameEngine
     {
         #region Variables        
         public const int N = 8;
-        public const int Scale = 40;
-      
+        public const int SCALE = 40;             
+
+        private int[,] _matrix;        
+        private Dictionary<Point, int> _movePoints;       
+        #endregion
+
+        #region Properties               
+        public bool GameProcess { get; private set; }
+        public int FirstPlayerPoints { get; private set; }
+        public int SecondPlayerPoints { get; private set; }
         public bool FirstMoveAI { get; set; }        
-
-        private int[,] _matrix;
-
-        //List of points
-        private Dictionary<Point, int> _movePoints;
         public Dictionary<Point, int> MovePoints
         {
             get
@@ -22,12 +25,6 @@ namespace Reversi.GameEngine
                 return _movePoints;
             }
         }
-        #endregion
-
-        #region Properties               
-        public bool GameProcess { get; private set; }
-        public int FirstPlayerPoints { get; private set; }
-        public int SecondPlayerPoints { get; private set; }
         public int this[int i, int j]
         {
             get
@@ -167,7 +164,7 @@ namespace Reversi.GameEngine
             return res;
         }
 
-        #region SideCheck
+        #region Side Checks
 
         private int CheckAllDirections(int x, int y, int player, bool needToAdd = true)
         {
@@ -270,7 +267,7 @@ namespace Reversi.GameEngine
         }
         #endregion SideCheck
 
-        #region Diagonal
+        #region Diagonal Checks
         private int UpLeftCheck(int x, int y, int p, bool f)
         {
             bool found = false;

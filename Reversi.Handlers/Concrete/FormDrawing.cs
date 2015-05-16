@@ -35,8 +35,8 @@ namespace Reversi.Handlers
                 {
                     Color c = Color.FromArgb(136, 210, 210);
                     //draw lines
-                    graphics.FillRectangle(new SolidBrush(c), j * Field.Scale, i * Field.Scale, Field.Scale, Field.Scale);
-                    graphics.DrawRectangle(p, j * Field.Scale, i * Field.Scale, Field.Scale, Field.Scale);
+                    graphics.FillRectangle(new SolidBrush(c), j * Field.SCALE, i * Field.SCALE, Field.SCALE, Field.SCALE);
+                    graphics.DrawRectangle(p, j * Field.SCALE, i * Field.SCALE, Field.SCALE, Field.SCALE);
                     //draw players play-chip                    
                     if (GameField[i, j] == 0)
                     {
@@ -56,7 +56,7 @@ namespace Reversi.Handlers
                         }
                         try
                         {
-                            graphics.DrawImage(image, new Rectangle(j * Field.Scale + 3, i * Field.Scale + 3, Field.Scale - 6, Field.Scale - 6));
+                            graphics.DrawImage(image, new Rectangle(j * Field.SCALE + 3, i * Field.SCALE + 3, Field.SCALE - 6, Field.SCALE - 6));
                         }
                         catch (InvalidOperationException ex)
                         {
@@ -68,7 +68,7 @@ namespace Reversi.Handlers
                             {
                                 image = new Bitmap(Reversi.Handlers.Properties.Resources.blue);
                             }
-                            graphics.DrawImage(image, new Rectangle(j * Field.Scale + 3, i * Field.Scale + 3, Field.Scale - 6, Field.Scale - 6));
+                            graphics.DrawImage(image, new Rectangle(j * Field.SCALE + 3, i * Field.SCALE + 3, Field.SCALE - 6, Field.SCALE - 6));
                             MessageBox.Show("Not so fast");
                         }
                     }
@@ -93,7 +93,7 @@ namespace Reversi.Handlers
             {
                 foreach (Reversi.GameEngine.Point point in GameField.MovePoints.Keys)
                 {
-                    graphics.DrawRectangle(pen, point.Y * Field.Scale + 3, point.X * Field.Scale + 3, Field.Scale - 6, Field.Scale - 6);
+                    graphics.DrawRectangle(pen, point.Y * Field.SCALE + 3, point.X * Field.SCALE + 3, Field.SCALE - 6, Field.SCALE - 6);
                 }
             }
         }
