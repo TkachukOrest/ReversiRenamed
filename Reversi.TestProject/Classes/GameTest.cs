@@ -5,6 +5,7 @@ using System.IO;
 using System.Runtime.Remoting.Channels;
 using System.Threading;
 using System.Timers;
+using Reversi.GameEngine.Classes;
 using Reversi.Handlers;
 using Timer = System.Threading.Timer;
 
@@ -234,7 +235,7 @@ namespace Reversi.GameEngine.Test
         public void Test_GameFinish_FirstPlayerWin()
         {
             Game game = new Game(_computerIntelligence);
-            game.ShomMessageHandler += (object sender, string s) => { };
+            game.ShomMessageHandler += (object sender, ShowMessageEventArgs s) => { };
             game.CreateNewGame();
             for (int i = 0; i < Field.N; i++)
             {
@@ -251,7 +252,7 @@ namespace Reversi.GameEngine.Test
         public void Test_GameFinish_SecondPlayerWin()
         {
             Game game = new Game(_computerIntelligence);
-            game.ShomMessageHandler += (object sender, string s) => { };
+            game.ShomMessageHandler += (object sender, ShowMessageEventArgs s) => { };
             game.CreateNewGame();            
             for (int i = 0; i < Field.N; i++)
             { 
@@ -268,7 +269,7 @@ namespace Reversi.GameEngine.Test
         public void Test_GameFinish_Draw()
         {
             Game game = new Game(_computerIntelligence);
-            game.ShomMessageHandler += (object sender, string s) => { };
+            game.ShomMessageHandler += (object sender, ShowMessageEventArgs s) => { };
             game.CreateNewGame();
             for (int i = 0; i < Field.N; i++)
             {
@@ -296,7 +297,7 @@ namespace Reversi.GameEngine.Test
             Game game = new Game(_computerIntelligence);
             game.InitDrawHandler += (object sender, EventArgs args) => { }; ;
             game.UpdateScoreHandler += (object sender, EventArgs args) => { };
-            game.ShomMessageHandler += (object sender, string s) => { }; ;
+            game.ShomMessageHandler += (object sender, ShowMessageEventArgs s) => { }; ;
             game.PlayGoodSoundHandler += (object sender, EventArgs args) => { };
             game.PlayBadSoundHandler += (object sender, EventArgs args) => { };
             game.DrawHandler = (sender, args) => { };

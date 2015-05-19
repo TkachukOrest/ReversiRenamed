@@ -38,10 +38,10 @@ namespace Reversi.GameEngine
         #endregion
 
         #region Events
-        public event EventHandler InitDrawHandler;
-        public event EventHandler UpdateScoreHandler;
-        public event EventHandler<string> ShomMessageHandler;
         public EventHandler<DrawEventArgs> DrawHandler;
+        public event EventHandler<ShowMessageEventArgs> ShomMessageHandler; 
+        public event EventHandler InitDrawHandler;
+        public event EventHandler UpdateScoreHandler;               
         public event EventHandler PlayGoodSoundHandler;
         public event EventHandler PlayBadSoundHandler;
         #endregion
@@ -103,17 +103,17 @@ namespace Reversi.GameEngine
                 {
                     if (Field.FirstPlayerPoints > Field.SecondPlayerPoints)
                     {
-                        ShomMessageHandler(this, String.Format("{0} player win with score: {1}", "First", Field.FirstPlayerPoints));
+                        ShomMessageHandler(this, new ShowMessageEventArgs(String.Format("{0} player win with score: {1}", "First", Field.FirstPlayerPoints)));
                     }
                     else
                     { 
                         if (Field.FirstPlayerPoints < Field.SecondPlayerPoints)
                         {
-                            ShomMessageHandler(this, String.Format("{0} player win with score: {1}", "Second(you)", Field.SecondPlayerPoints));
+                            ShomMessageHandler(this, new ShowMessageEventArgs(String.Format("{0} player win with score: {1}", "Second(you)", Field.SecondPlayerPoints)));
                         }
                         else
                         { 
-                            ShomMessageHandler(this, String.Format("Draw:  {0}-{1}", Field.FirstPlayerPoints, Field.SecondPlayerPoints));
+                            ShomMessageHandler(this, new ShowMessageEventArgs(String.Format("Draw:  {0}-{1}", Field.FirstPlayerPoints, Field.SecondPlayerPoints)));
                         }
                     }
                 }
@@ -125,6 +125,12 @@ namespace Reversi.GameEngine
             {
                 DrawHandler(this, new DrawEventArgs(player, enabledTips));
             }
+        }       
+        private void Initialize()
+        {
+            OnInitializeField();
+            OnInitializeDraw();
+            ReDraw();
         }
         public void CreateNewGame()
         {
@@ -132,12 +138,6 @@ namespace Reversi.GameEngine
             EnabledComputerMoves = false;
             CurrentMove = 1;
             Initialize();
-        }
-        private void Initialize()
-        {
-            OnInitializeField();
-            OnInitializeDraw();
-            ReDraw();
         }
         #endregion
 

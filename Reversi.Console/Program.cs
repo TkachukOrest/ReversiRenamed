@@ -3,6 +3,7 @@ using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 using Reversi.GameEngine;
+using Reversi.GameEngine.Classes;
 using Reversi.Handlers;
 
 
@@ -27,7 +28,7 @@ namespace Reversi.ConsoleUI
         {
             Console.WriteLine(String.Format("Score: X:{0} - O:{1}", _game.Field.FirstPlayerPoints, _game.Field.SecondPlayerPoints));
         }
-        public static void ShowMessage(object sender, string message)
+        public static void ShowMessage(object sender, ShowMessageEventArgs message)
         {
             Console.WriteLine(message);
         }

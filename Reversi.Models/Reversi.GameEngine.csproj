@@ -43,6 +43,7 @@
     <Compile Include="Classes\DrawEventArgs.cs" />
     <Compile Include="Classes\Game.cs" />
     <Compile Include="Classes\GameState.cs" />
+    <Compile Include="Classes\ShowMessageEventArgs.cs" />
     <Compile Include="Interfaces\IArtificialIntelligence.cs" />
     <Compile Include="Classes\MinMaxAI.cs" />
     <Compile Include="Enums\Players.cs" />

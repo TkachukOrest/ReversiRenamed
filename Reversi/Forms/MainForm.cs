@@ -3,6 +3,7 @@ using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 using Reversi.GameEngine;
+using Reversi.GameEngine.Classes;
 using Reversi.Handlers;
 
 namespace Reversi
@@ -63,9 +64,9 @@ namespace Reversi
             _game.PlayBadSoundHandler += _music.PlayBadSound;
         }
 
-        private void ShowMessage(object sender, string message)
+        private void ShowMessage(object sender, ShowMessageEventArgs args)
         {
-            MessageBox.Show(this, message, "We have a winner", MessageBoxButtons.OK);                                   
+            MessageBox.Show(this, args.Message, "We have a winner", MessageBoxButtons.OK);                                   
         }
 
         private void InitializeDraw(object sender, EventArgs e)
