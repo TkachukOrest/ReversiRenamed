@@ -38,6 +38,7 @@ namespace Reversi.GameEngine
         #endregion
 
         #region Events
+        //Peer:Необхідно дописати модифікатор event
         public EventHandler<DrawEventArgs> DrawHandler;
         public event EventHandler<ShowMessageEventArgs> ShomMessageHandler; 
         public event EventHandler InitDrawHandler;
